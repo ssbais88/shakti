@@ -1,0 +1,106 @@
+#header{
+	height: 150px;
+	width: 100%;
+	background-color: #0075AD;
+}
+#inside-header{
+	height:150px;
+	width: 870px;
+	background-color: #0075AD;
+	margin:0 auto;
+}
+#header-up{
+	height:28px;
+	width: 870px;
+	background-color: #0075AD;
+	border-bottom: 2px solid white;
+}
+#header-down{
+	height:100px;
+	width: 870px;
+	background-color: #0075AD;
+}
+#logo{
+	height: 100px;
+	width:200px;
+	/*background-color: brown;*/
+	float: left;
+}
+#logo h1{
+	color: white;
+	margin:0;
+	padding:31px;
+	text-align: center;
+}
+#middle{
+	height: 100px;
+	width:300px;
+	/*background-color: red;*/
+	float: left;
+}
+#right{
+	height: 100px;
+	width:370px;
+	/*background-color: yellow;*/
+	float: left;
+}
+
+#menu{
+	height: 50px;
+	width: 100%;
+}
+#menu ul{
+  list-style: none;
+  margin:0;
+  padding:0;
+}
+#menu ul li{
+	float: left;
+	padding:16px;
+	padding-right: 10px;
+	/*background-color: black;*/
+}
+#inside-menu{
+	height:50px;
+	width: 870px;
+	background-color: #008ACC;
+	margin:-20px auto;
+}
+#content{
+	min-height:500px;
+	height:auto;
+	width: 100%;
+}
+#inside-content{
+	min-height:500px;
+	height: auto;
+	width: 870px;
+	background-color: yellow;
+	margin:0 auto;
+}
+#content-left{
+	min-height:500px;
+	height: auto;
+	width: 300px;
+	background-color: #ADE123;
+	float: left;
+	margin-top: 20px;
+}
+#content-right{
+	min-height:500px;
+	height: auto;
+	width: 570px;
+	background-color: #BDE546;
+	float: left;
+	margin-top: 20px;
+}
+#footer{
+	height: 150px;
+	width: 100%;
+}
+#inside-footer{
+	height:150px;
+	width: 870px;
+	background-color: black;
+	margin:0 auto;
+}
