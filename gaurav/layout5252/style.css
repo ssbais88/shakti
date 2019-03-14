@@ -26,6 +26,7 @@
 	/*background-color: brown;*/
 	float: left;
 }
+<<<<<<< HEAD
 #middle{
 	background-image: url(images1.png);
 	background-size: 100% 100%;
@@ -36,6 +37,8 @@
 	background-size: 100% 100%;
 	margin: 20px;
 }
+=======
+>>>>>>> 6df145a2709a2eddd6aae8ba447b377bf5d1470d
 #logo h1{
 	color: white;
 	margin:0;
@@ -43,14 +46,24 @@
 	text-align: center;
 }
 #middle{
+<<<<<<< HEAD
 	height: 60px;
 	width:260px;
+=======
+	height: 100px;
+	width:300px;
+>>>>>>> 6df145a2709a2eddd6aae8ba447b377bf5d1470d
 	/*background-color: red;*/
 	float: left;
 }
 #right{
+<<<<<<< HEAD
 	height: 60px;
 	width:330px;
+=======
+	height: 100px;
+	width:370px;
+>>>>>>> 6df145a2709a2eddd6aae8ba447b377bf5d1470d
 	/*background-color: yellow;*/
 	float: left;
 }
@@ -89,6 +102,7 @@
 	margin:0 auto;
 }
 #content-left{
+<<<<<<< HEAD
 	height: 381px;
 	width: 266px;
 	background-color: #ADE123;
@@ -113,11 +127,24 @@
 }
 #content-right{
 	height: 480px;
+=======
+	min-height:500px;
+	height: auto;
+	width: 300px;
+	background-color: #ADE123;
+	float: left;
+	margin-top: 20px;
+}
+#content-right{
+	min-height:500px;
+	height: auto;
+>>>>>>> 6df145a2709a2eddd6aae8ba447b377bf5d1470d
 	width: 570px;
 	background-color: #BDE546;
 	float: left;
 	margin-top: 20px;
 }
+<<<<<<< HEAD
 #right-up{
     height: 350px;
     width: 570px;
@@ -154,6 +181,8 @@
     background-color: red;
     margin-top: 20px;
 }
+=======
+>>>>>>> 6df145a2709a2eddd6aae8ba447b377bf5d1470d
 #footer{
 	height: 150px;
 	width: 100%;
