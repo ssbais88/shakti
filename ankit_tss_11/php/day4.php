@@ -86,7 +86,33 @@ echo "<p>";
 		<td>=</td>
 		<td>50</td>
 	</tr>
+
 </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <?php
 for ($i=5; $i <=19 ; $i++) { 
@@ -96,17 +122,40 @@ for ($i=5; $i <=19 ; $i++) {
 
 ?>.
 <br><br><br><br>
+<table align="center" cellspacing="0" cellpadding="10">
 <?php
- for ($i=1; $i <=10; $i++) { 
- 	echo $i;
- 	?>
- 	<br>
- 	<?php
- }
+for ($i=20; $i <=19 ; $i++) { 
+	echo $i;
 
+}
 
 ?>
+<?php
+for ($i=5; $i <=19 ; $i++) { 
+	echo 5;
+?>
+<br>
+<?php
+}
 
+?>
+<?php
+for($i=1; $i<=10; $i++)
+{
+	// echo"tr";
+	// echo"$i";
+	// echo"td";
+	// echo"<tr/>";
+	// echo"<td/>";
 
-</body>
+?>
+<tr>
+<td><?php echo$i*5;?></td>
+
+</tr>
+<?php
+
+}
+?>
+</table></body>
 </html> 
