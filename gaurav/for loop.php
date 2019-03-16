@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+ <!DOCTYPE html>
 <html>
 <head>
 	<title></title>
@@ -11,6 +12,10 @@
 
 		?>
 		<tr>
+			<td><?php echo "5"; ?></td>
+			<td><?php echo "*"; ?></td>
+			<td><?php echo $i*1; ?></td>
+			<td><?php echo "="; ?></td>
 			<td><?php echo $i*5; ?></td>
 		</tr>
 
@@ -28,3 +33,5 @@
 
 </body>
 </html>
+
+
