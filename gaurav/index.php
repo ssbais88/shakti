@@ -12,7 +12,7 @@ echo "$d";
 <br>
 <?php
 $a = 3;
-    if ($a=3) {
+    if ($a==3) {
       echo "red";
     }
 
@@ -23,7 +23,7 @@ $a = 3;
 <br>
 <?php 
 $a = 4;
- if ($a=3) {
+ if ($a==3) {
    echo "pink";
  }
  else{
