@@ -8,15 +8,11 @@
 	<?php
 	for($i=1; $i<=10; $i++)
 	{
-<<<<<<< HEAD
 		echo "<tr>";
 		echo "<td>";
 		echo $i;
 		echo "</td>";
 		echo "</tr>";
-
-=======
->>>>>>> f375d4a917e30caf5363988c53f0ccc3909e8ff0
 
 		?>
 		<tr>
