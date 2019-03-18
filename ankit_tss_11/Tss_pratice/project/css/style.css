@@ -37,7 +37,7 @@ body{
 	min-height: 600px;
 	width: 970px;
 	margin: 0 auto;
-	margin-top: 20px;
+	/*margin-top: 20px;*/
 }
 #inside-footer{
 	height: 200px;

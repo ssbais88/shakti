@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+ <!DOCTYPE html>
 <html>
 <head>
 	<title></title>
@@ -8,14 +9,13 @@
 	<?php
 	for($i=1; $i<=10; $i++)
 	{
-		echo "<tr>";
-		echo "<td>";
-		echo $i;
-		echo "</td>";
-		echo "</tr>";
 
 		?>
 		<tr>
+			<td><?php echo "5"; ?></td>
+			<td><?php echo "*"; ?></td>
+			<td><?php echo $i*1; ?></td>
+			<td><?php echo "="; ?></td>
 			<td><?php echo $i*5; ?></td>
 		</tr>
 
@@ -33,3 +33,5 @@
 
 </body>
 </html>
+
+
