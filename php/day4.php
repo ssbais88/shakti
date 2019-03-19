@@ -14,6 +14,10 @@
 		echo "</td>";
 		echo "</tr>";
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 10969eb5bfd9ba0a8be07325a695c56b57b17ee9
 		?>
 		<tr>
 			<td><?php echo $i*5; ?></td>
