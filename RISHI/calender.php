@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
 	<title>calender</title>
@@ -6,13 +5,22 @@
 		tr{
 			color: red;
 		}
+		table{
+			background-color: yellow;
+		}
 	</style>
 </head>
 <body>
 <table 
-align="center" cellspacing="0" cellpadding="8" border="1">
+align="center" cellspacing="0" cellpadding="18" border="1">
 <tr>
-
+       <td>Sun</td>
+       <td>Mon</td>
+       <td>Tue</td>
+       <td>Wed</td>
+       <td>Thr</td>
+       <td>Fri</td>
+       <td>Sat</td>  
 	<?php
 	for($i=1;$i<=31;$i++)
 	{
