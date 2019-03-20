@@ -50,21 +50,25 @@ body{
 	width: 770px;	
 }
 #right-header-top ul{
+	margin: 0;
+	padding: 0;
 	list-style:none;
-/*	margin: 0; */
+
 }
 #right-header-top ul li{
-	float: right;
 	color: #fff;
+	float: right;
 }
 #right-header-top ul li a{
+	display:inline-block;
 	color: #fff;
-	margin: 10px 15px;
+	padding:8px 10px;
 	text-decoration:none; 
 	/*background-color: red;*/
 }
 #right-header-top ul li a:hover{
 	color:yellow;
+	background-color: #789456;
 }
 #menu{
 	background-color: #EA0929;
@@ -80,12 +84,14 @@ body{
 #inside-menu ul{
 	list-style: none;
 	margin: 0;
+	padding: 0;
 }
 #inside-menu ul li a{
+	display:inline-block;
 	color: #fff;
 	text-decoration: none;
 	float: right;
-	margin: 6px;
+	padding:8px 44px 8px 50px;
 	font-size: 20px;
 	/*background-color: blue;*/
 }
@@ -117,18 +123,17 @@ body{
 	margin: 0;
 	padding: 0;
 }
-#left-content ul li{
-	padding: 10px 0 10px 0;
-	/*float: left;*/text-align: left;
-}
 #left-content ul li a{
 	/*color:#FFFFFF;*/
 	text-decoration: none;
 	border-bottom: 1px solid #352274;
-	padding-left: 10px 20px;
+	padding: 10px 20px;
 	/*border-spacing: 0;*/
-	display: block;
-
+	display:/*inline-*/block;
+}
+#left-content ul li a:hover{
+	background-color: yellow;
+	color: #000000;
 }
 #right-content{
 	/*background-color: brown;*/
