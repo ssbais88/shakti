@@ -20,7 +20,7 @@ align="center" cellspacing="0" cellpadding="18" border="1">
        <td>Wed</td>
        <td>Thr</td>
        <td>Fri</td>
-       <td>Sat</td>  
+       <td>Sat</td>  </tr>
 	<?php
 	for($i=1;$i<=31;$i++)
 	{
