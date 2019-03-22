@@ -57,7 +57,7 @@ h1{
 	/*list-style: none;*/
 	/*text-decoration: none;*/
 	display: inline-block;
-	padding: 15px;
+	padding: 16px;
 
 }
 ul li:hover{
@@ -65,8 +65,8 @@ ul li:hover{
 	/*text-decoration: none;*/
 	/*display: inline-block;*/
 	/*padding: 15px;*/
-	background-color: #F8F0F9;
-	background-color: #000;
+	background-color: orange;
+	color: maroon;
 
 }
 #content{
@@ -129,6 +129,10 @@ ul li:hover{
 	margin: 10px;
 	float: right;
 }
+#one img{
+	height: 200px;
+	width: 780px;
+}
 #two{
 	background-color: #F0F0F0;
 	height: auto;
@@ -139,6 +143,10 @@ ul li:hover{
 	float: left;
 	/*margin-right: 50px;*/
 	/*margin-left: 50px;*/
+}
+img{
+	height: 100px;
+	width: 200px;
 }
 #three{
 	background-color: #F0F0F0;
