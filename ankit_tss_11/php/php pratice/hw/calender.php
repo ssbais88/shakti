@@ -22,7 +22,7 @@
 			<td>Wed</td>
 			<td>Thu</td>
 			<td>Fri</td>
-			<td>Sat</td><br></tr>0
+			<td>Sat</td></tr>
 			<?php
 				for ($i=1; $i <=31 ; $i++)
 					 { 
