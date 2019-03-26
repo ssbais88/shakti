@@ -31,10 +31,10 @@
 	<h1>1.THIS IS THE LONG WAY TO COMPARE 4 NUMBERS</h1><hr>
 <?php
 //--------------------1.THIS IS THE LONG WAY TO COMPARE 4 NUMBERS-------------------------
-$a =90;
+$a =900;
 $b =120;
-$c =70;
-$d =60;
+$c =7000;
+$d =60000;
 
 if ($a>$b) {
 	if ($a>$c) {
@@ -85,9 +85,9 @@ else{
 <?php
 //-------------------2.THIS IS THE SHORT WAY TO COMPARE 4 NUMBERS-------------------------
 $a =100;
-$b =90;
-$c =50;
-$d =60;
+$b =900;
+$c =5000;
+$d =60000;
 
 if ($a>$b && $a>$c && $a>$d) {
 	?>
