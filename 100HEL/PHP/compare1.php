@@ -4,12 +4,13 @@
 	<title></title>
 </head>
 <body>
-	<?php
-		$a=111;
-		$b=222;
-		$c=333;
-		$d=444;
-		if ($a>$b) {
+<?php
+$a =9000;
+$b =120;
+$c =700;
+$d =6000;
+
+if ($a>$b) {
 			if ($a>$c) {
 				if ($a>$d) {
 					echo "A is Greater";
@@ -35,6 +36,8 @@
 				echo "C is Greater";
 			}
 		}
-	?>
+
+
+?>
 </body>
 </html>
