@@ -7,25 +7,76 @@
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+
+	<style type="text/css">
+		.a1:hover{
+			background-color:#33FF99;
+
+		}
+		.a2{
+				height: 280px;
+				width: 300px;
+				background-image:url("img/2.jpg");
+				background-size: 100% 100%;
+		}
+		.a3{
+				height: 280px;
+				width: 300px;
+				background-image:url("img/3.jpg");
+				background-size: 100% 100%;
+		}
+		.a4{
+				height: 280px;
+				width: 300px;
+				background-image:url("img/4.jpeg");
+				background-size: 100% 100%;
+		}
+		.a5{
+				height: 280px;
+				width: 300px;
+				background-image:url("img/5.jpg");
+				background-size: 100% 100%;
+		}
+		.a6{
+				height: 280px;
+				width: 300px;
+				background-image:url("img/6.png");
+				background-size: 100% 100%;
+		}
+		.a7{
+				height: 280px;
+				width: 300px;
+				background-image:url("img/7.jpg");
+				background-size: 100% 100%;
+		}
+		.lg{
+			color:#33FF99;
+		}
+		.div1{
+			float: left;
+		}
+		.div2{
+			float: left;
+		}
+	</style>
 </head>
 <body>
 <div class="container-fluid bg-dark">
 	<div class="row" style="background-color:#DAF7A6">
 		<div class="col-md-5">
-			<p class="text-danger m-0 p-2">World's fast growing site</p>
+			<p class="text-danger m-1 p-2">World's fast growing site</p>
 		</div>
 		<div class="col-md-7">
 			<ul class="nav justify-content-end">
-		<button class=" btn nav-item " data-toggle="modal" data-target="#login"><a href="#" class="list-item">Login <i class="fa fa-lock" aria-hidden="true"></i></a></button>
-		<button class="btn nav-item" data-toggle="modal" data-target="#signup"><a href="#" class="list-link">Signup <i class="fa fa-sign-in" aria-hidden="true"></i></a></button>
-		<button class="btn nav-item"><a href="#" class="list-link">Profile <i class="fa fa-user" aria-hidden="true"></i></a></button>
-		<button class="btn nav-item"><a href="#" class="list-link">Setting <i class="fa fa-cog" aria-hidden="true"></i></a></button>
+		<button class=" btn nav-item " data-toggle="modal" data-target="#login"><a href="#" class="nav-link">Login <i class="fa fa-lock" aria-hidden="true"></i></a></button>
+		<button class="btn nav-item" data-toggle="modal" data-target="#signup"><a href="#" class="nav-link">Signup <i class="fa fa-sign-in" aria-hidden="true"></i></a></button>
+		<button class="btn nav-item" data-toggle="modal" data-target="#cart"><a href="#" class="nav-link">Cart <i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="badge badge-warning badge-pill">2</span></a></button>
 	</ul>
 		</div>
 	</div>
 </div>
 	<nav class="navbar sticky-top  navbar-expand-sm" style="background-color:pink;">
-		<a href="#" class="navbar-brand text-danger">eBay</a>
+		<a href="#" class="navbar-brand text-danger h1">eBay</a>
 		<button class="navbar-toggler" data-toggle="collapse" data-target="#my">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -42,10 +93,11 @@
 				</li>
 				<li class="nav-item dropdown">
 					<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">more</a>
-					<div class="dropdown-menu">
-						<a href="#" class="dropdown-item">Account option</a>
-						<a href="#" class="dropdown-item">Category</a>
-						<a href="#" class="dropdown-item">Channge password</a>
+					<div class="dropdown-menu" style="background-color:#C133FF;">
+						<a href="#" class="dropdown-item">Notification's</a>
+						<a href="#" class="dropdown-item">Sell here</a>
+						<a href="#" class="dropdown-item">24X7 Customer Support</a>
+						<a href="#" class="dropdown-item">Download App</a>
 					</div>
 				</li>
 			</ul>
@@ -54,24 +106,72 @@
 	</div>
 </div>
 <div class="container-fluid">
+	<div class="jumbotron bg-info mb-1">
+		<h1 class="text-center text-light">Welcome to the Abdul's Layout </h1>
+		<h5 class="text-center text-warning">This tamplete is Designed in Bootstrap 4.</h5>
+	</div>
+</div>
+<div class="container-fluid">
 	<div class="row">
-		<div class="col-md-2 offset-5">
-			<p class="text-center">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</p>
+		<div class="col-md-3 mb-1">
+			<div class="list-group">
+				<a href="#" class="list-group-item list-group-item-action a1">Men's</a>
+				<a href="#" class="list-group-item list-group-item-action a1">Women's</a>
+				<a href="#" class="list-group-item list-group-item-action a1">Mobile & Tablet</a>
+				<a href="#" class="list-group-item list-group-item-action a1">Home Applainces</a>
+				<a href="#" class="list-group-item list-group-item-action a1">Kitchen</a>
+			</div>
+		</div>
+		<div class="col-md-9 mb-1">
+			<div class="row">
+				<div class="col-md-12">
+					<h4 class="bg-secondary py-4 pl-2 text-light">New Arrival's</h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 mb-1">
+					<div class="card">
+						<div class="card-body a2"></div>
+						<div class="card-footer"><button class="btn btn-danger">Add to Cart</button><button class="btn btn-success float-right">Buy Now</button></div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-1">
+					<div class="card">
+						<div class="card-body a3"></div>
+						<div class="card-footer"><button class="btn btn-danger">Add to Cart</button><button class="btn btn-success float-right">Buy Now</button></div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-1">
+					<div class="card">
+						<div class="card-body a4"></div>
+						<div class="card-footer"><button class="btn btn-danger">Add to Cart</button><button class="btn btn-success float-right">Buy Now</button></div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-1">
+					<div class="card">
+						<div class="card-body a5"></div>
+						<div class="card-footer"><button class="btn btn-danger">Add to Cart</button><button class="btn btn-success float-right">Buy Now</button></div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-1">
+					<div class="card">
+						<div class="card-body a6"></div>
+						<div class="card-footer"><button class="btn btn-danger">Add to Cart</button><button class="btn btn-success float-right">Buy Now</button></div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-1">
+					<div class="card">
+						<div class="card-body a7"></div>
+						<div class="card-footer"><button class="btn btn-danger">Add to Cart</button><button class="btn btn-success float-right">Buy Now</button></div>
+					</div>
+				</div>
+			</div>
+				
 		</div>
 	</div>
 </div>
+</div>
+					<!-- Login and Signup  popup or modal id Element  -->
 <div id="login" class="modal fade">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -121,6 +221,21 @@
 			<div class="modal-footer">
 				<input class="btn btn-info" type="submit" name="" value="SignUp">
 				<input class="btn btn-danger" data-dismiss="modal" type="reset" name="" value="Exit">
+			</div>
+		</div>
+	</div>
+</div>
+<div id="cart" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header"><h2>My Cart(0)</h2>
+			</div>
+			<div class="modal-body">
+			<h3 class="text-center text-primary">Your Cart is Empty</h3>
+			<img src="img/8.png" class="img-thumbnail"> 
+			</div>
+			<div class="modal-footer">
+				<input class="btn btn-warning" data-dismiss="modal" type="reset" name="" value="Shop Now">
 			</div>
 		</div>
 	</div>
