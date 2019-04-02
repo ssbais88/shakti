@@ -52,13 +52,13 @@
 			<a href="#" class="nav-link">My Cart <i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
 		</li>
 		<li class="nav-item">
-			<a href="login.php" class="nav-link">Login <i class="fa fa-user" aria-hidden="true"></i></a>
+			<a href="page/login.php" class="nav-link">Login <i class="fa fa-user" aria-hidden="true"></i></a>
 		</li>
 		<li class="nav-item">
-			<a href="signup.php" class="nav-link">Signup <i class="fa fa-user" aria-hidden="true"></i></a>
+			<a href="page/signup.php" class="nav-link">Signup <i class="fa fa-user" aria-hidden="true"></i></a>
 		</li>
 	</ul>
-
+ 
 
 
 </nav>

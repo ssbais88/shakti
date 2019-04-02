@@ -10,7 +10,7 @@
 	<script type="text/javascript" src="js/bootstrap.bundle.js"></script>
 </head>
 <body>
-	<nav class="navbar bg-dark navbar-dark navbar-expand-sm pl-5 p-0 m-0" style="background-color: #15965A;">
+	<nav class="navbar bg-light  navbar-expand-sm pl-5 p-0 m-0" style="background-image: url(image/a.jpg);">
 		<button class="navbar-toggler" data-toggle="collapse" data-target="#top-bar">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -18,28 +18,28 @@
 			<center>
 				<ul class="navbar-nav pl-5 ml-3">
 					<li class="nav-link">
-						<a href="index.php" class="nav-link">Home</a>					
+						<a href="index.php" class="nav-link text-light">Home</a>					
 					</li>
 					<li class="nav-link">
-						<a href="#" class="nav-link">About Us</a>					
+						<a href="#" class="nav-link text-light">About Us</a>					
 					</li>
 					<li class="nav-link">
-						<a href="#" class="nav-link">Contact</a>					
+						<a href="#" class="nav-link text-light">Contact</a>					
 					</li>
 					<li class="nav-link">
-						<a href="#" class="nav-link">Help</a>					
+						<a href="#" class="nav-link text-light">Help</a>					
 					</li>
 					<li class="nav-link">
-						<a href="#" class="nav-link">FAQ</a>					
+						<a href="#" class="nav-link text-light">FAQ</a>					
 					</li>
 				</ul>
 			</center>
 		</div>
 	</nav>
-	<div class="container-fluid sticky-top mb-0 pb-0"style="background-color: #000;">
+	<div class="container-fluid sticky-top mb-0 pb-0"style="background-color: #000;background-image: url(image/a.jpg);">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-2 col-sm-12" ><img src="image/1.jpg"></div>
+				<div class="col-md-2 col-sm-12" ><a href="index.php"><img src="image/1.jpg"></a></div>
 				<form class="form-inline-xl col-md-5 my-2 pt-1 ">
 					<div class="input-group-prepend ">
 					<input type="text" class="form-control" placeholder="Search for product brands and many more....">
@@ -49,10 +49,13 @@
 				</form>
 				<ul class="nav mt-2 mx-0 offset-md-1">
 					<li class="nav-item">
-						<a href="login.php" class="nav-link text-light">Login & Signup</a>
+						<a href="login.php" class="nav-link text-light">Login</a>
 					</li>
 					<li class="nav-item">
-						<a href="#" class="nav-link text-light"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart</a>
+						<a href="signup.php" class="nav-link text-light ">Signup</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link text-light"><i class="fa fa-shopping-cart" aria-hidden="true"></i>My Cart</a>
 					</li>
 					<li class="nav-item">
 						<a href="#" class="nav-link text-light"><i class="fa fa-user" aria-hidden="true"></i> My Account</a>
