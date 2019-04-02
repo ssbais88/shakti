@@ -1,1 +1,0 @@
-	<div class="jumbotron bg-dark mb-0 mt-2 img-fluid max-width=100% max-height-auto" style="background-image: url('image/2.jpeg');background-size: 100%;height: auto;"><center><h1>Welcome To Pay Cart Shopping</h1></center></div>
