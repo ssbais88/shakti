@@ -56,7 +56,7 @@
 		</li>
 		<li class="nav-item">
 			<a href="signup.php" class="nav-link">Signup <i class="fa fa-user" aria-hidden="true"></i></a>
-		</li>
+		</li> 
 	</ul>
  
 
