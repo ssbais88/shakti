@@ -8,11 +8,6 @@
 	<script type="text/javascript" src="js/bootstrap.bundle.js"></script>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<style type="text/css">
-		.myimg{
-			height: 200px;
-			background-size: 100% 100%;
-			margin: 47px;
-		}
 		.bg-mycolor{
 			background-image: url(image/4.jpg);
 			background-size: 100%;
@@ -147,9 +142,9 @@
 
 		<div class="container">
 			<div class="row">
-				<div class="col-md-3 myimg px-2" style="background-image: url(image/1.jpg);"></div>
-				<div class="col-md-3 myimg px-2" style="background-image: url(image/2.jpg);"></div>
-				<div class="col-md-3 myimg px-3" style="background-image: url(image/3.jpg);"></div>
+				<div class="col-md-4 my-4"><img src="image/1.jpg" class="img-fluid"></div>
+				<div class="col-md-4 my-4 px-4"><img src="image/2.jpg" class="img-fluid"></div>
+				<div class="col-md-4 my-4"><img src="image/3.jpg" class="img-fluid"></div>
 			</div>
 		</div>
 		
@@ -159,3 +154,4 @@
 </div>
 </body>
 </html>
+
