@@ -27,7 +27,7 @@
 	</style>
 </head>
 <body>
-<nav class="navbar bg-mycolor navbar-expand-sm navbar-dark sticky-top">
+<nav class="navbar bg-mycolor navbar-expand-md navbar-dark sticky-top">
 	<a class="navbar-brand" href="#">My Shopping</a>
 	<button class="navbar-toggler" data-toggle="collapse" data-target="#myMenu">
 		<span class="navbar-toggler-icon"></span>
