@@ -1,6 +1,6 @@
 <?php
-include("header.php");
-include("slider.php");
+include("common-files/header.php");
+include("common-files/slider.php");
 ?>
 	<div class="container-fluid bg-primary" style="background-color: #fff;">
 		<div class="row">
@@ -313,6 +313,158 @@ include("slider.php");
 			<div class="col-md-4"><img src="image/4.jpeg" class="img-fluid py-3"></div>
 		</div>
 	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- start footer coding -->
+<div class="container-fluid bg-dark">
+	<div class="footer">About
+	</div>
+		<a href="#">Contact us</a>
+</div>
 </body>
 </html>
 	
+	<!-- <div class="container"> -->
+		<div class="row ml-3 py-4 ">
+			<div class="col-md-2 bg-primary" style="width: 60px !important;">
+				<span class="text-secondary">About</span>
+				<ul class="navbar-nav">
+	 				<li class="nav-item ">
+						<a href="#" class="nav-link small m-0 p-0 mb-2 text-light"></a>
+					<!-- </li>
+					<li class="nav-item">
+		class			 -->	<a href="#" class="nav-link small m-0 p-0 mb-2 text-light">About us</a>
+					<!-- </li>
+					<li class="nav-item"> -->
+						<a href="#" class="nav-link m-0 p-0  small text-light  mb-2 ">Carrers</a>
+					<!-- </li>
+					<li class="nav-item"> -->
+						<a href="#" ="nav-link m-0 p-0 text-light small mb-2 ">Pay-Cart stories</a>
+					<!-- </li>
+					<li class="nav-item">
+ -->						<a href="#" class="nav-link m-0 p-0 text-light small mb-2 ">Press</a>
+					<!-- </li> -->
+				</ul>
+			</div>
+			<div class="col-md-2">
+				<span class="text-secondary">Help</span>
+				<ul class="navbar-nav">
+	 				<li class="nav-item ">
+						<a href="#" class="nav-link small m-0 p-0 mb-2 text-light">Payment</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link small m-0 p-0 mb-2 text-light">Shipping</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link m-0 p-0  small text-light  mb-2 ">Cancellation & Returns</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link m-0 p-0 text-light small mb-2 ">FAQ</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link m-0 p-0 text-light small mb-2 ">Report Infringement</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-2 ml-2">
+				<span class="text-secondary">Policy</span>
+				<ul class="navbar-nav">
+	 				<li class="nav-item ">
+						<a href="#" class="nav-link small m-0 p-0 mb-2 text-light">Return Policy</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link small m-0 p-0 mb-2 text-light">Terms of Use</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link m-0 p-0  small text-light mb-2">Security</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link m-0 p-0 text-light small mb-2 ">Privacy</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link m-0 p-0 text-light small mb-2 ">Sitemap</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link m-0 p-0 text-light small mb-2 ">EPR Compliance</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-1 pl-2 bg-danger">
+				<span class="text-secondary">Social</span>
+				<ul class="navbar-nav">
+	 				<li class="nav-item ">
+						<a href="#" class="nav-link small m-0 p-0 mb-2 text-light">Facebook</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link small m-0 p-0 mb-2 text-light">Twitter</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link m-0 p-0  small text-light mb-2">Youtube</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link m-0 p-0 text-light small mb-2 ">Google Plus</a>
+					</li>
+				</ul>
+			</div>
+			<div class=" border-right border-secondary"></div>
+			
+		</div>
+	</div>

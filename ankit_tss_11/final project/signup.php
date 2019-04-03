@@ -1,6 +1,6 @@
 <?php
-include("header.php");
-include("slider.php")
+include("common-files/header.php");
+include("common-files/slider.php")
 ?>
 <div class="container mt-3">
 	<div class="row">
@@ -45,6 +45,17 @@ include("slider.php")
 						<div class="form-group">
 							<label>Address</label>
 							<textarea class="form-control" placeholder="Enter your deliver address"></textarea>
+						</div>
+						<div class="form-group">
+							<label>City</label>
+							<select class="form-control">
+								<option>Select</option>
+								<option>Indore</option>
+								<option>Bhopal</option>
+								<option>Ujjain</option>
+								<option>Dewas</option>
+								<option>Gwalior</option>
+							</select>
 						</div>
 					</form>
 				</div>

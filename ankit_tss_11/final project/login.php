@@ -1,6 +1,6 @@
 <?php
-include("header.php");
-include("slider.php");
+include("common-files/header.php");
+include("common-files/slider.php");
 ?>
 <div class="container my-4">
 	<div class="row">

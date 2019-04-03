@@ -10,7 +10,7 @@
 	<script type="text/javascript" src="js/bootstrap.bundle.js"></script>
 </head>
 <body>
-	<nav class="navbar bg-light  navbar-expand-sm pl-5 p-0 m-0" style="background-image: url(image/a.jpg);">
+	<nav class="navbar navbar-dark navbar-expand-sm pl-5 p-0 m-0" style="background-image: url(image/a.jpg);">
 		<button class="navbar-toggler" data-toggle="collapse" data-target="#top-bar">
 			<span class="navbar-toggler-icon"></span>
 		</button>
