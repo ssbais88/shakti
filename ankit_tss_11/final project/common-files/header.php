@@ -1,8 +1,8 @@
 <html>
 <head>
 	<title>Pay Cart Shopping</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 	<script type="text/javascript" src="js/jquery.js"></script>
@@ -12,8 +12,7 @@
 <body>
 	<nav class="navbar navbar-dark navbar-expand-sm pl-5 p-0 m-0" style="background-image: url(image/a.jpg);">
 		<button class="navbar-toggler" data-toggle="collapse" data-target="#top-bar">
-			<span class="navbar-toggler-icon"></span>
-		</button>
+			<span class="navbar-toggler-icon"></span></button>
 		<div class="collapse navbar-collapse" id="top-bar">
 			<center>
 				<ul class="navbar-nav pl-5 ml-3">

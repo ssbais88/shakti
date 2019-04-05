@@ -1,5 +1,3 @@
-	<div class="jumbotron bg-dark mb-0 img-fluid max-width=100% max-height-auto" style="background-image: url('image/a.jpg');background-size: 100% 100%;height:315px; border-radius: 0;">
-		<h1 style=" padding-right: 15px;color: #fff;">
-			<i>Welcome To Pay Cart Shopping</i>
-		</h1>
+	<div class="jumbotron m-0 p-0 img-fluid">
+		<img src="image/7.jpg" class="m-0 p-0" style="width: 100%; height: 400px;position: 100% 100%;background-size: 100% 100%">
 	</div>

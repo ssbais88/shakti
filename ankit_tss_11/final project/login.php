@@ -26,3 +26,6 @@ include("common-files/slider.php");
 		</div>
 	</div>
 </div>
+<?php
+include("common-files/footer.php");
+?>
