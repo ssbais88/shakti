@@ -18,17 +18,18 @@ include("header.php")
 						<h4 class="m-0">Signup</h4>
 					</div>
 					<div class="card-body">
+						<form action="save.php" method="post">
 						<div class="form-group">
 							<label>Full Name</label>
-							<input type="text" placeholder="Full Name" class="form-control">
+							<input type="text" name="fullname" placeholder="Full Name" class="form-control">
 						</div>
 						<div class="form-group">
 							<label>Email</label>
-							<input type="text" placeholder="Email" class="form-control">
+							<input type="text" name="email" placeholder="Email" class="form-control">
 						</div>
 						<div class="form-group">
 							<label>Password</label>
-							<input type="password" placeholder="Password" class="form-control">
+							<input type="password" name="pass" placeholder="Password" class="form-control">
 						</div>
 						<div class="form-group">
 							<label>Re-Password</label>
@@ -36,33 +37,34 @@ include("header.php")
 						</div>
 						<div class="form-group">
 							<label>Gender</label>
-							<input type="radio" name="gender" >Male
-							<input type="radio" name="gender" >Female
+							<input type="radio" name="gender" value="Male" >Male
+							<input type="radio" name="gender" value="Female" >Female
 						</div>
 						<div class="form-group">
 							<label>Address</label>
-							<textarea class="form-control" placeholder="Address"></textarea>
+							<textarea class="form-control" name="add" placeholder="Address"></textarea>
 						</div>
 						<div class="form-group">
 							<label>City</label>
-							<select class="form-control">
+							<select class="form-control" name="city">
 								<option>Select</option>
 								<option>Indore</option>
 								<option>Bhopal</option>
 								<option>Mumbai</option>
 								<option>Pune</option>
-								<option>Select</option>
+								<option>Udaipur</option>
 							</select>
 						</div>
 						<div class="form-group">
 							<label>Contact</label>
-							<input type="text" placeholder="Contact" class="form-control">
+							<input type="text" name="contact" placeholder="Contact" class="form-control">
 						</div>
 					</div>
 					<div class="card-footer">
-						<input type="submit" name="Submit" class="btn btn-success">
+						<input type="submit" value="Submit" class="btn btn-success">
 						<a href="index.php" class="btn btn-danger">Close</a>
 					</div>
+					</form>
 				</div>
 			</div>
 		</div>

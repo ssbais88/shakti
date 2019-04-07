@@ -35,7 +35,7 @@
 		</button>
 		<div class="collapse navbar-collapse" id="mymenu">
 			<ul class="navbar-nav">
-				<li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+				<li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">About</a></li>
 				<li class="nav-item"><a href="#" class="nav-link">FAQ</a></li>
 			</ul>
