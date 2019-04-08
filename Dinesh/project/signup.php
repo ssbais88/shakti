@@ -18,18 +18,18 @@
            	 		<h4>Signup</h4>
            	 	</div>
            	 	<div class="card-body">
-           	 		<form>
+           	 		<form action="save.php" method="post">
            	 			<div class="form-group">
 									<label>Full Name</label>
-									<input type="Text" placeholder="Full Name" class="form-control">
+									<input type="Text" name="full_name" placeholder="Full Name" class="form-control">
 								</div>
 								<div class="form-group">
 									<label>Username/Email</label>
-									<input type="Text" placeholder="Username" class="form-control">
+									<input type="Text" name="username" placeholder="Username" class="form-control">
 								</div>
 								<div class="form-group">
 									<label>Password</label>
-									<input type="password" placeholder="Password" class="form-control">
+									<input type="password" name="pass" placeholder="Password" class="form-control">
 								</div>
 								<div class="form-group">
 									<label>Re-Password</label>
@@ -37,20 +37,20 @@
 								</div>
 								<div class="form-group">
 									<label>Gender</label>
-									<input type="radio" name="gender" />Male
-									<input type="radio" name="gender" />Female
+									<input type="radio"value="male" name="gender" />Male
+									<input type="radio"value="female" name="gender" />Female
 								</div>
 								<div class="form-group">
 									<label>Address</label>
-									<textarea class="form-control" placeholder="Address"></textarea>
+									<textarea class="form-control" name="add" placeholder="Address"></textarea>
 								</div>
 								<div class="form-group">
 									<label>Contact</label>
-									<input type="text" placeholder="Contact" class="form-control">
+									<input type="text" name="contact" placeholder="Contact" class="form-control">
 								</div>
 								<div class="form-group">
 									<label>City</label>
-									<select class="form-control">
+									<select class="form-control" name="city">
 										<option>Select</option>
 										<option>Indore</option>
 										<option>Bhopal</option>
