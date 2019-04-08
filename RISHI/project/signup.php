@@ -1,17 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-	<meta name="viewport" content="width=device-width initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/bootstrap.bundle.js"></script>
-</head>
-<body>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6 offset-md-4">
+<?php
+include("header.php")
+?>
+
+		<div class="col-md-9 ">
 				<div class="card">
 					<div class="card-header">
 						<div>
@@ -20,16 +11,20 @@
 					</div>
 					<div class="card-body">
 						<div class="form-group">
-							<label for="full_name">USER NAME</label>
+							<label for="full">Full NAME</label>
 						<div class="input-group">
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fa fa-user" aria-hidden="true"></i>
 								</span>
 							</div>
-							<input type="text" class="form-control" placeholder="fullname">
+							<input type="text" id="full" class="form-control" placeholder="fullname">
 							</div>
 
-				</div>
+				    </div>
+				    <div class="form-group">
+				    	<label for="user">User Name</label>
+				    	<div></div>
+				    </div>
 				<div class="form-group">
 							<label for="full_name">MOBILE NO.</label>
 						<div class="input-group">
@@ -38,7 +33,7 @@
 
 								</span>
 							</div>
-							<input type="text" class="form-control" placeholder="mobile no.">
+							<input type="text" id="full_name" class="form-control" placeholder="mobile no.">
 							</div>
 							
 				</div>
@@ -86,10 +81,6 @@
 				</div>
 				
 			</div>
-			
-		</div>
-		
-	</div>
 
 </body>
 </html>
