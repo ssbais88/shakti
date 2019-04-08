@@ -1,9 +1,7 @@
 <?php
 // print_r($_POST);
 
-$con = mysqli_connect("localhost", "admin", "admin", "tss_11");
-
-
+include("db.php");
 $a = $_POST['full_name'];
 $b = $_POST['username'];
 $c = $_POST['pass'];
