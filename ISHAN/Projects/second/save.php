@@ -13,12 +13,12 @@ $e = $_POST['add'];
 $f = $_POST['contact'];
 $g = $_POST['city'];
 
-$query = "INSERT INTO user(`full_name`,`username`,`password`,`gender`,`add`,`contact`,`city`) VALUES 
+echo $query = "INSERT INTO user(full_name,username,password,gender,address,contact,city) VALUES 
 ('$a','$b','$c','$d','$e','$f','$g')";
 
 // print_r($query);
 mysqli_query($con, 	$query);
 
-header("location:login.php");
+// header("location:login.php");
 
 ?>

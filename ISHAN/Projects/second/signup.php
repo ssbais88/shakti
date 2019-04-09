@@ -39,7 +39,7 @@ include("header.php");
 					</div>
 					<div class="form-group">
 						<label>Contact</label>
-						<input type="text" name="contact" placeholder="Enter Mobile or Phone">
+						<input type="text" name="contact" class="form-control" placeholder="Enter Mobile or Phone">
 					</div>
 					<div class="form-group">
 						<label>City</label>
@@ -50,6 +50,7 @@ include("header.php");
 							<option>JABALPUR</option>
 							<option>KATNI</option>
 							<option>UJJAIN</option>
+							<option>DELHI</option>
 						</select>
 					</div>
 			<div class="card-footer">
