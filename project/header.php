@@ -51,12 +51,37 @@
 		<li class="nav-item">
 			<a href="#" class="nav-link">My Cart <i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
 		</li>
-		<li class="nav-item">
-			<a href="login.php" class="nav-link">Login <i class="fa fa-user" aria-hidden="true"></i></a>
-		</li>
-		<li class="nav-item">
-			<a href="signup.php" class="nav-link">Signup <i class="fa fa-user" aria-hidden="true"></i></a>
-		</li> 
+
+		<?php 
+		if(isset($_SESSION['is_user_logged_in']))
+		{ ?>
+
+			<li class="nav-item">
+				<a href="my_account.php" class="nav-link">My Account <i class="fa fa-user" aria-hidden="true"></i></a>
+			</li>
+			<li class="nav-item">
+				<a href="logout.php" class="nav-link">Logout <i class="fa fa-user" aria-hidden="true"></i></a>
+			</li> 
+
+		<?php }
+		else
+		{ ?>
+
+			<li class="nav-item">
+				<a href="login.php" class="nav-link">Login <i class="fa fa-user" aria-hidden="true"></i></a>
+			</li>
+			<li class="nav-item">
+				<a href="signup.php" class="nav-link">Signup <i class="fa fa-user" aria-hidden="true"></i></a>
+			</li> 
+
+
+		<?php 
+		}
+		?>
+
+
+
+		
 	</ul>
  
 
