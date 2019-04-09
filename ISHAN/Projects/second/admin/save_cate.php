@@ -4,9 +4,9 @@
 
 $con = mysqli_connect("localhost","root","","ebay");
 
-$cat = $_POST['category'];
+$a = $_POST['category'];
 
-$query = "INSERT INTO category(`cate`) VALUES ('$cat')";
+$query = "INSERT INTO category(category) VALUES ('$a')";
 
 mysqli_query($con, $query);
 

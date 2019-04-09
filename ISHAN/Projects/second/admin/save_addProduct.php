@@ -9,7 +9,7 @@ $c = $_POST['p_price'];
 $d = $_POST['detail'];
 $e = $_POST['discount'];
 
-$query = "INSERT INTO product(`pname`,`pcate`,`pprice`,`pdetail`,`pdiscount`) VALUES ('$a','$b','$c','$d','$e')";
+$query = "INSERT INTO product(pname,pcate,pprice,pdetail,pdiscount) VALUES ('$a','$b','$c','$d','$e')";
 
 mysqli_query($con, $query);
 

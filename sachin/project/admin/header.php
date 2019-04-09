@@ -19,13 +19,13 @@
 					<a class="nav-link" href="dashboard.php">Dashboard</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Add Product</a>
+					<a class="nav-link" href="add_product.php">Add Product</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">View Product</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Add Category</a>
+					<a class="nav-link" href="add_category.php">Add Category</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">View Category</a>
@@ -37,7 +37,7 @@
 					<a class="nav-link" href="#">Setting</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Logout</a>
+					<a class="nav-link" href="logout.php">Logout</a>
 				</li>
 
 
