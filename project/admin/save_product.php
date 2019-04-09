@@ -1,6 +1,10 @@
 <?php
 // print_r($_POST);
+<<<<<<< HEAD
 $con = mysqli_connect("localhost", "admin", "admin", "tss_11");
+=======
+include("../db.php");
+>>>>>>> 27f339788b07ab55c1ea115ece0da473526160bd
 
 $a = $_POST['p_name'];
 $b = $_POST['p_price'];
