@@ -1,5 +1,7 @@
 <?php
+session_start();
 include("header.php");
+
 ?>
 <div class="col-md-9 mb-1">
 			<div class="row">
@@ -9,16 +11,27 @@ include("header.php");
 			</div>
 <div class="row">
 	<div class="col-sm-8 offset-2">
-		<div class="card">
+		<form action="authenti.php" method="post">
+			<div class="card">
 			<div class="card-body">
 				<label>User Id</label>
-				<input type="text" name="" class="form-control" placeholder="Enter your name">
+				<input type="text" name="username" class="form-control" placeholder="Enter your name">
 				<label>Password</label>
-				<input type="password" name="" class="form-control" placeholder="Enter your Password">
+				<input type="password" name="password" class="form-control" placeholder="Enter your Password">
 			</div>
 			<div class="card-footer">
-				<input type="submit" name="" class="btn btn-success" value="Signin">
+				<input type="submit" class="btn btn-success" value="Signin">
+					<br><br>
+					<p class="text-danger text-center">
+						<?php
+							if (isset($_SESSION['msg'])) {
+								echo $_SESSION['msg'];
+								unset($_SESSION['msg']);
+							}
+						?>
+					</p>
 			</div>
 		</div>
+		</form>
 	</div>
 </div>
