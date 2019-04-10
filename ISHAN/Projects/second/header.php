@@ -69,10 +69,33 @@
 		</div>
 		<div class="col-md-7">
 			<ul class="nav justify-content-end">
-		<button class=" btn nav-item"><a href="login.php" class="nav-link">Login <i class="fa fa-lock" aria-hidden="true"></i></a></button>
-		<button class="btn nav-item"><a href="signup.php" class="nav-link">Signup <i class="fa fa-sign-in" aria-hidden="true"></i></a></button>
-		<button class="btn nav-item" data-toggle="modal" data-target="#cart"><a href="#" class="nav-link">Cart <i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="badge badge-warning badge-pill">2</span></a></button>
-	</ul>
+					<?php
+					if (isset($_SESSION['is_user_logged_in']))
+					 {?>
+					<button class=" btn nav-item">
+						<a href="my_account.php" class="nav-link">My Account <i class="fa fa-user" aria-hidden="true"></i></a>
+					</button>
+					<button class="btn nav-item">
+						<a href="logout.php" class="nav-link">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+					</button>	
+
+					<?php
+				}
+				else
+					{ ?>
+					<button class=" btn nav-item">
+						<a href="login.php" class="nav-link">Login <i class="fa fa-lock" aria-hidden="true"></i></a>
+					</button>
+					<button class="btn nav-item">
+						<a href="signup.php" class="nav-link">Signup <i class="fa fa-sign-in" aria-hidden="true"></i></a>
+					</button>
+				<?php
+			}?>
+
+					<button class="btn nav-item">
+						<a href="#" class="nav-link">Cart <i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="badge badge-warning badge-pill">2</span></a>
+					</button>
+			</ul>
 		</div>
 	</div>
 </div>
