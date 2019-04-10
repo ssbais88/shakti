@@ -1,4 +1,5 @@
 <?php
+include("db.php");
 include("header.php");
 ?>
 		<div class="col-md-9 border p-4">
