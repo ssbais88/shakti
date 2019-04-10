@@ -1,5 +1,9 @@
 <?php
+include("db.php");
 include("header.php");
+
+$query = "SELECT * FROM product";
+$result = mysqli_query($con, $query);
 ?>
 		<div class="col-md-9">
 			<div class="row">
@@ -8,84 +12,37 @@ include("header.php");
 				</div>
 			</div>
 			<div class="row">
+				<?php
+				while($data=mysqli_fetch_assoc($result))
+				{ 
+					$a = $data['product_price'];
+					$b = $data['discount'];
+
+					$x = $a * $b/100;
+					$y = $a-$x;
+
+
+					?>
 				<div class="col-md-4">
 					<div class="card mb-2">
 						<div class="card-header">
-							<span class="font-weight-bold">Sony</span>
+							<span class="font-weight-bold"><?php echo $data['product_name'];?></span>
 						</div>
 						<div class="card-body">
 
 						</div>
 						<div class="card-footer">
 							<a href="#" class="btn btn-dark btn-sm">Buy</a>
+							<br />
+							<del>(<?php echo $data['product_price'];?>)</del>
+							<b><?php echo $y; ?>.00</b>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4">
-					<div class="card mb-2">
-						<div class="card-header">
-							<span class="font-weight-bold">Sony</span>
-						</div>
-						<div class="card-body">
-
-						</div>
-						<div class="card-footer">
-							<a href="#" class="btn btn-dark btn-sm">Buy</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="card mb-2">
-						<div class="card-header">
-							<span class="font-weight-bold">Sony</span>
-						</div>
-						<div class="card-body">
-
-						</div>
-						<div class="card-footer">
-							<a href="#" class="btn btn-dark btn-sm">Buy</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="card mb-2">
-						<div class="card-header">
-							<span class="font-weight-bold">Sony</span>
-						</div>
-						<div class="card-body">
-
-						</div>
-						<div class="card-footer">
-							<a href="#" class="btn btn-dark btn-sm">Buy</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="card mb-2">
-						<div class="card-header">
-							<span class="font-weight-bold">Sony</span>
-						</div>
-						<div class="card-body">
-
-						</div>
-						<div class="card-footer">
-							<a href="#" class="btn btn-dark btn-sm">Buy</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="card mb-2">
-						<div class="card-header">
-							<span class="font-weight-bold">Sony</span>
-						</div>
-						<div class="card-body">
-
-						</div>
-						<div class="card-footer">
-							<a href="#" class="btn btn-dark btn-sm">Buy</a>
-						</div>
-					</div>
-				</div>
+				<?php
+				}
+				?>
+				
 
 			</div>
 		</div>
