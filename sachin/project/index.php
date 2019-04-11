@@ -1,56 +1,96 @@
-<?Php
+<?php
 include("header.php");
 ?>
+		<div class="col-md-9">
+			<div class="row">
+				<div class="col-md-12">
+					<h4 class="bg-secondary text-light px-4 py-2">Lastest Product</h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="card mb-2">
+						<div class="card-header">
+							<span class="font-weight-bold">Sony</span>
+						</div>
+						<div class="card-body">
 
-  <div class="container mt-4">
-  	<DIV class="row">
-  		<div class="col-md-3">
-  			<div class="list-group">
-  				<a href="#"class="list-group-item list-group-item-action">electronics</a>
-  				<a href="#"class="list-group-item list-group-item-action">furniture</a>
-  				<a href="#"class="list-group-item list-group-item-action">fashion</a>
-  				<a href="#"class="list-group-item list-group-item-action">accesories</a>
-  			</div>
-  		</div>
-  		<div class="col-md-9">
-  			<DIV class="row">
-  				<div class="col-md-5">
-  					<div class="card">
-  						<!-- <div class="card-header">
-  							
-  						</div> -->
-  						<div class="card-body">
-  							<img src="image/4.jpeg">
-  						</div>
-  						<div class="card-footer">
-  								<a href="#" class="bg-dark text-light" >Buy</a>
-  						</div>
-  					</div>
+						</div>
+						<div class="card-footer">
+							<a href="#" class="btn btn-dark btn-sm">Buy</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card mb-2">
+						<div class="card-header">
+							<span class="font-weight-bold">Sony</span>
+						</div>
+						<div class="card-body">
 
-  				</div>
-  				<div class="col-md-5">
-  					<div class="card">
-  						<!-- <div class="card-header">
-  							
-  						</div> -->
-  						<div class="card-body">
-  							<img src="image/2.jpeg">
-  						</div>
-  						<div class="card-footer">
-  							<a href="#"class="bg-dark text-light">Buy</a>
-  						</div>
-  					</div>
+						</div>
+						<div class="card-footer">
+							<a href="#" class="btn btn-dark btn-sm">Buy</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card mb-2">
+						<div class="card-header">
+							<span class="font-weight-bold">Sony</span>
+						</div>
+						<div class="card-body">
 
-  				</div>
-  			 	
-  			</DIV>  
-  </div>  
+						</div>
+						<div class="card-footer">
+							<a href="#" class="btn btn-dark btn-sm">Buy</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card mb-2">
+						<div class="card-header">
+							<span class="font-weight-bold">Sony</span>
+						</div>
+						<div class="card-body">
+
+						</div>
+						<div class="card-footer">
+							<a href="#" class="btn btn-dark btn-sm">Buy</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card mb-2">
+						<div class="card-header">
+							<span class="font-weight-bold">Sony</span>
+						</div>
+						<div class="card-body">
+
+						</div>
+						<div class="card-footer">
+							<a href="#" class="btn btn-dark btn-sm">Buy</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card mb-2">
+						<div class="card-header">
+							<span class="font-weight-bold">Sony</span>
+						</div>
+						<div class="card-body">
+
+						</div>
+						<div class="card-footer">
+							<a href="#" class="btn btn-dark btn-sm">Buy</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
 </div>
-  </DIV>
-</div>
-  <?php 
-  include("footer.php");
-   ?>
-
-</body>
-</html>
+<?php
+include("footer.php");
+?>

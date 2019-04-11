@@ -18,7 +18,7 @@
            	 		<h4>Signup</h4>
            	 	</div>
            	 	<div class="card-body">
-           	 		<form action="save1.php" method="post">
+           	 		<form action="save.php" method="post">
            	 			<div class="form-group ">
 									<label>Full Name</label>
 									<input type="Text" name="full_name" placeholder="Full Name" class="form-control">
