@@ -31,6 +31,12 @@ $result = mysqli_query($con, $query);
 							<input type="text" placeholder="Product Price" name="p_price" class="form-control">
 						</div>
 						<div class="form-group">
+							<label>Product Image</label>
+							<input type="file" class="form-control">
+						</div>
+
+
+						<div class="form-group">
 							<label>Product Detail</label>
 							<textarea class="form-control" placeholder="Detail" name="p_detail"></textarea>
 						</div>
