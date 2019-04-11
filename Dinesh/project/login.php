@@ -1,4 +1,5 @@
 <?php
+include("db.php");
 include("header.php"); 
  ?>
 
@@ -15,19 +16,29 @@ include("header.php");
 					login
 				</div>
 				<div class="card-body">
-					<form>
+					<form action="auth.php" method="post">
 						<div class="form-group">
 							<label>username</label>
-							<input type="text" placeholder ="username"class="form-control">
+							<input type="text" name="username" placeholder ="username"class="form-control">
 						</div>
 						<div class="form-group">
 							<label>password</label>
-							<input type="password" placeholder ="password"class="form-control">
+							<input type="password" name="password" placeholder ="password"class="form-control">
 						</div>
 				
 				</div>
 				  <div class="card-footer">
 				  	<input type="submit" value="login"  class="btn btn-success">
+                    <br>
+                    <br>
+                    <br>
+				  	<p class="text-danger text-center">
+						<?php
+						if(isset($_SESSION['msg']))
+						{
+							echo $_SESSION['msg'];
+							unset($_SESSION['msg']);
+						}?>
 				  </div>
 					</form>
 			</div>

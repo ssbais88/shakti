@@ -1,15 +1,21 @@
 <?Php
-include("header.php")
+include("header.php");
+$query = "SELECT * FROM category";
+$result = mysqli_query($con, $query);
 ?>
 
   <div class="container mt-4">
   	<DIV class="row">
   		<div class="col-md-3">
   			<div class="list-group">
-  				<a href="#"class="list-group-item list-group-item-action">electronics</a>
-  				<a href="#"class="list-group-item list-group-item-action">furniture</a>
-  				<a href="#"class="list-group-item list-group-item-action">fashion</a>
-  				<a href="#"class="list-group-item list-group-item-action">accesories</a>
+  				<?php
+        while($data=mysqli_fetch_assoc($result))
+        { ?>
+          <a class="list-group-item list-group-item-action" href="#"><?php echo $data['category_name'];?></a>
+
+        <?php
+        }
+        ?>
   			</div>
   		</div>
   		<div class="col-md-9">
