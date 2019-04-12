@@ -1,5 +1,5 @@
 
-<div class="container-fluid bg-dark">
+<div class="container-fluid bg-dark m-0 p-0">
 	<div class="row">
 		<div class="col-md-6">
 			<div class="row">
@@ -54,14 +54,15 @@
 				</h4>
 			</div>
 			<div class="col-md-6">
-				<h3 class="text-light border-bottom">Mail Us</h3>
+				<h3 class="text-light border-bottom">Registered Office At</h3>
 				<h4 class="text-light">
-					eBay India PVT. LTD,
-					4th Floore, infront of-
-					Treasure Island. District
-					Indore, Madhya Pradesh, 
-					58493053 Mail At :
-					abdulislamkhan5@gmail.com
+					eBay International PVT. LTD,
+					Vaishnavi Summit, Ground Floor, 7th Main,
+					80 Feet Road, 3rd Block,
+					Koramangala,
+					Bengaluru - 560034 India
+					CIN : U51109KA2012PTC066107
+					Telephone: 1800 208 9898
 				</h4>
 			</div>
 		</div>

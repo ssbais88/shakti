@@ -1,11 +1,18 @@
 <?php
+include("../db.php");
+	if (! isset($_SESSION['is_user_logged_in']))
+	 {
+		header("location:index.php");
+	}
+	$query = "SELECT * FROM category";
+	$result = mysqli_query($con,$query);
 include("header.php");
-?>
 
+?>
 <div class="container">
 	<div class="row">
 		<div class="col-md-8 offset-2">
-			<h3>Add Any Product Here---</h3>
+			<h3>Add Any Product Here....</h3>
 			<form action="save_addProduct.php" method="post">
 				<div class="card">
 					<div class="card-header">
@@ -20,23 +27,25 @@ include("header.php");
 							<label>Product Category</label>
 							<select class="form-control" name="p_cate">
 								<option>Select</option>
-								<option>Mobile</option>
-								<option>Home Appliance</option>
-								<option>Electronic</option>
-								<option>Fashion</option>
+								<?php
+								while ($data = mysqli_fetch_assoc($result))
+								{ ?>
+									<option><?php echo $data['category']; ?></option>
+								<?php }
+								?>
 							</select>
 						</div>
 						<div class="form-group">
 							<label>Product Price</label>
-							<input type="text" name="p_price" class="form-control" placeholder="Enter Your Price">
+							<input type="text" name="p_price" class="form-control" placeholder="Enter Product Price Here">
 						</div>
-						<div class="form-group">
+					<div class="form-group">
 							<label>Product Detail</label>
-							<input type="text" name="detail" class="form-control" placeholder="Enter Product Name">
+							<textarea class="form-control" placeholder="Enter Details of Product" name="detail"></textarea>
 						</div>
 						<div class="form-group">
-							<label>Discount</label>
-							<input type="text" name="discount" class="form-control" placeholder="Enter Discount Number">
+							<label>Product Discount</label>
+							<input type="text" name="discount" class="form-control" placeholder="Enter Product Discount Here">
 						</div>
 					</div>
 					<div class="card-footer">
