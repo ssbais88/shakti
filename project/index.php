@@ -28,8 +28,9 @@ $result = mysqli_query($con, $query);
 						<div class="card-header">
 							<span class="font-weight-bold"><?php echo $data['product_name'];?></span>
 						</div>
+						<img src="admin/upload/<?php echo $data['image_name']; ?>" style="height:150px !important; width: 100%;" />
 						<div class="card-body">
-
+							
 						</div>
 						<div class="card-footer">
 							<a href="#" class="btn btn-dark btn-sm">Buy</a>
