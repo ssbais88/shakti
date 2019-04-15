@@ -1,3 +1,10 @@
+<?Php 
+
+$query = "SELECT * FROM category";
+$result = mysqli_query($con, $query);
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -73,3 +80,17 @@
   	<h2>Cmping Gear</h2>
   	<P>sjdoip dpoijsdi cdjpvpd sdalpo </P>
   </div>
+<div class="container mt-4">
+    <DIV class="row">
+      <div class="col-md-3">
+        <div class="list-group">
+          <?php
+        while($data=mysqli_fetch_assoc($result))
+        { ?>
+          <a class="list-group-item list-group-item-action" href="#"><?php echo $data['cat_name'];?></a>
+
+        <?php
+        }
+        ?>
+        </div>
+      </div>

@@ -1,5 +1,5 @@
 <?php 
-include("bd.php");
+include("db.php");
  include("header.php");
  ?>
    
