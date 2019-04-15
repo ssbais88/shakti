@@ -1,6 +1,8 @@
 <?php
 $query="SELECT * FROM category";
 $result=mysqli_query($con, $query);
+$qu="SELECT * FROM user";
+$re=mysqli_query($con, $qu);
 ?>
 <!DOCTYPE html>
 <html>
@@ -58,8 +60,17 @@ $result=mysqli_query($con, $query);
 			<?php
 			if (isset($_SESSION['is_user_logged_in'])) 
 			{?>
+			<li class="nav-item">
+				<?php
+				while ($da=mysqli_fetch_assoc($re))
+				{
+				?>					
+				<a href="myprofile.php" class="nav-link" style="color: #000;"><?php echo $da['fullname']; ?></a>
+				<?php
+				}
+				?>
+				</li>
 			<li class="nav-item"><a href="myaccount.php" class="nav-link" style="color: #000;">My Account <i class="fa fa-user"></i></a></li>
-			<li class="nav-item"><a href="myprofile.php" class="nav-link" style="color: #000;">My Profile <i class="fa fa-user"></i></a></li>
 			<li class="nav-item"><a href="logout.php" class="nav-link" style="color: #000;">Logout <i class="fa fa-sign-out"></i></a></li>
 			<?php
 			}
