@@ -1,8 +1,13 @@
 <?php
 // print_r($_POST);
-$con=mysqli_connect("localhost","root","","babycare");
+// die;
+include("../db.php");
+if(! isset($_SESSION['is_admin_logged_in']))
+{
+	header("location:index.php");
+}
 $a=$_POST['cate-name'];
 $query="INSERT INTO CATEGORY(categoryname) VALUES('$a')";
 mysqli_query($con,$query);
-header("location:deshboard.php");
+header("location:dashboard.php");
 ?>

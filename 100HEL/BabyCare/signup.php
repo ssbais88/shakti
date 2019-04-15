@@ -1,18 +1,16 @@
 <?php
+include("db.php");
 include("header.php")
 ?>
-	<div class="bg-secondary my-2">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<h3 class="bg-secondary text-light my-2 p-1">User Signup</h3>
-				</div>
+	<div class="col-md-9">
+		<div class="row">
+			<div class="col-md-12">
+				<h3 class="bg-secondary text-light my-2 p-1">User Signup</h3>
 			</div>
 		</div>
-	</div>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6 offset-3">
+			<div class="col-md-8 offset-2">
 				<div class="card">
 					<div class="card-header">
 						<h4 class="m-0">Signup</h4>
@@ -69,6 +67,7 @@ include("header.php")
 			</div>
 		</div>
 	</div>
+</div>
 <?php
 include("footer.php")
 ?>
