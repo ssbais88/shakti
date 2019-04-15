@@ -15,10 +15,14 @@ include("header.php");
 							Registration
 						</div>
 						<div class="card-body">
-							<form action="save.php" method="post">
+							<form action="save.php" method="post" enctype="multipart/form-data">
 								<div class="form-group">
 									<label>Full Name</label>
 									<input type="Text" name="full_name" placeholder="Full Name" class="form-control">
+								</div>
+								<div class="form-group">
+									<label>Profile Pic</label>
+									<input type="file" name="image" placeholder="Full Name" class="form-control">
 								</div>
 								<div class="form-group">
 									<label>Username/Email</label>

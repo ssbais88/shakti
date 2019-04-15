@@ -1,3 +1,8 @@
+<?php
+$con = mysqli_connect("localhost","root","","ebay");
+$query = "SELECT * FROM category";
+$result = mysqli_query($con,$query);
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,51 +19,6 @@
 			background-color:#33FF99;
 
 		}
-		.a2{
-				height: 280px;
-				width: 300px;
-				background-image:url("img/2.jpg");
-				background-size: 100% 100%;
-		}
-		.a3{
-				height: 280px;
-				width: 300px;
-				background-image:url("img/3.jpg");
-				background-size: 100% 100%;
-		}
-		.a4{
-				height: 280px;
-				width: 300px;
-				background-image:url("img/4.jpeg");
-				background-size: 100% 100%;
-		}
-		.a5{
-				height: 280px;
-				width: 300px;
-				background-image:url("img/5.jpg");
-				background-size: 100% 100%;
-		}
-		.a6{
-				height: 280px;
-				width: 300px;
-				background-image:url("img/6.png");
-				background-size: 100% 100%;
-		}
-		.a7{
-				height: 280px;
-				width: 300px;
-				background-image:url("img/7.jpg");
-				background-size: 100% 100%;
-		}
-		.lg{
-			color:#33FF99;
-		}
-		.div1{
-			float: left;
-		}
-		.div2{
-			float: left;
-		}
 	</style>
 </head>
 <body>
@@ -69,10 +29,33 @@
 		</div>
 		<div class="col-md-7">
 			<ul class="nav justify-content-end">
-		<button class=" btn nav-item"><a href="login.php" class="nav-link">Login <i class="fa fa-lock" aria-hidden="true"></i></a></button>
-		<button class="btn nav-item"><a href="signup.php" class="nav-link">Signup <i class="fa fa-sign-in" aria-hidden="true"></i></a></button>
-		<button class="btn nav-item" data-toggle="modal" data-target="#cart"><a href="#" class="nav-link">Cart <i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="badge badge-warning badge-pill">2</span></a></button>
-	</ul>
+					<?php
+					if (isset($_SESSION['is_user_logged_in']))
+					 {?>
+					<button class=" btn nav-item">
+						<a href="my_account.php" class="nav-link">My Account <i class="fa fa-user" aria-hidden="true"></i></a>
+					</button>
+					<button class="btn nav-item">
+						<a href="logout.php" class="nav-link">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+					</button>	
+
+					<?php
+				}
+				else
+					{ ?>
+					<button class=" btn nav-item">
+						<a href="login.php" class="nav-link">Login <i class="fa fa-lock" aria-hidden="true"></i></a>
+					</button>
+					<button class="btn nav-item">
+						<a href="signup.php" class="nav-link">Signup <i class="fa fa-sign-in" aria-hidden="true"></i></a>
+					</button>
+				<?php
+			}?>
+
+					<button class="btn nav-item">
+						<a href="#" class="nav-link">Cart <i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="badge badge-warning badge-pill">2</span></a>
+					</button>
+			</ul>
 		</div>
 	</div>
 </div>
@@ -115,29 +98,13 @@
 	<div class="row">
 		<div class="col-md-3 mb-1">
 			<div class="list-group">
-				<a href="#" class="list-group-item list-group-item-action a1">Men's</a>
-				<a href="#" class="list-group-item list-group-item-action a1">Women's</a>
-				<a href="#" class="list-group-item list-group-item-action a1">Mobile & Tablet</a>
-				<a href="#" class="list-group-item list-group-item-action a1">Home Applainces</a>
-				<a href="#" class="list-group-item list-group-item-action a1">Kitchen</a>
+				<?php
+					while($data=mysqli_fetch_assoc($result))
+					{ ?>
+				<a href="#" class="list-group-item list-group-item-action a1"><?php echo $data['category']; ?></a>
+
+				<?php
+				}
+				?>
 			</div>
 		</div>
-		
-					<!-- Login and Signup  popup or modal id Element  -->
-<div id="cart" class="modal fade">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header"><h2>My Cart(0)</h2>
-			</div>
-			<div class="modal-body">
-			<h3 class="text-center text-primary">Your Cart is Empty</h3>
-			<img src="img/8.png" class="img-thumbnail"> 
-			</div>
-			<div class="modal-footer">
-				<input class="btn btn-warning" data-dismiss="modal" type="reset" name="" value="Shop Now">
-			</div>
-		</div>
-	</div>
-</div>
-</body>
-</html>

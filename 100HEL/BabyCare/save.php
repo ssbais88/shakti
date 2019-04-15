@@ -10,7 +10,7 @@ $e=$_POST['add'];
 $f=$_POST['city'];
 $g=$_POST['contact'];
 
-$query = "INSERT INTO USER (fullname,email,password,gender,address,city,contact) VALUE ('$a','$b','$c','$d','$e','$f','$g')";
+$query = "INSERT INTO USER (fullname,email,password,gender,address,city,contact) VALUES ('$a','$b','$c','$d','$e','$f','$g')";
 
 mysqli_query($con, $query);
 

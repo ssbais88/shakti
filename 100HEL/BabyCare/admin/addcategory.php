@@ -1,4 +1,9 @@
 <?php
+include("../db.php");
+if (! isset($_SESSION['is_admin_logged_in']))
+{
+	header("location:index.php");
+}
 include("header.php");
 ?>
 <div class="container">
@@ -17,7 +22,7 @@ include("header.php");
 						</div>
 					</div>
 					<div class="card-footer">
-						<input type="submit" value="Add" name="">
+						<input type="submit" value="Add">
 					</div>
 				</form>
 			</div>

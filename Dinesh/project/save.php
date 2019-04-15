@@ -1,12 +1,11 @@
 <?php 
-    // print_r($_POST);
-
-
- $con = mysqli_connect("localhost","root","","dines");
+   
+   include("db.php")
 
  $a=$_POST['full_name'];
  $b=$_POST['username'];
  $c=$_POST['pass'];
+ $c=sha1($c);
  $d=$_POST['gender'];
  $e=$_POST['add'];
  $f=$_POST['contact'];

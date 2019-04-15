@@ -1,9 +1,22 @@
 <?php
 include("db.php");
 include("header.php");
+if(isset($_GET['category']))
+{
+	$a = $_GET['category'];
+	$query = "SELECT * FROM product WHERE product_category='$a'";
+	$result = mysqli_query($con, $query);
+}
+else
+{
+	$query = "SELECT * FROM product";
+	$result = mysqli_query($con, $query);
 
-$query = "SELECT * FROM product";
-$result = mysqli_query($con, $query);
+}
+
+
+
+
 ?>
 		<div class="col-md-9">
 			<div class="row">
@@ -28,8 +41,9 @@ $result = mysqli_query($con, $query);
 						<div class="card-header">
 							<span class="font-weight-bold"><?php echo $data['product_name'];?></span>
 						</div>
+						<img src="admin/upload/<?php echo $data['image_name']; ?>" style="height:150px !important; width: 100%;" />
 						<div class="card-body">
-
+							
 						</div>
 						<div class="card-footer">
 							<a href="#" class="btn btn-dark btn-sm">Buy</a>

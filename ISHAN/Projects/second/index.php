@@ -1,5 +1,8 @@
 <?php
+		include("db.php");
 		include("header.php");
+		$query =" SELECT * FROM product";
+		$result = mysqli_query($con,$query);
 ?>
 		<div class="col-md-9 mb-1">
 			<div class="row">
@@ -8,42 +11,30 @@
 				</div>
 			</div>
 			<div class="row">
+				<?php
+				while($data=mysqli_fetch_assoc($result))
+				{ 
+					$a = $data['pprice'];
+					$b = $data['pdiscount'];
+
+					$x = $a * $b /100;
+					$y = $a - $x;
+				?>
 				<div class="col-md-4 mb-1">
 					<div class="card">
-						<div class="card-body a2"></div>
-						<div class="card-footer"><button class="btn btn-danger">Add to Cart</button><button class="btn btn-success float-right">Buy Now</button></div>
+						<div class="card-header">
+							<span class="font-weight-bold"><?php echo $data['pname']; ?></span>
+						</div>
+						<div class="card-body"></div>
+						<div class="card-footer">
+							<button class="btn btn-success">Buy</button>
+							<del>(<?php echo $data['pprice']; ?>)</del>
+							<b><?php echo $y; ?>.00</b>
+					</div>
 					</div>
 				</div>
-				<div class="col-md-4 mb-1">
-					<div class="card">
-						<div class="card-body a3"></div>
-						<div class="card-footer"><button class="btn btn-danger">Add to Cart</button><button class="btn btn-success float-right">Buy Now</button></div>
-					</div>
-				</div>
-				<div class="col-md-4 mb-1">
-					<div class="card">
-						<div class="card-body a4"></div>
-						<div class="card-footer"><button class="btn btn-danger">Add to Cart</button><button class="btn btn-success float-right">Buy Now</button></div>
-					</div>
-				</div>
-				<div class="col-md-4 mb-1">
-					<div class="card">
-						<div class="card-body a5"></div>
-						<div class="card-footer"><button class="btn btn-danger">Add to Cart</button><button class="btn btn-success float-right">Buy Now</button></div>
-					</div>
-				</div>
-				<div class="col-md-4 mb-1">
-					<div class="card">
-						<div class="card-body a6"></div>
-						<div class="card-footer"><button class="btn btn-danger">Add to Cart</button><button class="btn btn-success float-right">Buy Now</button></div>
-					</div>
-				</div>
-				<div class="col-md-4 mb-1">
-					<div class="card">
-						<div class="card-body a7"></div>
-						<div class="card-footer"><button class="btn btn-danger">Add to Cart</button><button class="btn btn-success float-right">Buy Now</button></div>
-					</div>
-				</div>
+			<?php }
+			?>
 			</div>
 		</div>
 	</div>

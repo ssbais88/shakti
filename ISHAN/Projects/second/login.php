@@ -1,7 +1,6 @@
 <?php
-session_start();
+include("db.php");
 include("header.php");
-
 ?>
 <div class="col-md-9 mb-1">
 			<div class="row">
@@ -35,3 +34,7 @@ include("header.php");
 		</form>
 	</div>
 </div>
+</div>
+<?php
+		include("footer.php");
+?>
