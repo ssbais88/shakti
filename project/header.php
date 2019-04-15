@@ -41,9 +41,9 @@ $result = mysqli_query($con, $query);
 	<div id="myMenu" class="collapse navbar-collapse">
 	<ul class="navbar-nav">
 		<li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
-		<li class="nav-item"><a class="nav-link" href="#">About</a></li>
-		<li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-		<li class="nav-item"><a class="nav-link" href="#">Help</a></li>
+		<li class="nav-item">
+			<a href="#" class="nav-link">My Cart <i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+		</li>
 		
 	</ul>
 	</div>
@@ -52,9 +52,7 @@ $result = mysqli_query($con, $query);
 		<button type="submit" class="btn btn-dark"><i class="fa fa-search" aria-hidden="true"></i></button>
 	</form>
 	<ul class="navbar-nav">
-		<li class="nav-item">
-			<a href="#" class="nav-link">My Cart <i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-		</li>
+		
 
 		<?php 
 		if(isset($_SESSION['is_user_logged_in']))
@@ -62,6 +60,9 @@ $result = mysqli_query($con, $query);
 
 			<li class="nav-item">
 				<a href="my_account.php" class="nav-link">My Account <i class="fa fa-user" aria-hidden="true"></i></a>
+			</li>
+			<li class="nav-item">
+				<a href="my_profile.php" class="nav-link">My Profile <i class="fa fa-user" aria-hidden="true"></i></a>
 			</li>
 			<li class="nav-item">
 				<a href="logout.php" class="nav-link">Logout <i class="fa fa-user" aria-hidden="true"></i></a>
@@ -113,7 +114,7 @@ $result = mysqli_query($con, $query);
 				<?php
 				while($data=mysqli_fetch_assoc($result))
 				{ ?>
-					<a class="list-group-item list-group-item-action" href="#"><?php echo $data['category_name'];?></a>
+					<a class="list-group-item list-group-item-action" href="index.php?category=<?php echo $data['category_name']; ?>"><?php echo $data['category_name'];?></a>
 
 				<?php
 				}
