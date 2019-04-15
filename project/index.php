@@ -1,9 +1,22 @@
 <?php
 include("db.php");
 include("header.php");
+if(isset($_GET['category']))
+{
+	$a = $_GET['category'];
+	$query = "SELECT * FROM product WHERE product_category='$a'";
+	$result = mysqli_query($con, $query);
+}
+else
+{
+	$query = "SELECT * FROM product";
+	$result = mysqli_query($con, $query);
 
-$query = "SELECT * FROM product";
-$result = mysqli_query($con, $query);
+}
+
+
+
+
 ?>
 		<div class="col-md-9">
 			<div class="row">
