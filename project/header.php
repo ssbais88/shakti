@@ -1,3 +1,8 @@
+	<?php
+	include ("db.php");
+$query = "SELECT * FROM category";
+$result = mysqli_query($con, $query);
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -106,9 +111,14 @@
 	<div class="row">
 		<div class="col-md-3">
 			<div class="list-group">
-				<a class="list-group-item list-group-item-action" href="#">Mobile</a>
-				<a class="list-group-item list-group-item-action" href="#">Home Applicance</a>
-				<a class="list-group-item list-group-item-action" href="#">Electronics</a>
-				<a class="list-group-item list-group-item-action" href="#">Fashion</a>
+				<?php
+				while($data=mysqli_fetch_assoc($result))
+				{ ?>
+					<a class="list-group-item list-group-item-action" href="#"><?php echo $data['category_name'];?></a>
+
+				<?php
+				}
+				?>
+				
 			</div>
 		</div>

@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 			<?php
 // print_r($_POST);
+=======
+<?php
+>>>>>>> 65bcba31006394b82e26022fb23a962ef4b4d824
 include("db.php");
-
 $u = $_POST['username'];
 $p = $_POST['password'];
 

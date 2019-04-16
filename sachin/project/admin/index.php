@@ -16,7 +16,7 @@
 	</nav>
 	<div class="row m-4 p-4">
 		<div class="col-md-4 offset-md-4">
-					<form action="auth.php"method="post">
+					<form action="auth.php "method="post">
 			<div class="card">
 				<div class="card-header">
 					<b>Admin Login</b>
@@ -36,8 +36,8 @@
 					<input type="submit" value="Login" class="btn btn-success">
 				</div>
 				<Br />
-				<Br />
-				<!-- <p class="text-danger text-center">
+		<Br />
+				<p class="text-danger text-center">
 					<?php
 					if(isset($_SESSION['msg']))
 					{
@@ -45,10 +45,10 @@
 						unset($_SESSION['msg']);
 					}
 					?>	
-				</p> -->
+				</p> 
 			</div>
 					</form>
 		</div>
 	</div>
 </body>
-</html>
+</html> 

@@ -23,8 +23,8 @@
 					<a href="#" class="nav-link">ABOUT</a>
 				</li>
 				<li class="nav-item dropdown">
-					<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="#yadav">MORE</a>
-					<div id="yadav" class="dropdown-menu">
+					<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">MORE</a>
+					<div class="dropdown-menu">
 					<a href="#" class="dropdown-item">help</a>
 					<a href="#" class="dropdown-item">contact</a>
 					<a href="#" class="dropdown-item">mails</a>
@@ -32,7 +32,7 @@
 				</li>
 			</ul>
 		</div>
-				<div class="form-group mb-0">
+				<div class="form-group mb-0 ">
 					<div class="input-group">
 					<div class="input-group-append">
 					<input type="text" placeholder="search" class="form-control">
@@ -44,7 +44,7 @@
 				</div>			
 				<ul class="navbar-nav">
 					<li class="nav-item">
-						<a href="#" class="nav-link">
+						<a href="login.php" class="nav-link">
 							<i class="fa fa-lock"></i> Login
 						</a>
 					</li>

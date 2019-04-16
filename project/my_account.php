@@ -6,11 +6,9 @@ if(! isset($_SESSION['is_user_logged_in']))
 {
 	header("location:login.php");
 }
-
-
 include("header.php");
 ?>
-		<div class="col-md-9 border p-4">
+<div class="col-md-9 border p-4">
 			<div class="row">
 				<div class="col-md-12">
 					<h4 class="bg-secondary text-light px-4 py-2">My Account</h4>

@@ -3,12 +3,12 @@
 
 
 
-// include("../db.php");
+include("../db.php");
 $con=mysqli_connect("localhost","root","password","myproject");
-// if(! isset($_SESSION['is_admin_logged_in']))
-// {
-// 	header("location:index.php");
-// }
+if(! isset($_SESSION['is_admin_logged_in']))
+{
+	header("location:index.php");
+}
 
 $a =$_POST['p_name'];
 $b = $_POST['p_price'];

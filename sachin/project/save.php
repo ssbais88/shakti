@@ -8,6 +8,8 @@ $con = mysqli_connect("localhost", "root", "password", "myproject");
 $a = $_POST['full_name'];
 $b = $_POST['username'];
 $c = $_POST['password'];
+
+$c = sha1($c);
 $d = $_POST['gender'];
 $e = $_POST['address'];
 $f = $_POST['contact'];
