@@ -28,7 +28,7 @@ $result=mysqli_query($con, $query);
 					<tr>
 						<td><?php echo $data['id']; ?></td>
 						<td><?php echo $data['category_name'];?></td>
-						<td><a href="#" class="btn btn-info">Edit</a></td>
+						<td><a href="edit_cate.php?cate=<?php echo $data['id'];?>" class="btn btn-info">Edit</a></td>
 						<td><a href="delete_cate.php?cate=<?php echo $data['id']; ?>" class="btn btn-danger">Delete</a></td>
 					</tr>
 
