@@ -13,7 +13,7 @@ include("header.php");
 	<div class="row">
 		<div class="col-md-8 offset-2">
 			<h3>Add Any Product Here....</h3>
-			<form action="save_addProduct.php" method="post">
+			<form action="save_addProduct.php" method="post" enctype="multipart/form-data">
 				<div class="card">
 					<div class="card-header">
 						Detail of Product
@@ -38,6 +38,19 @@ include("header.php");
 						<div class="form-group">
 							<label>Product Price</label>
 							<input type="text" name="p_price" class="form-control" placeholder="Enter Product Price Here">
+						</div>
+						<div class="form-group">
+							<label>Product Image</label>
+							<input type="file" name="image" class="form-control">
+							<p class="text-center text-danger">
+								<?php
+									if(isset($_SESSION['msg']))
+									{
+										echo $_SESSION['msg'];
+										unset($_SESSION['msg']);
+									}
+								?>
+							</p>
 						</div>
 					<div class="form-group">
 							<label>Product Detail</label>
