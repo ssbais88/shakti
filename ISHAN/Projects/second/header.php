@@ -25,15 +25,18 @@ $result = mysqli_query($con,$query);
 <div class="container-fluid bg-dark">
 	<div class="row" style="background-color:#DAF7A6">
 		<div class="col-md-5">
-			<p class="text-danger m-1 p-2">World's fast growing site</p>
+			<p class="text-danger m-1 p-2">World's fastest growing website</p>
 		</div>
 		<div class="col-md-7">
 			<ul class="nav justify-content-end">
 					<?php
 					if (isset($_SESSION['is_user_logged_in']))
 					 {?>
+					 <button class=" btn nav-item">
+						<a href="my_Account.php" class="nav-link">My Account <i class="fa fa-user" aria-hidden="true"></i></a>
+					</button>
 					<button class=" btn nav-item">
-						<a href="my_account.php" class="nav-link">My Account <i class="fa fa-user" aria-hidden="true"></i></a>
+						<a href="my_profile.php" class="nav-link">My Profile <i class="fa fa-user" aria-hidden="true"></i></a>
 					</button>
 					<button class="btn nav-item">
 						<a href="logout.php" class="nav-link">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>
