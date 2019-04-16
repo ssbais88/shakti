@@ -25,7 +25,9 @@
 						<div class="card-header">
 							<span class="font-weight-bold"><?php echo $data['pname']; ?></span>
 						</div>
-						<div class="card-body"></div>
+						<div class="card-body">
+							<img src="admin/upload/<?php echo $data['image_name']; ?>" style="width: 100%; height:150px !important;">
+						</div>
 						<div class="card-footer">
 							<button class="btn btn-success">Buy</button>
 							<del>(<?php echo $data['pprice']; ?>)</del>

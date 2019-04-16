@@ -43,6 +43,24 @@
 				   </div>
 				</div>			
 				<ul class="navbar-nav">
+					<?php
+						if(isset($_SESSION['is_user_logged_in']))
+						{ ?>
+
+					<li class="nav-item">
+						<a href="my_account.php" class="nav-link">
+							<i class="fa fa-lock"></i>My Acoount
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="logout.php" class="nav-link">
+							<i class="fa fa-user-plus" aria-hidden="true"></i> Signout
+						</a>
+					</li>
+					<?php	}
+						else
+						{ ?>
+
 					<li class="nav-item">
 						<a href="login.php" class="nav-link">
 							<i class="fa fa-lock"></i> Login
@@ -53,11 +71,8 @@
 							<i class="fa fa-user-plus" aria-hidden="true"></i> Signup
 						</a>
 					</li>
-					<li class="nav-item">
-						<a href="#" class="nav-link">
-							<i class="fa fa-user" aria-hidden="true"></i> Myaccout
-						</a>
-					</li>
+					<?php	}
+					?>
 				</ul>
 		</div>
 	</nav>
