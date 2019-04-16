@@ -1,4 +1,5 @@
 <?php
+include("db.php");
 include("header.php");
 ?>
 <div class="col-md-9 mb-1">
@@ -11,7 +12,7 @@ include("header.php");
 	<div class="col-sm-8 offset-2">
 		<div class="card">
 			<div class="card-body">
-				<form action="save.php" method="post">
+				<form action="save.php" method="post" enctype="multipart/form-data">
 					<div class="form-group">
 						<label>Full Name</label>
 						<input type="text" name="full_name" class="form-control" placeholder="Enter your Full name">
@@ -40,6 +41,16 @@ include("header.php");
 					<div class="form-group">
 						<label>Contact</label>
 						<input type="text" name="contact" class="form-control" placeholder="Enter Mobile or Phone">
+					</div>
+					<div class="form-group">
+						<label>Image File</label>
+						<input type="file" name="simage" class="form-control">
+						<?php
+							if (isset($_SESSION['msg'])) {
+								echo $_SESSION['msg'];
+								unset($_SESSION['msg']);
+							}
+						?>
 					</div>
 					<div class="form-group">
 						<label>City</label>

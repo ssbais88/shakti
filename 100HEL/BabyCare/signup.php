@@ -16,7 +16,7 @@ include("header.php")
 						<h4 class="m-0">Signup</h4>
 					</div>
 					<div class="card-body">
-						<form action="save.php" method="post">
+						<form action="save.php" method="post" enctype="multipart/form-data">
 						<div class="form-group">
 							<label>Full Name</label>
 							<input type="text" name="fullname" placeholder="Full Name" class="form-control">
@@ -32,6 +32,19 @@ include("header.php")
 						<div class="form-group">
 							<label>Re-Password</label>
 							<input type="password" placeholder="Re-Password" class="form-control">
+						</div>
+						<div class="form-group">
+							<label>Profile Picture</label>
+							<input type="file" name="profile_image" class="form-control">
+							<p class="text-danger">
+								<?php
+								if (isset($_SESSION['msg'])) 
+								{
+									echo $_SESSION['msg'];
+									unset($_SESSION['msg']);
+								}
+								?>
+							</p>
 						</div>
 						<div class="form-group">
 							<label>Gender</label>

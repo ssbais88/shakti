@@ -31,12 +31,12 @@ $result=mysqli_query($con, $query);
 								<span class="font-weight-bold"><?php echo $data['productname']; ?></span>
 							</div>
 							<div class="card-body">
-								<center><img src="admin/upload<?php echo $data['imagename']; ?>" style="height: 150px; width: 190px;"></center>
+								<img src="admin/upload/<?php echo $data['imagename']; ?>" style="height: 150px; width: 190px;">
 							</div>
 							<div class="card-footer">
 								<a href="#" class="btn btn-success btn-sm">More</a>
 							<del>(<?php echo $data['productprice']; ?>)</del>
-							<b><?php echo $y; ?>.00</b>
+							<b><?php echo $y; ?></b>
 							</div>
 						</div>
 					</div>
