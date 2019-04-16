@@ -28,7 +28,7 @@
 				 		<td><?php echo $data['id']; ?></td>
 						<td><?php echo $data['cat_name'];?></td>
 						<td><a href="#" class="btn btn-info">Edit</a></td>
-						<td><a href="#" class="btn btn-danger">Delete</a></td>
+						<td><a href="delcate.php?cate=<?php echo $data['id']; ?>" class="btn btn-danger">Delete</a></td>
 				 	</tr>
 				<?php }  ?> 
 				
