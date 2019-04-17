@@ -36,7 +36,7 @@ $result = mysqli_query($con, $query);
 				<td><?php echo $data['p_cate']; ?></td>
 				<td><?php echo $data['discount']; ?></td>
 				<td><a href="#" class="btn btn-primary">Edit</a></td>
-				<td><a href="#" class="btn btn-danger">Delete</a></td>
+				<td><a href="delete_product.php?delete=<?php  echo $data['id']; ?>" class="btn btn-danger">Delete</a></td>
 				
 				
 			</tr>

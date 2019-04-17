@@ -18,6 +18,8 @@ if (mysqli_num_rows($result)==1)
 		$_SESSION['name'] = $data['full_name'];
 		$_SESSION['is_user_logged_in']=true;
 		header("location:my_account.php");
+
+		// mosiba;
 	}
 	else{
 

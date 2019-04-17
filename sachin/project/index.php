@@ -94,3 +94,5 @@ include("header.php");
 <?php
 include("footer.php");
 ?>
+
+<div class="btn btn-success"><a href="admin/dashboard.php">admin</a></div>

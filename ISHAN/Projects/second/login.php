@@ -34,3 +34,7 @@ include("header.php");
 		</form>
 	</div>
 </div>
+</div>
+<?php
+		include("footer.php");
+?>

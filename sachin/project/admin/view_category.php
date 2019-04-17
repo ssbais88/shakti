@@ -1,11 +1,10 @@
 <?php 
 include("../db.php");
-include ("header.php");
-
 if(! isset($_SESSION['is_admin_logged_in']))
 {
 	header("location:index.php");
 }
+include ("header.php");
 
 $query = "SELECT * FROM category";
 $result = mysqli_query($con,$query);
@@ -35,8 +34,8 @@ $result = mysqli_query($con,$query);
 <td><?php echo $data['id']; ?></td>
 <td><?php echo $data['cate_name']; ?></td>
 
-<td><a href="#" class="btn btn-success">Edit</a></td>
-<td><a href="#" class="btn btn-danger">Delete</a></td>
+<td><a href="edit_category.php?edot=<?php  echo $data['id'] ; ?>" class="btn btn-success">Edit</a></td>
+<td><a href="delete_category.php?cote=<?php  echo $data['id'];?>" class="btn btn-danger">Delete</a></td>
 </tr>
 
 <?php  }
