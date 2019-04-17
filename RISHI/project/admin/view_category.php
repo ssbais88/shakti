@@ -1,5 +1,11 @@
 <?php
+
 include("../db.php");
+if(! isset($_SESSION['is_user_logged_in']))
+{
+	header("location:index.php");
+}
+
 $query="SELECT * FROM category";
 $result=mysqli_query($con,$query);
 
@@ -27,7 +33,7 @@ include("header.php");
 						<td><?php echo $data['id']; ?></td>
 						<td><?php echo $data['category']; ?></td>
 						<td><a href="#" class="btn btn-info">Edit</a></td>
-						<td><a href="#" class="btn btn-danger">deletes</a></td>
+						<td><a href="delete_cate.php?d_cate=<?php echo $data['id'];?>" class="btn btn-danger">deletes</a></td>
 					</tr>
 					<?php
 					}?>

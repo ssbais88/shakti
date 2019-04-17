@@ -21,7 +21,7 @@ if ($ext=="jpg" || $ext=="png" || $ext=="jpeg" || $ext=="gif")
 		$g=$_POST['contact'];
 		$user_image=time().rand(100,1000000).".".$ext;
 
-		$query = "INSERT INTO USER (fullname,email,password,gender,address,city,contact,image) VALUES ('$a','$b','$c','$d','$e','$f','$g','user_image')";
+		$query = "INSERT INTO user (fullname,email,password,gender,address,city,contact,image) VALUES ('$a','$b','$c','$d','$e','$f','$g','$user_image')";
 		move_uploaded_file($tmp_name, "user_image/".$user_image);
 
 		mysqli_query($con, $query);

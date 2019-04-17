@@ -14,8 +14,9 @@ $data = mysqli_fetch_assoc($result);
 		<div class="col-md-12">
 			<h4 class="bg-secondary text-light px-4 py-2">My Profile</h4>
 		</div>
+	</div>
 		<div class="row">
-			<div class="col-md-10 offset-md-1">
+			<div class="col-md-10 offset-1">
 				<table class="table table-dark table-bordered table-hover">
 					<tr>
 						<td>Full Name</td>

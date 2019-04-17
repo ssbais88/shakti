@@ -2,8 +2,8 @@
    
      include("../db.php");
 
-     $u=$_POST('username');
-     $p=$_POST('password');
+     $u=$_POST['username'];
+     $p=$_POST['pass'];
 
      $query="SELECT * FROM admin WHERE username='$u'";
      $result=mysqli_query($con,$query);
