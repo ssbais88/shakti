@@ -36,7 +36,7 @@ if (! isset($_SESSION['is_admin_logged_in']))
 						<td><?php echo $data['product_category']; ?></td>
 						<td><?php echo $data['discount']; ?></td>
 						<td><a href="#" class="btn btn-info">Edit</a></td>
-						<td><a href="#" class="btn btn-danger">Delete</a></td>
+						<td><a href="delpro.php?demo=<?php echo $data['id']; ?>" class="btn btn-danger">Delete</a></td>
 					</tr>
 					</tr>
                   

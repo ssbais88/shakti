@@ -1,5 +1,5 @@
 <?php 
-include("bd.php");
+include("db.php");
  include("header.php");
  ?>
    
@@ -19,10 +19,14 @@ include("bd.php");
            	 		<h4>Signup</h4>
            	 	</div>
            	 	<div class="card-body">
-           	 		<form action="save.php" method="post">
+           	 		<form action="save.php" method="post" enctype="multipart/form-data">
            	 			<div class="form-group">
 									<label>Full Name</label>
 									<input type="Text" name="full_name" placeholder="Full Name" class="form-control">
+								</div>
+								<div class="form-group">
+									<label>profile pic</label>
+									<input type="file" name="image" class="form-control">
 								</div>
 								<div class="form-group">
 									<label>Username/Email</label>

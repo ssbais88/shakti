@@ -15,7 +15,7 @@ include("header.php");
 					<div class="card-body">
 						<div class="form-group">
 							<label>Category Name</label>
-							<input type="text" name="category" class="form-control">
+							<input type="text" name="category" class="form-control" placeholder="Enter Category Name">
 						</div>
 					</div>
 					<div class="card-footer">

@@ -1,8 +1,18 @@
 <?php
 		include("db.php");
 		include("header.php");
-		$query =" SELECT * FROM product";
-		$result = mysqli_query($con,$query);
+		// print_r($_GET);
+		if(isset($_GET['category1']))
+		{
+			$a = $_GET['category1'];
+			$query =" SELECT * FROM product WHERE pcate ='$a'";
+			$result = mysqli_query($con,$query);
+		}
+		else
+		{
+			$query =" SELECT * FROM product";
+			$result = mysqli_query($con,$query);
+		}
 ?>
 		<div class="col-md-9 mb-1">
 			<div class="row">

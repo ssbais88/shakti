@@ -36,6 +36,15 @@ include("header.php")
 						<div class="form-group">
 							<label>Profile Picture</label>
 							<input type="file" name="profile_image" class="form-control">
+							<p class="text-danger">
+								<?php
+								if (isset($_SESSION['msg'])) 
+								{
+									echo $_SESSION['msg'];
+									unset($_SESSION['msg']);
+								}
+								?>
+							</p>
 						</div>
 						<div class="form-group">
 							<label>Gender</label>

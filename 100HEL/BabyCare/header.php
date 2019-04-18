@@ -85,7 +85,7 @@ $result=mysqli_query($con, $query);
 				while ($data=mysqli_fetch_assoc($result))
 				{
 					?>
-					<a href="#" class="list-group-item"><?php echo $data['categoryname']; ?></a>
+					<a href="index.php?category=<?php echo $data['categoryname'];?>" class="list-group-item list-group-item-action"><?php echo $data['categoryname']; ?></a>
 				<?php
 				}
 				?>
