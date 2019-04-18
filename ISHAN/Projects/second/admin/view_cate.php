@@ -23,7 +23,7 @@
 			<tr>
 				<td><?php echo $data['id']; ?></td>
 				<td><?php echo $data['category']; ?></td>
-				<td><a class="btn btn-warning" href="#">Edit</a></td>
+				<td><a class="btn btn-warning" href="edit_cate.php?cate=<?php echo $data['id'] ?>">Edit</a></td>
 				<td><a  class="btn btn-danger" href="delete_cate.php?cate=<?php echo $data['id'] ?>">Delete</a></td>
 			</tr>
 		<?php	}

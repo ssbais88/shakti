@@ -10,7 +10,7 @@ include("header.php");
           <h1>Sign up</h1>
         </div>
         <div class="card-body">
-          <form action="save.php" method="post">
+          <form action="save.php" method="post" enctype="multipart/form-data">
           <div class="form-group">
             <label for="full-name">Full name</label>
             <div class="input-group">
@@ -19,7 +19,10 @@ include("header.php");
               </div>
               <input type="text" name="full_name" class="form-control" placeholder="full-name">
             </div>
-
+          <div class="form-group">
+            <label>Profile pic</label>
+            <input type="file" name="image" class="form-control">
+          </div>
 
 
           <div class="form-group">

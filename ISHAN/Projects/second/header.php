@@ -104,7 +104,7 @@ $result = mysqli_query($con,$query);
 				<?php
 					while($data=mysqli_fetch_assoc($result))
 					{ ?>
-				<a href="#" class="list-group-item list-group-item-action a1"><?php echo $data['category']; ?></a>
+				<a class="list-group-item list-group-item-action a1" href="index.php?category=<?php echo $data['category']; ?>"><?php echo $data['category']; ?></a>
 
 				<?php
 				}

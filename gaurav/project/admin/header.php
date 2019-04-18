@@ -39,19 +39,19 @@
       	<li class="nav-item">
       		<a href="#" class="nav-link">My cart<i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
       	</li>
-        <!-- <?php
-          // if(isset($_SESSION['is_user_logged_in']))
+        <?php
+          if(isset($_SESSION['is_user_logged_in']))
           {
-        ?> -->
+        ?>
          <li class="nav-item">
            <a href="#" class="nav-link">My Account</a>
          </li>
          <li class="nav-item">
           <a href="#" class="nav-link">Logout</a>          
          </li>
-     <!--     <?php} 
-         // else{?>
-      --> </ul>
+         <?php} 
+         else{?>
+      </ul>
       <ul class="navbar-nav">
       	<li class="nav-item">
       		<a href="signin.php" class="nav-link">Sign in<i class="fa fa-user" aria-hidden="true"></i></a>
@@ -64,7 +64,7 @@
       </ul>
 
   </nav>
-      <!-- <?php}?> -->
+      <?php}?>
  <div class="jumbotron mb-0" style="background-image:url('images/banner.jpg'); background-size:100% 100%; border-radius: 0;"><h1>Shop Online</h1></div>
  <div class="container">
  	<div class="row">
