@@ -40,7 +40,8 @@ $result = mysqli_query($con, $query);
 
 	<div id="myMenu" class="collapse navbar-collapse">
 	<ul class="navbar-nav">
-		<li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+		<li class="nav-item">
+			<a class="nav-link" href="index.php">Home</a></li>
 		<li class="nav-item">
 			<a href="#" class="nav-link">My Cart <i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
 		</li>

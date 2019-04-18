@@ -4,6 +4,8 @@ $con = mysqli_connect("localhost","root","","onlineshop");
 
 $u = $_POST['username'];
 $p = $_POST['password'];
+
+$p = sha1($p);
 $query = "select * from user where user_name = '$u'";
 $result = mysqli_query($con,$query);
 if (mysqli_num_rows($result)==1)

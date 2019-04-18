@@ -54,6 +54,9 @@ $result = mysqli_query($con,$query);
         <a href="myaccount.php" class="nav-link">My Account <i class="fa fa-user" aria-hidden="true"></i></a>
       </li>
       <li class="nav-item">
+        <a href="myprofile.php" class="nav-link">My profile <i class="fa fa-user" aria-hidden="true"></i></a>
+      </li>
+      <li class="nav-item">
         <a href="logout.php" class="nav-link">Logout <i class="fa fa-user" aria-hidden="true"></i></a>
       </li> 
 
@@ -83,7 +86,7 @@ $result = mysqli_query($con,$query);
         while($data=mysqli_fetch_assoc($result))  
         {  
         ?>
- 				<a href="#" class="list-group-item list-group-item-action"><?php
+ 				<a href="index.php?category=<?php echo $data['cate-name']?>" class="list-group-item list-group-item-action"><?php
         echo $data['cate_name']?></a>
  				<?php
       }
