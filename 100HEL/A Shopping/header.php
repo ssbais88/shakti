@@ -40,9 +40,17 @@
 				<li class="nav-item"><a href="#" class="nav-link">Contact us</a></li>
 			</ul>
 		</div>
+		<div class="form-group mb-0">
+			<div class="input-group">
+				<input type="text" class="form-control" placeholder="Search">
+				<div class="input-group-append">
+					<button type="submit" class="btn btn-dark"><i class="fa fa-search"></i></button>
+				</div>
+			</div>
+		</div>
 		<ul class="navbar-nav">
-			<li class="nav-item"><a href="#" data-target="#signup" data-toggle="modal" class="nav-link">Signup</a></li>
-			<li class="nav-item"><a href="#" data-target="#signin" data-toggle="modal" class="nav-link">Signin</a></li>
+			<li class="nav-item"><a href="#" data-target="#signup" data-toggle="modal" class="nav-link">Signup <i class="fa fa-user-plus"></i></a></li>
+			<li class="nav-item"><a href="#" data-target="#signin" data-toggle="modal" class="nav-link">Signin <i class="fa fa-sign-in"></i></a></li>
 		</ul>
 	</nav>
 	<div id="signin" class="modal fade">
@@ -78,19 +86,19 @@
 					<div class="modal-body">
 						<div class="form-group">
 							<label>Full Name</label>
-							<input type="text" name="" placeholder="Full Name" class="form-control" name="fullname">
+							<input type="text" placeholder="Full Name" class="form-control" name="fullname">
 						</div>
 						<div class="form-group">
 							<label>Email</label>
-							<input type="text" name="" placeholder="Username" class="form-control" name="email">
+							<input type="text" placeholder="Username" class="form-control" name="email">
 						</div>
 						<div class="form-group">
 							<label>Password</label>
-							<input type="password" name="" placeholder="Password" class="form-control" name="pass">
+							<input type="password" placeholder="Password" class="form-control" name="pass">
 						</div>
 						<div class="form-group">
 							<label>Re-Password</label>
-							<input type="password" name="" placeholder="Re-Password" class="form-control">
+							<input type="password" placeholder="Re-Password" class="form-control">
 						</div>
 						<div class="form-group">
 							<label>Gender</label>
@@ -114,7 +122,7 @@
 						</div>
 						<div class="form-group">
 							<label>Contact</label>
-							<input type="text" name="" class="form-control" placeholder="Contact" name="contact">
+							<input type="text" class="form-control" placeholder="Contact" name="contact">
 						</div>
 					</div>
 					<div class="modal-footer">

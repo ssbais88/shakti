@@ -1,3 +1,20 @@
+<?php
+$query = "SELECT * FROM category";
+$result = mysqli_query($con, $query);
+
+
+
+if(isset($_COOKIE['cart']))
+{
+	$x = $_COOKIE['cart'];
+	$arr = explode("#", $x);
+	$cart_total=count($arr);
+}
+else
+{
+	$cart_total = 0;	
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,9 +54,9 @@
 	<div id="myMenu" class="collapse navbar-collapse">
 	<ul class="navbar-nav">
 		<li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
-		<li class="nav-item"><a class="nav-link" href="#">About</a></li>
-		<li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-		<li class="nav-item"><a class="nav-link" href="#">Help</a></li>
+		<li class="nav-item">
+			<a href="my_cart.php" class="nav-link">My Cart <i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="badge badge-pill badge-dark"><?php echo $cart_total; ?></span></a>
+		</li>
 		
 	</ul>
 	</div>
@@ -48,9 +65,7 @@
 		<button type="submit" class="btn btn-dark"><i class="fa fa-search" aria-hidden="true"></i></button>
 	</form>
 	<ul class="navbar-nav">
-		<li class="nav-item">
-			<a href="#" class="nav-link">My Cart <i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-		</li>
+		
 
 		<?php 
 		if(isset($_SESSION['is_user_logged_in']))
@@ -58,6 +73,9 @@
 
 			<li class="nav-item">
 				<a href="my_account.php" class="nav-link">My Account <i class="fa fa-user" aria-hidden="true"></i></a>
+			</li>
+			<li class="nav-item">
+				<a href="my_profile.php" class="nav-link">My Profile <i class="fa fa-user" aria-hidden="true"></i></a>
 			</li>
 			<li class="nav-item">
 				<a href="logout.php" class="nav-link">Logout <i class="fa fa-user" aria-hidden="true"></i></a>
@@ -106,9 +124,14 @@
 	<div class="row">
 		<div class="col-md-3">
 			<div class="list-group">
-				<a class="list-group-item list-group-item-action" href="#">Mobile</a>
-				<a class="list-group-item list-group-item-action" href="#">Home Applicance</a>
-				<a class="list-group-item list-group-item-action" href="#">Electronics</a>
-				<a class="list-group-item list-group-item-action" href="#">Fashion</a>
+				<?php
+				while($data=mysqli_fetch_assoc($result))
+				{ ?>
+					<a class="list-group-item list-group-item-action" href="index.php?category=<?php echo $data['category_name']; ?>"><?php echo $data['category_name'];?></a>
+
+				<?php
+				}
+				?>
+				
 			</div>
 		</div>

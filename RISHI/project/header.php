@@ -23,8 +23,8 @@
 					<a href="#" class="nav-link">ABOUT</a>
 				</li>
 				<li class="nav-item dropdown">
-					<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="#yadav">MORE</a>
-					<div id="yadav" class="dropdown-menu">
+					<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">MORE</a>
+					<div class="dropdown-menu">
 					<a href="#" class="dropdown-item">help</a>
 					<a href="#" class="dropdown-item">contact</a>
 					<a href="#" class="dropdown-item">mails</a>
@@ -32,7 +32,7 @@
 				</li>
 			</ul>
 		</div>
-				<div class="form-group mb-0">
+				<div class="form-group mb-0 ">
 					<div class="input-group">
 					<div class="input-group-append">
 					<input type="text" placeholder="search" class="form-control">
@@ -43,8 +43,26 @@
 				   </div>
 				</div>			
 				<ul class="navbar-nav">
+					<?php
+						if(isset($_SESSION['is_user_logged_in']))
+						{ ?>
+
 					<li class="nav-item">
-						<a href="#" class="nav-link">
+						<a href="my_account.php" class="nav-link">
+							<i class="fa fa-lock"></i>My Acoount
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="logout.php" class="nav-link">
+							<i class="fa fa-user-plus" aria-hidden="true"></i> Signout
+						</a>
+					</li>
+					<?php	}
+						else
+						{ ?>
+
+					<li class="nav-item">
+						<a href="login.php" class="nav-link">
 							<i class="fa fa-lock"></i> Login
 						</a>
 					</li>
@@ -53,11 +71,8 @@
 							<i class="fa fa-user-plus" aria-hidden="true"></i> Signup
 						</a>
 					</li>
-					<li class="nav-item">
-						<a href="#" class="nav-link">
-							<i class="fa fa-user" aria-hidden="true"></i> Myaccout
-						</a>
-					</li>
+					<?php	}
+					?>
 				</ul>
 		</div>
 	</nav>

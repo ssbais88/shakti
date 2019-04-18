@@ -1,9 +1,6 @@
 <?php
 // print_r($_POST);
-
-$con = mysqli_connect("localhost","root","","ebay");
- session_start();
-
+include("db.php");
 $u = $_POST['username'];
 $p = $_POST['password'];
 
@@ -17,7 +14,12 @@ if (mysqli_num_rows($result)==1)
 	//This fn is convert Object into a associative array format
 	if ($data['password']==$p)
 	{
-		echo "Yes";
+		$_SESSION['id'] = $data['id'];
+		$_SESSION['name'] = $data['full_name'];
+		$_SESSION['is_user_logged_in']=true;
+		header("location:my_account.php");
+
+		// mosiba;
 	}
 	else{
 

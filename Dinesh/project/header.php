@@ -1,3 +1,10 @@
+<?Php 
+
+$query = "SELECT * FROM category";
+$result = mysqli_query($con, $query);
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,10 +46,33 @@
       	<ul class="navbar-nav">
       		<li class="nav-item"><a href="#" class="nav-link">my-cart<i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
 </a></li>
-      		<li class="nav-item"><a href="login.php" class="nav-link">login<i class="fa fa-user" aria-hidden="true"></i>
+<?php if (isset($_SESSION['is_user_loged_in'])) {
+   
+ ?>
+      		<li class="nav-item"><a href="#" class="nav-link">my account<i class="fa fa-user" aria-hidden="true"></i>
 </a></li>
-      		<li class="nav-item"><a href="signup.php" class="nav-link">sign-up<i class="fa fa-user" aria-hidden="true"></i>
+      		<li class="nav-item"><a href="#" class="nav-link">setting<i class="fa fa-user" aria-hidden="true"></i>
 </a></li>
+ <li class="nav-item"><a href="logout.php" class="nav-link">logout<i class="fa fa-user" aria-hidden="true"></i>
+</a></li>
+
+    <?php 
+         }
+         else
+         {
+
+      ?>
+      <li class="nav-item">
+        <a href="login.php" class="nav-link">Login <i class="fa fa-user" aria-hidden="true"></i></a>
+      </li>
+      <li class="nav-item">
+        <a href="signup.php" class="nav-link">Signup <i class="fa fa-user" aria-hidden="true"></i></a>
+      </li> 
+
+
+    <?php 
+    }
+    ?>
       	</ul>
 
       </nav>
@@ -50,3 +80,17 @@
   	<h2>Cmping Gear</h2>
   	<P>sjdoip dpoijsdi cdjpvpd sdalpo </P>
   </div>
+<div class="container mt-4">
+    <DIV class="row">
+      <div class="col-md-3">
+        <div class="list-group">
+          <?php
+        while($data=mysqli_fetch_assoc($result))
+        { ?>
+          <a class="list-group-item list-group-item-action" href="#"><?php echo $data['cat_name'];?></a>
+
+        <?php
+        }
+        ?>
+        </div>
+      </div>
