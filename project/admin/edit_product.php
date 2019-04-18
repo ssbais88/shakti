@@ -26,7 +26,7 @@ $result = mysqli_query($con, $query);
 	<h3>Update Product</h3>
 	<div class="row">
 		<div class="col-md-8 offset-md-2">
-			<form action="save_product.php" method="post" enctype="multipart/form-data">
+			<form action="update_product.php" method="post" enctype="multipart/form-data">
 				<input type="hidden" name="pid" value="<?php echo $a; ?>">
 			<div class="card">
 				<div class="card-header">
@@ -41,6 +41,10 @@ $result = mysqli_query($con, $query);
 						<div class="form-group">
 							<label>Product Price</label>
 							<input type="text" placeholder="Product Price" name="p_price" class="form-control" value="<?php echo $data1['product_price']; ?>">
+						</div>
+						<div class="form-group">
+							<label>Current Image</label>
+							<img src="upload/<?php echo $data1['image_name']; ?>" height="100" width="100">
 						</div>
 						<div class="form-group">
 							<label>Product Image</label>
@@ -65,11 +69,25 @@ $result = mysqli_query($con, $query);
 							<label>Product Category</label>
 							<select name="p_cate" class="form-control">
 								<option>Select</option>
+
 								<?php
 								while($data=mysqli_fetch_assoc($result))
-								{ ?>
-									<option><?php echo $data['category_name'];?></option>
-								<?php
+								{ 
+									if($data1['product_category']==$data['category_name'])
+									{
+										?>
+										<option selected="selected"><?php echo $data['category_name'];?></option>
+										<?php
+									}
+									else
+									{
+										?>
+										<option><?php echo $data['category_name'];?></option>
+										<?php
+									}
+
+
+
 								}
 								?>
 							</select>
@@ -83,7 +101,7 @@ $result = mysqli_query($con, $query);
 
 				</div>
 					<div class="card-footer">
-						<input type="submit" value="Add" class="btn btn-primary">
+						<input type="submit" value="Update" class="btn btn-primary">
 					</div>
 					</form>
 

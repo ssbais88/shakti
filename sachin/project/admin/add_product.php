@@ -11,7 +11,7 @@ include ('header.php');
    	<h2>Add Product</h2>
    	 <div class="row">
         <div class="col-md-6 offset-md-3">
-        	<form action="save_product.php" method="post">
+        	<form action="save_product.php" method="post" enctype="multipart/form-data">
 	          <div class="card">
 		        <div class="card-header">
 		        	<h4>product detail</h4>
@@ -19,7 +19,10 @@ include ('header.php');
 		        <div class="card-body">
 			       <div class="form-group">
 				     <label>Product Name</label>
-					        <input type="text" name="p_name"class="from-control" placeholder="product name"></div>
+					        <input type="text" name="p_name"class="from-control" placeholder="product name"></div> 
+					        <div class="form-group">
+				     <label>Product Image</label>
+					        <input type="file" name="image" class="from-control" ></div>
 				<div class="form-group">
 				  <label>Product Price</label>
 				<input type="text"name="p_price" class="from-control" placeholder="price"></div>

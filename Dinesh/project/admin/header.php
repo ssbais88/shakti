@@ -22,22 +22,26 @@
 					<a href="addpro.php"class="nav-link">add product</a>
 				</li> 
 				<li class="nav-item">
-					<a href="#"class="nav-link">view product</a>
+					<a href="viewpro.php"class="nav-link">view product</a>
 				</li>
 				<li class="nav-item">
 					<a href="addcat.php"class="nav-link">add category</a>
 				</li>
 				<li class="nav-item">
-					<a href="#"class="nav-link">view category</a>
+					<a href="viewcat.php"class="nav-link">view category</a>
 				</li>
 				<li class="nav-item">
-					<a href="#"class="nav-link">view users</a>
+					<a href="viewusers.php"class="nav-link">view users</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a href="#"class="nav-link dropdown-toggle" data-toggle="dropdown">setting</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="#">Change Password</a>
+						<a class="dropdown-item" href="create_new_admin.php">Create New Admin</a>
+					</div>
 				</li>
 				<li class="nav-item">
-					<a href="#"class="nav-link">setting</a>
-				</li>
-				<li class="nav-item">
-					<a href="#"class="nav-link">logout</a>
+					<a href="logout.php"class="nav-link">logout</a>
 				</li>
 			</ul>
 
