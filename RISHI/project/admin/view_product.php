@@ -36,7 +36,7 @@ include("header.php");
 				<td><?php echo $data['productcate']; ?></td>
 				<td><?php echo $data['productprice']; ?></td>
 				<td><?php echo $data['productdiscount']; ?></td>
-				<td><a href="#" class="btn btn-info">Edit</a></td>
+				<td><a href="edit_product.php?e_pro=<?php echo $data['id']; ?>" class="btn btn-info">Edit</a></td>
 				<td><a href="delete_pro.php?p_dlt=<?php echo $data['id']; ?>" class="btn btn-danger">Delete</a></td>
 			</tr>		
 		<?php	

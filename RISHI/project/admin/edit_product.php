@@ -1,14 +1,21 @@
 <?php
 include("../db.php");
-if(! isset($_SESSION['is_user_logged_in']))
-{
-	header("location:index.php");
-}
 include("header.php");
+
+$a=$_GET['e_pro'];
+
+$query1="SELECT * FROM addproduct WHERE id=$a";
+$result1=mysqli_query($con ,$query1);
+
+$data1=mysqli_fetch_assoc($result1);
+// print_r($_GET);
+// die;
+
 $query="SELECT * FROM category";
 $result=mysqli_query($con ,$query);
 
 ?>
+
 <div class="container">
 	<!-- <h3>Add product</h3> -->
 	<div class="row">
@@ -16,16 +23,20 @@ $result=mysqli_query($con ,$query);
 			<form action="save_product.php" method="post" enctype="multipart/form-data">
 			<div class="card">
 				<div class="card-header">
-					Product details
+					Edit Product
 				</div>
 				<div class="card-body">
 					<div class="form-group">
 						<label>Product name</label>
-						<input type="text" name="p_name" placeholder="Product name" class="form-control">
+						<input type="text" name="p_name" placeholder="Product name" value="<?php echo $data1['productname']; ?>" class="form-control">
 					</div>
 					<div class="form-group">
 						<label>Product price</label>
-						<input type="text" name="p_price" placeholder="price" class="form-control">
+						<input type="text" name="p_price" placeholder="price" value="<?php echo $data1['productprice']; ?>" class="form-control">
+					</div>
+					<div class="form-group">
+						<label>Current image</label>
+						<img src="upload/<?php echo $data1['image_name'];?>" height="100" width="100">
 					</div>
 					<div class="form-group">
 						<label>Product image</label>
@@ -55,11 +66,11 @@ $result=mysqli_query($con ,$query);
 					</div>
 					<div class="form-group">
 						<label>Product detail</label>
-						<textarea class="form-control" name="p_detail" placeholder="details"></textarea>
+						<textarea class="form-control" value="<?php echo $data1['productdetail']; ?>" name="p_detail" placeholder="details"></textarea>
 					</div>
 					<div class="form-group">
 						<label>Product Discount	</label>
-						<input type="text" name="p_discount" placeholder="Discount" class="form-control">
+						<input type="text" value="<?php echo $data1['productdiscount']; ?>" name="p_discount" placeholder="Discount" class="form-control">
 					</div>
 				</div>
 				<div class="card-footer">
@@ -69,7 +80,3 @@ $result=mysqli_query($con ,$query);
 			</form>
 		</div>
 	</div>
-</div>
-<?php
-include("footer.php");
-?>

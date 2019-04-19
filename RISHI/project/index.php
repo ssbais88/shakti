@@ -1,6 +1,8 @@
 <?php
 include("db.php");
-include("header.php")
+include("header.php");
+$query="SELECT * FROM addproduct";
+$result=mysqli_query($con ,$query);
 ?>
 			<div class="col-md-9">
 				<div class="row">
@@ -9,127 +11,34 @@ include("header.php")
 					</div>
 				</div>
 				<div class="row mt-4">
+				<?php
+				while($data=mysqli_fetch_assoc($result))
+				{	
+					$a=$data['productprice'];
+					$b=$data['productdiscount'];
+					$x=$a*$b/100;
+					$y=$a-$x;	
+
+				?>
 					<div class="col-md-4">
 						<div class="card">
 							<div class="card-header">
-								
+								<?php echo $data['productname']; ?>
 							</div>
 							<div class="card-body">
 								
 							</div>
 							<div class="card-footer">
-								
+								<input type="submit" value="buy" class="btn btn-success">
+							<del><?php echo $data['productprice'];  ?></del>
+							<b><?php echo $y; ?>.00 </b>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4">
-						<div class="card">
-							<div class="card-header">
-								
-							</div>
-							<div class="card-body">
-								
-							</div>
-							<div class="card-footer">
-								
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="card">
-							<div class="card-header">
-								
-							</div>
-							<div class="card-body">
-								
-							</div>
-							<div class="card-footer">
-								
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row mt-2">
-					<div class="col-md-4">
-						<div class="card">
-							<div class="card-header">
-								
-							</div>
-							<div class="card-body">
-								
-							</div>
-							<div class="card-footer">
-								
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="card">
-							<div class="card-header">
-								
-							</div>
-							<div class="card-body">
-								
-							</div>
-							<div class="card-footer">
-								
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="card">
-							<div class="card-header">
-								
-							</div>
-							<div class="card-body">
-								
-							</div>
-							<div class="card-footer">
-								
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row mt-2">
-					<div class="col-md-4">
-						<div class="card">
-							<div class="card-header">
-								
-							</div>
-							<div class="card-body">
-								
-							</div>
-							<div class="card-footer">
-								
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="card">
-							<div class="card-header">
-								
-							</div>
-							<div class="card-body">
-								
-							</div>
-							<div class="card-footer">
-								
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="card">
-							<div class="card-header">
-								
-							</div>
-							<div class="card-body">
-								
-							</div>
-							<div class="card-footer">
-								
-							</div>
-						</div>
-					</div>
+				<?php
+				}
+				?>
+				
 				</div>
 			</div>
 		</div>
