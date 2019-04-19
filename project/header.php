@@ -1,6 +1,19 @@
 <?php
 $query = "SELECT * FROM category";
 $result = mysqli_query($con, $query);
+
+
+
+if(isset($_COOKIE['cart']))
+{
+	$x = $_COOKIE['cart'];
+	$arr = explode("#", $x);
+	$cart_total=count($arr);
+}
+else
+{
+	$cart_total = 0;	
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -42,13 +55,13 @@ $result = mysqli_query($con, $query);
 	<ul class="navbar-nav">
 		<li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
 		<li class="nav-item">
-			<a href="#" class="nav-link">My Cart <i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+			<a href="my_cart.php" class="nav-link">My Cart <i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="badge badge-pill badge-dark"><?php echo $cart_total; ?></span></a>
 		</li>
 		
 	</ul>
 	</div>
-	<form class="form-inline">
-		<input type="text" class="form-control" placeholder="Search">
+	<form class="form-inline" action="" method="get">
+		<input name="q" type="text" class="form-control" placeholder="Search">
 		<button type="submit" class="btn btn-dark"><i class="fa fa-search" aria-hidden="true"></i></button>
 	</form>
 	<ul class="navbar-nav">
