@@ -60,8 +60,8 @@ else
 		
 	</ul>
 	</div>
-	<form class="form-inline">
-		<input type="text" class="form-control" placeholder="Search">
+	<form class="form-inline" action="" method="get">
+		<input name="q" type="text" class="form-control" placeholder="Search">
 		<button type="submit" class="btn btn-dark"><i class="fa fa-search" aria-hidden="true"></i></button>
 	</form>
 	<ul class="navbar-nav">
