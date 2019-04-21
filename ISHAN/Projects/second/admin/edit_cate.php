@@ -4,13 +4,13 @@
 	if (! isset($_SESSION['is_user_logged_in'])) {
 		header("location:index.php");
 	}
+
 	include("header.php");
 
 	$id = $_GET['cate'];
 	$query = "SELECT * FROM category WHERE id='$id'";
 	$result = mysqli_query($con,$query);
 	$data = mysqli_fetch_assoc($result);
-	print_r($data);
 ?>
 <div class="container">
 	<div class="row">

@@ -56,7 +56,7 @@ $result = mysqli_query($con,$query);
 			}?>
 
 					<button class="btn nav-item">
-						<a href="#" class="nav-link">Cart <i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="badge badge-warning badge-pill">2</span></a>
+						<a href="add_to_cart.php?=<?php echo $data['id'] ?>" class="nav-link">Cart <i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="badge badge-warning badge-pill">2</span></a>
 					</button>
 			</ul>
 		</div>

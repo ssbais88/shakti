@@ -7,8 +7,9 @@ include("../db.php");
 
 	// print_r($_GET);
 	// die;
-	$id = $_GET['pro'];
-	$query1 = "SELECT * FROM product WHERE id =$id";
+	
+	$a = $_GET['pro'];
+	$query1 = "SELECT * FROM product WHERE id =$a";
 	$result1 = mysqli_query($con,$query1);
 	$data1  = mysqli_fetch_assoc($result1);
 	// print_r($data1);
@@ -17,14 +18,12 @@ include("../db.php");
 	$result = mysqli_query($con, $query);
 include("header.php");
 
-
-
 ?>
 <div class="container">
 	<div class="row">
 		<div class="col-md-8 offset-2">
 			<h3>Update Product Here....</h3>
-			<form action="update_addProduct.php" method="post" enctype="multipart/form-data">
+			<form action="update_pro.php" method="post" enctype="multipart/form-data">
 
 				<input type="hidden" name="pid" value="<?php echo $a; ?>">
 
@@ -66,7 +65,7 @@ include("header.php");
 						</div>
 						<div class="form-group">
 							<label>Current Image</label>
-							<img src="upload/<?php echo $data1['image_name']; ?>" height="100" width="100">
+							<img src="upload/<?php echo $data1['image_name']; ?>" height="100" width="150">
 						</div>
 						<div class="form-group">
 							<label>Product Image</label>
@@ -91,7 +90,7 @@ include("header.php");
 						</div>
 					</div>
 					<div class="card-footer">
-						<input type="submit" value="Add Product" class="btn btn-primary">
+						<input type="submit" value="Update Product" class="btn btn-primary">
 					</div>
 				</div>
 			</form>
