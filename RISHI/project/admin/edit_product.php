@@ -20,7 +20,8 @@ $result=mysqli_query($con ,$query);
 	<!-- <h3>Add product</h3> -->
 	<div class="row">
 		<div class="col-md-8 offset-md-2 mt-2">
-			<form action="save_product.php" method="post" enctype="multipart/form-data">
+			<form action="update_pro.php" method="post" enctype="multipart/form-data">
+				<input type="hidden" name="pid" value="<?php echo $a; ?>">
 			<div class="card">
 				<div class="card-header">
 					Edit Product
@@ -74,7 +75,7 @@ $result=mysqli_query($con ,$query);
 					</div>
 				</div>
 				<div class="card-footer">
-					<input type="submit" value="add" class="btn btn-primary">
+					<input type="submit" value="update" class="btn btn-primary">
 				</div>
 			</div>
 			</form>

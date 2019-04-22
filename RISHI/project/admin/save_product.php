@@ -11,7 +11,7 @@ $name=$_FILES['image']['name'];
 $size=$_FILES['image']['size'];
 $tmp_name=$_FILES['image']['tmp_name'];
 
-$arr=explode(".", $name);
+ echo $arr=explode(".", $name);
 // break file name with . for ext
 
 $ext=end($arr);
@@ -33,7 +33,7 @@ if($ext=="png" || $ext=="gif" || $ext=="jpeg" || $ext=="jpg")
 
 			$query="INSERT INTO addproduct(productname,productcate,productprice,productdetail,productdiscount,image_name)VALUES('$a','$c','$b','$d','$e','$new_name')";
 
-			move_uploaded_file($tmp_name, "upload/".$new_name);
+			move_uploaded_file($tmp_name,"upload/".$new_name);
 
 			mysqli_query($con ,$query);
 			header("location:add_product.php");

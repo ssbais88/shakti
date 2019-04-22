@@ -26,7 +26,7 @@ $result=mysqli_query($con ,$query);
 								<?php echo $data['productname']; ?>
 							</div>
 							<div class="card-body">
-								
+								<img src="admin/upload/<?php echo $data['image_name']; ?>"style="height: 200px !important; width: 100%;">
 							</div>
 							<div class="card-footer">
 								<input type="submit" value="buy" class="btn btn-success">
