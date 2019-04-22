@@ -5,18 +5,42 @@
 
 include("db.php");
 include("header.php");
-if(isset($_GET['category']))
+if(isset($_GET['q']))
 {
-	$a = $_GET['category'];
-	$query = "SELECT * FROM product WHERE product_category='$a'";
-	$result = mysqli_query($con, $query);
+	// q=sa
+	$q = $_GET['q'];
+	if(isset($_GET['category']))
+	{
+		$a = $_GET['category'];
+		$query = "SELECT * FROM product WHERE product_category='$a' AND product_name LIKE '%$q%'";
+		$result = mysqli_query($con, $query);
+	}
+	else
+	{
+		$query = "SELECT * FROM product WHERE product_name LIKE '%$q%'";
+		$result = mysqli_query($con, $query);
+
+	}
 }
 else
 {
-	$query = "SELECT * FROM product";
-	$result = mysqli_query($con, $query);
 
+	if(isset($_GET['category']))
+	{
+		$a = $_GET['category'];
+		$query = "SELECT * FROM product WHERE product_category='$a'";
+		$result = mysqli_query($con, $query);
+	}
+	else
+	{
+		$query = "SELECT * FROM product";
+		$result = mysqli_query($con, $query);
+
+	}
 }
+
+
+
 
 
 

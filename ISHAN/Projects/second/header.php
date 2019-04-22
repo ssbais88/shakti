@@ -2,6 +2,17 @@
 $con = mysqli_connect("localhost","root","","ebay");
 $query = "SELECT * FROM category";
 $result = mysqli_query($con,$query);
+
+if(isset($_COOKIE['cart']))
+{
+	$x = $_COOKIE['cart'];
+	$arr = explode("#", $x);
+	$cart_total = count($arr);
+}
+else
+{
+	$cart_total = 0;
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -56,7 +67,7 @@ $result = mysqli_query($con,$query);
 			}?>
 
 					<button class="btn nav-item">
-						<a href="add_to_cart.php?=<?php echo $data['id'] ?>" class="nav-link">Cart <i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="badge badge-warning badge-pill">2</span></a>
+						<a href="my_cart.php" class="nav-link">Cart <i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="badge badge-warning badge-pill"><?php echo $cart_total; ?></span></a>
 					</button>
 			</ul>
 		</div>
@@ -68,10 +79,12 @@ $result = mysqli_query($con,$query);
 		" data-toggle="collapse" data-target="#my">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-		<form class="form-inline">
-			<input type="text" name="" class="form-control" placeholder="Search Item's">
+
+		<form class="form-inline" action="" method="get">
+			<input type="text" name="q" class="form-control" placeholder="Search Item's">
 			<button class="btn btn-success"><i class="fa fa-search" aria-hidden="true"></i></button>
 		</form>
+		
 		<div id="my" class="collapse navbar-collapse">
 			<ul class="navbar-nav">
 				<li class="nav-item">
