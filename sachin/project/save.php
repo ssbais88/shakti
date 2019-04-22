@@ -16,7 +16,7 @@ $f = $_POST['contact'];
 $g = $_POST['city'];
 
 
-$query="INSERT INTO project (full_name, user_name, password, gender, address, contact, city) VALUES ('$a', '$b', '$c', '$d', '$f', '$e', '$g')";
+$query="INSERT INTO project (full_name, user_name, password, gender, address, contact, city) VALUES ('$a', '$b', '$c', '$d', '$e', '$f', '$g')";
 
 mysqli_query($con, $query);
 

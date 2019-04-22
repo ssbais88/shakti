@@ -1,4 +1,4 @@
-<?php
+	<?php
 include("db.php");
 include("header.php");
 $id = $_SESSION['id'];
@@ -25,7 +25,7 @@ $data = mysqli_fetch_assoc($result);
 								<div class="form-group">
 									<label>Full Name</label>
 									<input value="<?php echo $data['full_name'];?>" type="Text" name="full_name" placeholder="Full Name" class="form-control">
-								</div>
+									</div>
 								<div class="form-group">
 									<label>Profile Pic</label>
 									<input type="file" name="image" placeholder="Full Name" class="form-control">
@@ -42,7 +42,7 @@ $data = mysqli_fetch_assoc($result);
 								<div class="form-group">
 									<label>Gender</label>
 									<input <?php if($data['gender']=="male") echo "checked='checked'"; ?> value="male" type="radio" name="gender" />Male
-									<input <?php if($data['gender']=="female") echo "checked='checked'"; ?> value="female" type="radio" name="gender" />Female
+									<input <?php if($data['gender']=="female") echo "checked='checked'" ; ?> value="female" type="radio" name="gender" />Female
 								</div>
 								<div class="form-group">
 									<label>Address</label>

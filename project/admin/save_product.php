@@ -9,15 +9,13 @@ if(! isset($_SESSION['is_admin_logged_in']))
 {
 	header("location:index.php");
 }
-<<<<<<< HEAD
 
 $a = $_POST['p_name'];
 $b = $_POST['p_price'];
 $c = $_POST['p_detail'];
 $d = $_POST['p_cate'];
 $e = $_POST['discount'];
-=======
->>>>>>> 23e4295bea4f4533ddd72db680f053eef6c37556
+
 
 // print_r($_FILES);
 

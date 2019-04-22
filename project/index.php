@@ -1,4 +1,8 @@
 <?php
+
+// print_r($_COOKIE);
+
+
 include("db.php");
 include("header.php");
 if(isset($_GET['category']))
@@ -46,7 +50,7 @@ else
 							
 						</div>
 						<div class="card-footer">
-							<a href="#" class="btn btn-dark btn-sm">Buy</a>
+							<a href="add_to_cart.php?pid=<?php echo $data['id']; ?>" class="btn btn-dark btn-sm">Add To Cart</a>
 							<br />
 							<del>(<?php echo $data['product_price'];?>)</del>
 							<b><?php echo $y; ?>.00</b>

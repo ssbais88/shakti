@@ -52,14 +52,8 @@ $result = mysqli_query($con,$query);
       			<a href="index.php" class="nav-link">home</a>
       		</li>
       		<li class="nav-item">
-      			<a href="#" class="nav-link">about</a>
-      		</li>
-      		<li class="nav-item">
-      			<a href="#" class="nav-link">contact</a>
-      		</li>
-      		<li class="nav-item">
-      			<a href="#" class="nav-link">help</a>
-      		</li>
+      <a href="my_cart.php" class="nav-link">My Cart <i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+    </li>
       	</ul>
       	</div>
       	<form class="form-inline ">
@@ -68,9 +62,7 @@ $result = mysqli_query($con,$query);
             </button>
       	</form>
       	<ul class="navbar-nav">
-    <li class="nav-item">
-      <a href="#" class="nav-link">My Cart <i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-    </li>
+    
 
     <?php 
     if(isset($_SESSION['is_user_logged_in']))
@@ -80,7 +72,10 @@ $result = mysqli_query($con,$query);
         <a href="my_account.php" class="nav-link">My Account <i class="fa fa-user" aria-hidden="true"></i></a>
       </li>
       <li class="nav-item">
-        <a href="logout.php" class="nav-link">Logout <i class="fa fa-user" aria-hidden="true"></i></a>
+        <a href="my_profile.php" class="nav-link">My Profile <i class="fa fa-user" aria-hidden="true"></i></a>
+      </li>
+      <li class="nav-item">
+        <a href="admin/logout.php" class="nav-link">Logout <i class="fa fa-user" aria-hidden="true"></i></a>
       </li> 
 
     <?php }

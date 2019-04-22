@@ -1,8 +1,10 @@
 <?php
-include("header.php"); 
-include("db.php")
- ?>
 
+include("db.php");
+
+include("header.php"); 
+
+?>
 <div class="container">
 	<div class="row">
 		<div class="col-md-9 border p-4">
