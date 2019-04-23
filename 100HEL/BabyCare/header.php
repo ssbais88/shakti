@@ -1,6 +1,16 @@
 <?php
 $query="SELECT * FROM category";
 $result=mysqli_query($con, $query);
+if (isset($_COOKIE['cart']))
+{
+	$x=$_COOKIE['cart'];
+	$arr=explode("#", $x);
+	$cart_total=count($arr);
+}
+else
+{
+	$cart_total=0;
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -45,16 +55,18 @@ $result=mysqli_query($con, $query);
 				<li class="nav-item"><a href="#" class="nav-link">Help</a></li>
 			</ul>
 		</div>
-		<div class="form-group mb-0">
-			<div class="input-group">
-				<input type="text" class="form-control" placeholder="Search">
-				<div class="input-group-append">
-					<button type="submit" class="btn btn-dark"><i class="fa fa-search"></i></button>
+		<form class="form-inline" action="" method="get">
+			<div class="form-group mb-0">
+				<div class="input-group">
+					<input type="text" name="search" class="form-control" placeholder="Search">
+					<div class="input-group-append">
+						<button type="submit" class="btn btn-dark"><i class="fa fa-search"></i></button>
+					</div>
 				</div>
 			</div>
-		</div>
+		</form>
 		<ul class="navbar-nav">
-			<li class="nav-item"><a href="#" class="nav-link" style="color: #000;">My Cart <i class="fa fa-shopping-cart"></i></a></li>
+			<li class="nav-item"><a href="mycart.php" class="nav-link" style="color: #000;">My Cart <i class="fa fa-shopping-cart"></i> <span class="badge badge-pill badge-danger"><?php echo $cart_total; ?></span></a></li>
 			<?php
 			if (isset($_SESSION['is_user_logged_in'])) 
 			{?>
