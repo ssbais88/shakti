@@ -6,6 +6,10 @@ if(! isset($_SESSION['is_admin_logged_in']))
 }
 
 include ('header.php');
+$query = "SELECT * FROM category";
+$result = mysqli_query($con,$query);
+// print_r($_GET);
+
 ?>
    <div class="container">
    	<h2>Add Product</h2>
@@ -20,9 +24,24 @@ include ('header.php');
 			       <div class="form-group">
 				     <label>Product Name</label>
 					        <input type="text" name="p_name"class="from-control" placeholder="product name"></div> 
+					        
+
+
+
 					        <div class="form-group">
-				     <label>Product Image</label>
-					        <input type="file" name="image" class="from-control" ></div>
+				               <label>Product Image</label>
+					           <input type="file" name="image" class="from-control" >
+					             
+					             
+					             <?php
+								if(isset($_SESSION['msg']))
+								{
+									echo $_SESSION['msg'];
+									unset($_SESSION['msg']);
+								}
+								?>
+					        </div>
+
 				<div class="form-group">
 				  <label>Product Price</label>
 				<input type="text"name="p_price" class="from-control" placeholder="price"></div>
@@ -32,9 +51,20 @@ include ('header.php');
                      <div class="form-group">
 				<label>Product Category</label>
 				<select  name="p_cate"class="form-control" >
-                         <option>electronick</option>
-                         <option>mobile</option>
-                         <option>home applicance</option></select>
+                         <option>Select</option>
+                         <?php 
+                         while($data=mysqli_fetch_assoc($result))
+                         { ?>
+                     <?php print_r();  ?>
+                    
+                     <option><?php echo $data['cate_name']; ?></option>
+
+
+
+
+                          <?php }
+                         ?>
+                         
 				</div>
 
                   <div class="from-group">
@@ -51,9 +81,4 @@ include ('header.php');
 				<input type="submit" value="add" class="btn btn-success"></div></div></form>
 </div></div></div>
 
-
-
-<?php 
-
-include('footer.php');
-?>
+<?php ?>

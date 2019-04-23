@@ -31,6 +31,7 @@ include("header.php");
 				</div>
 				  <div class="card-footer">
 				  	<input type="submit" value="login"  class="btn btn-success">
+
 				  	<p class="text-danger text-center">
 						<?php
 						if(isset($_SESSION['msg']))
@@ -40,6 +41,7 @@ include("header.php");
 						}
 						?>
 						</p>
+						<a href="signup.php">creat new account</a>
 				  </div>
 					</form>
 			</div>

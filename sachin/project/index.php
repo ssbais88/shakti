@@ -4,6 +4,10 @@
 
 include("db.php");
 include("header.php");
+if(isset($_SESSION['is_user_logged_in']))
+{
+	header("location:login.php");
+}
 if(isset($_GET['category']))
 {
 	$a = $_GET['category'];
