@@ -2,8 +2,8 @@
 include("header.php");
 session_start();
 ?>
-<div class="row">
-	<div class="col-md-12">
+<!-- <div class="row"> -->
+	<div class="col-md-4 offset-md-1">
 		<div class="card">
 			<div class="card-header">
 				<h3>LOGIN</h3>
@@ -48,6 +48,6 @@ session_start();
 		</form>
 		</div>
 	</div>
-</div>
+<!-- </div> -->
 </body>
 </html>
