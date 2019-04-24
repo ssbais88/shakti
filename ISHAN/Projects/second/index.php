@@ -64,8 +64,11 @@
 						</div>
 						<div class="card-footer">
 						<a href="add_to_cart.php?pid=<?php echo $data['id']; ?>" class="btn btn-success" >Add to Cart</a>
+						<a href="more_img.php?p_id=<?php echo $data['id']; ?>" class="btn btn-primary" >More</a>
+						<br>
 							<del>(<?php echo $data['pprice']; ?>)</del>
 							<b><?php echo $y; ?>.00</b>
+						
 					</div>
 					</div>
 				</div>

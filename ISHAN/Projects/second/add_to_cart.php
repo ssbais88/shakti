@@ -1,5 +1,6 @@
 <?php
 // print_r($_GET);
+// die;
  $a = $_GET['pid'];
 
 if(isset($_COOKIE['cart']))

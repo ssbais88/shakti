@@ -1,6 +1,6 @@
 <?php
 include("db.php");
-include("header.php")
+include("header.php");
 ?>
 	<div class="col-md-9">
 		<div class="row">
