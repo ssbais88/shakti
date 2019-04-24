@@ -37,9 +37,9 @@ $result = mysqli_query($con,$query);
   	  		</li>
   	  	</ul>
   	  </div>
-  	  <form class="form-inline">
-  	  	<input type="text" class="form-control" placeholder="search">
-  	  	<button class="btn btn-success"><i class="fa fa-search" aria-hidden="true"></i></button>
+  	  <form class="form-inline" action="" method="get">
+  	  	<input type="text" name="q" class="form-control" placeholder="search">
+  	  	<button type="submit" class="btn btn-success"><i class="fa fa-search" aria-hidden="true"></i></button>
   	  </form>
       <ul class="navbar-nav">
       	<li class="nav-item">
@@ -86,8 +86,8 @@ $result = mysqli_query($con,$query);
         while($data=mysqli_fetch_assoc($result))  
         {  
         ?>
- 				<a href="index.php?category=<?php echo $data['cate-name']?>" class="list-group-item list-group-item-action"><?php
-        echo $data['cate_name']?></a>
+ 				<a href="index.php?category=<?php echo $data['cate_name'];?>" class="list-group-item list-group-item-action"><?php
+        echo $data['cate_name'];?></a>
  				<?php
       }
       ?>

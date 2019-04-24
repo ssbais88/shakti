@@ -13,7 +13,7 @@ $result = mysqli_query($con, $query);
 <div class="container">
 	<h3>View All User</h3>
 	<div class="row">
-		<div class="col-md-12">
+		<div class="col-md-8 offset-md-2">
 			<table class="table table-bordered table-dark table-hover">
 				<tr>
 					<th>S.No.</th>

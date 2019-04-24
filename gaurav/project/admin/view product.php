@@ -20,6 +20,7 @@ include("dashboard.php");
 					<th>product id</th>
 					<th>product name</th>
 					<th>product price</th>
+					<th>Add</th>
 					<th>Edit</th>
 					<th>Delete</th>
 				</tr>
@@ -30,6 +31,7 @@ include("dashboard.php");
 					<td><?php echo $data['id']?></td>
 					<td><?php echo $data['p_name']?></td>
 					<td><?php echo $data['p_price']?></td>
+					<td><a href="#" class="btn btn-success">Addmore</a></td>
 			    <td><a href="edit_product.php?prod=<?php echo $data['id'];?>" class="btn btn-info">Edit</a></td>
 				<td><a href="deleteproduct.php?product=<?php echo $data['id'];?>" class="btn btn-danger">Delete</a></td>
 				</tr>

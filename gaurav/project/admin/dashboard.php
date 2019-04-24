@@ -28,7 +28,7 @@
    				<a href="view category.php" class="nav-link">View Category</a>
    			</li>
             <li class="nav-item">
-               <a href="#" class="nav-link">View Users</a>
+               <a href="view_user.php" class="nav-link">View Users</a>
             </li>
             <li class="nav-item dropdown">
                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Setting</a>
