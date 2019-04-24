@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Clock</title>
+	<script type="text/javascript">
+		var a = 0;
+		var b = 0;
+		var x = "";
+
+		function start()
+		{
+b += 1;
+				for(b=0; b<=60; b++)
+				{
+					
+				document.getElementById("cl").innerHTML = b;
+				x = setTimeout("start()",100);
+				}
+			}
+				a += 1;
+				
+
+				
+				// document.getElementById("cl").innerHTML = a;
+				// x = setTimeout("start()",100);
+			
+		function stop()
+		{
+			clearTimeout(x);
+		}
+		function reset()
+		{
+			a = 0;
+			document.getElementById("cl").innerHTML=a;
+		}
+	</script>
+</head>
+<body>
+<br>
+<br>
+<button onclick="start()">Start</button>
+<button onclick="stop()">Stop</button>
+<button onclick="reset()">Reset</button>
+<br>
+<br>
+<h1 id="cl">0</h1>
+</body>
+</html>
