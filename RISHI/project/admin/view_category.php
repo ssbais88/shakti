@@ -32,7 +32,7 @@ include("header.php");
 					<tr>
 						<td><?php echo $data['id']; ?></td>
 						<td><?php echo $data['category']; ?></td>
-						<td><a href="#" class="btn btn-info">Edit</a></td>
+						<td><a href="edit_cate.php?e_cate=<?php echo $data['id']; ?>" class="btn btn-info">Edit</a></td>
 						<td><a href="delete_cate.php?d_cate=<?php echo $data['id'];?>" class="btn btn-danger">deletes</a></td>
 					</tr>
 					<?php

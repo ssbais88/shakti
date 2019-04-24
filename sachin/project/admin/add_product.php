@@ -55,12 +55,10 @@ $result = mysqli_query($con,$query);
                          <?php 
                          while($data=mysqli_fetch_assoc($result))
                          { ?>
-                     <?php print_r();  ?>
+                     
                     
-                     <option><?php echo $data['cate_name']; ?></option>
-
-
-
+  
+									<option><?php echo $data['cate_name'];?></option>
 
                           <?php }
                          ?>

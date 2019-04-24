@@ -7,4 +7,4 @@ include ('header.php');
 
 <?php   
 include('footer.php')
-?>
+?><a href="../index.php">index.php</a>

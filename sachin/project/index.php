@@ -51,7 +51,7 @@ else
 						<div class="card-header">
 							<span class="font-weight-bold"><?php echo $data['p_name'];?></span>
 						</div>
-						   <div class="card-footer">
+						   <div class="card-body">
 							<img src="admin/upload/<?php echo $data['image_name']; ?>" style="height:150px !important; width:100%;">
 						   </div>
 						<div class="card-footer">

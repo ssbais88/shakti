@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 	<!DOCTYPE html>
+=======
+<!DOCTYPE html>
+>>>>>>> 1e689817d3458748134bb4ed71b9b2c83282a74a
 <html>
 <head>
 	<title></title>

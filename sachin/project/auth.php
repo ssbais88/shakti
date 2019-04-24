@@ -1,5 +1,6 @@
 	<?php
 // print_r($_POST);
+// die;
  include("db.php");
 
 $u = $_POST['username'];
