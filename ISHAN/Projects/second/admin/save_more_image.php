@@ -24,6 +24,11 @@ if($ext == "jpg" || $ext == "jpeg" || $ext == "png" || $ext == "gif")
 	mysqli_query($con, $query);
 	// header("location:view_pro.php");
 }
+else
+{
+	$_SESSION['msg'] = "This File type is not Allowed !"; 
+	header("add_more_image.php");
+}
 
 
 $name = $_FILES['image2']['name'];
@@ -43,6 +48,11 @@ if($ext == "jpg" || $ext == "jpeg" || $ext == "png" || $ext == "gif")
 	move_uploaded_file($tmp_name, "upload/".$new_name);
 	mysqli_query($con, $query);
 	// header("location:view_pro.php");
+}
+else
+{
+	$_SESSION['msg'] = "This File type is not Allowed !"; 
+	header("add_more_image.php");
 }
 
 
@@ -64,11 +74,16 @@ if($ext == "jpg" || $ext == "jpeg" || $ext == "png" || $ext == "gif")
 	mysqli_query($con, $query);
 	// header("location:view_pro.php
 }
+else
+{
+	$_SESSION['msg'] = "This File type is not Allowed !"; 
+	header("add_more_image.php");
+}
 
 
 $name = $_FILES['image4']['name'];
 $size = $_FILES['image4']['size']; 
-$tmp_name = $_FILES['image2']['tmp_name']; 
+$tmp_name = $_FILES['image4']['tmp_name']; 
 
 $arr = explode(".", $name);
 $ext = end($arr);
@@ -84,4 +99,10 @@ if($ext == "jpg" || $ext == "jpeg" || $ext == "png" || $ext == "gif")
 	mysqli_query($con, $query);
 	header("location:view_pro.php");
 }
+else
+{
+	$_SESSION['msg'] = "This File type is not Allowed !"; 
+	header("add_more_image.php");
+}
+
 ?>

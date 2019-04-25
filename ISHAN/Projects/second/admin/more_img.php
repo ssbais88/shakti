@@ -1,8 +1,9 @@
 <?php
+include("../db.php");
 
 // print_r($_GET);
+// die;
 
-include("../db.php");
 
 $a = $_GET['p_id'];
 
@@ -11,28 +12,10 @@ $result = mysqli_query($con, $query);
 
 include("header.php");
 
-?>
-<div class="container">
-	<div class="row">
-		<div class="col-md-8 offset-2">
-			<table class="table table-dark table-hover">
-				<tr>
-					<!-- <th>ID</th> -->
-					<th>Product ID</th>
-					<th>Images</th>
-					<?php
-					while ($data =mysqli_fetch_assoc($result)) 
-						{?>
-				</tr>
-				<tr>
-					<!-- <td><?php echo $data['id'] ?></td> -->
-					<td><?php echo $data['product_id'] ?></td>
-					<td><img src="upload/<?php echo $data['image_name']; ?>"></td>
+$query =" SELECT * FROM more_image WHERE id='$a'";
+$result = mysqli_query($con, $query);
+$data = mysqli_fetch_assoc($result);
 
-				</tr>
-				<?php	}
-					?>
-			</table>
-		</div>
-	</div>
-</div>
+
+?>
+
