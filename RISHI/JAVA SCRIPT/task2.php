@@ -70,7 +70,7 @@ $n=rand(1000,9999);
 							</tr>
 							<tr>
 								<td><input type="text" name="p_name[]"></td>
-								<td><input type="text" name="Quan[]"></td>
+								<td><input type="text" name="quan[]"></td>
 								<td><input type="text" name="p_price[]"></td>
 							</tr>
 						</table>
