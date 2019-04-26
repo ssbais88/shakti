@@ -13,22 +13,14 @@ $tmp_name = $_FILES['image1']['tmp_name'];
 $arr = explode(".", $name);
 $ext = end($arr);
 
-if($ext == "jpg" || $ext == "jpeg" || $ext == "png" || $ext == "gif")
-{
-	
+
 	$img = $_POST['image1'];
 	$new_name = time().rand(1000,10000).".".$ext;
 
 	$query =" INSERT INTO more_image(product_id, image_name) VALUES('$id', '$new_name')";
 	move_uploaded_file($tmp_name, "upload/".$new_name);
 	mysqli_query($con, $query);
-	// header("location:view_pro.php");
-}
-else
-{
-	$_SESSION['msg'] = "This File type is not Allowed !"; 
-	header("add_more_image.php");
-}
+
 
 
 $name = $_FILES['image2']['name'];
@@ -38,8 +30,6 @@ $tmp_name = $_FILES['image2']['tmp_name'];
 $arr = explode(".", $name);
 $ext = end($arr);
 
-if($ext == "jpg" || $ext == "jpeg" || $ext == "png" || $ext == "gif")
-{
 	
 	$img = $_POST['image2'];
 	$new_name = time().rand(1000,10000).".".$ext;
@@ -47,13 +37,7 @@ if($ext == "jpg" || $ext == "jpeg" || $ext == "png" || $ext == "gif")
 	$query =" INSERT INTO more_image(product_id, image_name) VALUES('$id', '$new_name')";
 	move_uploaded_file($tmp_name, "upload/".$new_name);
 	mysqli_query($con, $query);
-	// header("location:view_pro.php");
-}
-else
-{
-	$_SESSION['msg'] = "This File type is not Allowed !"; 
-	header("add_more_image.php");
-}
+	
 
 
 $name = $_FILES['image3']['name'];
@@ -63,22 +47,14 @@ $tmp_name = $_FILES['image3']['tmp_name'];
 $arr = explode(".", $name);
 $ext = end($arr);
 
-if($ext == "jpg" || $ext == "jpeg" || $ext == "png" || $ext == "gif")
-{
-	
+
 	$img = $_POST['image3'];
 	$new_name = time().rand(1000,10000).".".$ext;
 
 	$query =" INSERT INTO more_image(product_id, image_name) VALUES('$id', '$new_name')";
 	move_uploaded_file($tmp_name, "upload/".$new_name);
 	mysqli_query($con, $query);
-	// header("location:view_pro.php
-}
-else
-{
-	$_SESSION['msg'] = "This File type is not Allowed !"; 
-	header("add_more_image.php");
-}
+	
 
 
 $name = $_FILES['image4']['name'];
@@ -88,9 +64,7 @@ $tmp_name = $_FILES['image4']['tmp_name'];
 $arr = explode(".", $name);
 $ext = end($arr);
 
-if($ext == "jpg" || $ext == "jpeg" || $ext == "png" || $ext == "gif")
-{
-	
+
 	$img = $_POST['image4'];
 	$new_name = time().rand(1000,10000).".".$ext;
 
@@ -98,11 +72,5 @@ if($ext == "jpg" || $ext == "jpeg" || $ext == "png" || $ext == "gif")
 	move_uploaded_file($tmp_name, "upload/".$new_name);
 	mysqli_query($con, $query);
 	header("location:view_pro.php");
-}
-else
-{
-	$_SESSION['msg'] = "This File type is not Allowed !"; 
-	header("add_more_image.php");
-}
 
 ?>
