@@ -22,7 +22,7 @@ $result=mysqli_query($con,$query);
 					Product Detail
 				</div>
 				<div class="card-body">
-					<form action="save_addproduct.php" method="post" enctype="multipart/form-data">
+					<form action="update_pro.php" method="post" enctype="multipart/form-data">
 						<input type="hidden" name="pid" value="<?php echo $id; ?>">
 						<div class="form-group">
 							<label>Product Name</label>
@@ -33,8 +33,12 @@ $result=mysqli_query($con,$query);
 							<input type="text" class="form-control" value="<?php echo $data1['productprice']; ?>" name="pro_price">
 						</div>
 						<div class="form-group">
+							<label>Current Image</label>
+							<img src="upload/<?php echo $data1['imagename']; ?>" height="80" width="80">
+						</div>
+						<div class="form-group">
 							<label>Product Image</label>
-							<input type="file" class="form-control" name="pro_image"  value="<?php echo $data1['imagename']; ?>">
+							<input type="file" class="form-control" name="pro_image">
 							<p class="text-danger">
 								<?php
 								if (isset($_SESSION['msg'])) 
@@ -55,9 +59,17 @@ $result=mysqli_query($con,$query);
 								<option>Select</option>
 								<?php
 								while ($data=mysqli_fetch_assoc($result))
-								{?>
-									<option><?php echo $data['categoryname'];?></option>
+								{
+									if($data1['productcategory']==$data['categoryname'])
+									{?>
+										<option selected="selected"><?php echo $data['categoryname'];?></option>
 								<?php
+									}
+									else
+									{?>
+										<option><?php echo $data['categoryname'];?></option>
+									<?php
+									}
 								}
 								?>
 							</select>

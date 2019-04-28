@@ -31,7 +31,7 @@ include("dashboard.php");
 					<td><?php echo $data['id']?></td>
 					<td><?php echo $data['p_name']?></td>
 					<td><?php echo $data['p_price']?></td>
-					<td><a href="#" class="btn btn-success">Addmore</a></td>
+					<td><a href="add_more.php?add=<?php echo $data['id']?>" class="btn btn-success">Addmore</a></td>
 			    <td><a href="edit_product.php?prod=<?php echo $data['id'];?>" class="btn btn-info">Edit</a></td>
 				<td><a href="deleteproduct.php?product=<?php echo $data['id'];?>" class="btn btn-danger">Delete</a></td>
 				</tr>

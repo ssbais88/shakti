@@ -55,6 +55,7 @@ $result = mysqli_query($con,$query);
               <br />
               <del>(<?php echo $data['p_price'];?>)</del>
               <b><?php echo $y; ?>.00</b>
+              <input type="submit" value="add more" class="btn btn-success">
    			</div>
    		</div>
    </div> 
