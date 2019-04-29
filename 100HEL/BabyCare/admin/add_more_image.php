@@ -87,7 +87,7 @@ $data1=mysqli_fetch_assoc($result1);
 						</div>
 				</div>
 				<div class="card-footer">
-					<input type="submit" class="btn btn-info" value="Add Image">
+					<input type="submit" class="btn btn-info" value="Add Images">
 				</div>
 				</form>
 			</div>
