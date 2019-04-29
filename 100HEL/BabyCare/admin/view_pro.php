@@ -31,6 +31,7 @@ $result=mysqli_query($con, $query);
 						<td><?php echo $data['productprice'];?></td>
 						<td><?php echo $data['productcategory'];?></td>
 						<td><?php echo $data['productdiscount'];?></td>
+						<td><a href="add_more_image.php?e_pro_image=<?php echo $data['id']; ?>" class="btn btn-info">Add More</a></td>
 						<td><a href="edit_pro.php?e_pro=<?php echo $data['id']; ?>" class="btn btn-info">Edit</a></td>
 						<td><a href="delete_pro.php?d_pro=<?php echo $data['id']; ?>" class="btn btn-danger">Delete</a></td>
 					</tr>

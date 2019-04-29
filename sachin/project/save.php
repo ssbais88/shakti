@@ -27,18 +27,18 @@ if($ext=="jpg" || $ext=="jpeg" || $ext=="gif" || $ext=="png"  )
        $f = $_POST['contact'];
        $g = $_POST['city'];
 
-$query="INSERT INTO project (full_name, user_name, password, gender, address, contact, city,image_name) VALUES ('$a', '$b', '$c', '$d', '$e', '$f', '$g','$new_name')";
+        $query="INSERT INTO project (full_name, user_name, password, gender, address, contact, city,image_name) VALUES ('$a', '$b', '$c', '$d', '$e', '$f', '$g','$new_name')";
 
-mysqli_query($con, $query);
-move_uploaded_file($tmp_name,"upload/".$new_name);
+        mysqli_query($con, $query);
+        move_uploaded_file($tmp_name,"upload/".$new_name);
 
-header("location:login.php");
+         header("location:login.php");
 
 	}
 	else
 	{
 		$_SESSION['msg']="file is too large";
-		header(location:signup.php);
+		header("location:signup.php");
 
 
 	}
@@ -49,7 +49,7 @@ header("location:login.php");
 else
 { echo "no";
 $_SESSION['msg']= "file type not allowed";
-header(location:signup.php);
+header("location:signup.php");
 }
 
 

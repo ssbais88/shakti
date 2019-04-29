@@ -1,13 +1,13 @@
 <?php 
-include("db.php");
+// include("db.php");
 
 
+include("header.php");
 
 if (! isset($_SESSION['is_user_logged_in'])) 
 {
 	header("location:login.php");
 }
-include("header.php");
 $query = "SELECT * FROM project WHERE id = ".$_SESSION['id'];
  $result = mysqli_query($con,$query);
  $data = mysqli_fetch_assoc($result);

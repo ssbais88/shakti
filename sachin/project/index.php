@@ -2,16 +2,40 @@
 // print_r($_COOKIE);
 
 
-include("db.php");
+// include("db.php");
 include("header.php");
-if(isset($_SESSION['is_user_logged_in']))
+if( ! isset($_SESSION['is_user_logged_in']))
 {
 	header("location:login.php");
 }
+// print_r($_GET);
+// die;
+if(isset($_GET['s_name']))
+{
+ $a = $_GET['s_name'];
+ if(isset($_GET['category'])
+ {
+   $c = $_GET['category'];
+   $query = "SELECT * FROM product WHERE p_cate='$c' AND p_name LIKE '%a%'";
+   $result = mysqli_query($con,$query);
+
+
+ }
+ else
+ {
+
+
+
+
+ }
+
+
+}
+
 if(isset($_GET['category']))
 {
 	$a = $_GET['category'];
-	$query = "SELECT * FROM product WHERE product_category='$a'";
+	$query = "SELECT * FROM product WHERE p_cate ='$a'";
 	$result = mysqli_query($con, $query);
 }
 else
