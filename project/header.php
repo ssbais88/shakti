@@ -15,6 +15,12 @@ else
 {
 	$cart_total = 0;	
 }
+
+
+$query_slider = "SELECT * FROM slider";
+$result_slider1 = mysqli_query($con, $query_slider);
+$result_slider2 = mysqli_query($con, $query_slider);
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -106,10 +112,72 @@ else
 
 
 </nav>
-<div class="jumbotron mb-0" style="background-color: #225544; border-radius: 0; background-image: url('image/bg.jpg'); background-size: 100% 100%">
+<!-- <div class="jumbotron mb-0" style="background-color: #225544; border-radius: 0; background-image: url('image/bg.jpg'); background-size: 100% 100%">
 	<h1 class="text-light">The Stepping Stone</h1>
 	<p class="text-light">Web Development Training Insititute in Indore</p>
+</div> -->
+
+<div style="height: 250px;" class="container-fluid">
+	<div id="slider" class="carousel slide" data-ride="carousel">
+		<ul class="carousel-indicators">
+			<?php
+			$i=0;
+			while($data_slide2=mysqli_fetch_assoc($result_slider2))
+			{ ?>
+				<li class="<?php if($i==0) echo "active"; ?>" data-target="#slider" data-slide-to="<?php echo $i; ?>"></li>
+
+			<?php
+			$i++;
+			}
+			?>
+
+			
+		</ul>
+
+
+
+
+		<div class="carousel-inner">
+			<?php
+			$n=0;
+			while($data_slide1=mysqli_fetch_assoc($result_slider1))
+			{ 
+
+			?>
+
+
+			<div class="<?php if($n==0) echo "active"; ?> carousel-item">
+				<img src="slider_img/<?php echo $data_slide1['image_name']; ?>" height="250" width="100%" />
+				<div class="carousel-caption">	
+					<h3><?php echo $data_slide1['title']; ?></h3>
+					<p><?php echo $data_slide1['sub_title'];?></p>
+				</div>
+			</div>
+			
+			<?php
+			$n++;
+			}
+			?>
+			
+		</div>
+
+
+
+
+		<a class="carousel-control-prev" href="#slider" data-slide="prev">
+		    <span class="carousel-control-prev-icon"></span>
+		  </a>
+		  <a class="carousel-control-next" href="#slider" data-slide="next">
+		    <span class="carousel-control-next-icon"></span>
+		  </a>
+
+
+	</div>
+
+
 </div>
+
+
 <!-- <div class="container-fluid" style="background-color: #fe4c50;">
 	<div class="container">
 		<h2 class="text-light pt-4">Our Project</h2>
