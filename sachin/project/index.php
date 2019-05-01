@@ -10,40 +10,41 @@ if( ! isset($_SESSION['is_user_logged_in']))
 }
 // print_r($_GET);
 // die;
-if(isset($_GET['s_name']))
-{
- $a = $_GET['s_name'];
- if(isset($_GET['category'])
- {
-   $c = $_GET['category'];
-   $query = "SELECT * FROM product WHERE p_cate='$c' AND p_name LIKE '%a%'";
-   $result = mysqli_query($con,$query);
+  if(isset($_GET['s_name']))
+   {
+      $a = $_GET['s_name'];
+      if(isset($_GET['category']))
+       {
+          $c = $_GET['category'];
+          $query = "SELECT * FROM product WHERE p_cate='$c' AND p_name LIKE '%$a%'";
+          $result = mysqli_query($con,$query);
+        }
+         else
+        {
+          $query = "SELECT * FROM product WHERE p_name LIKE '%$a%'";
+          $result = mysql_query($com,$query);
 
 
- }
- else
- {
+
+         }
 
 
+    }
+    else
 
+       if(isset($_GET['category']))
+        {
+        	$c = $_GET['category'];
+	        $query = "SELECT * FROM product WHERE p_cate ='$c'";
+	        $result = mysqli_query($con, $query);
+        }
+            else
+        {
+	      $query = "SELECT * FROM product";
+	       $result = mysqli_query($con, $query);
 
- }
-
-
-}
-
-if(isset($_GET['category']))
-{
-	$a = $_GET['category'];
-	$query = "SELECT * FROM product WHERE p_cate ='$a'";
-	$result = mysqli_query($con, $query);
-}
-else
-{
-	$query = "SELECT * FROM product";
-	$result = mysqli_query($con, $query);
-
-}
+        }
+    
 
 
 

@@ -20,6 +20,14 @@ if ($ext=="jpg" || $ext=="jpeg" || $ext=="png" || $ext=="gif")
 	mysqli_query($con, $query);
 	// header("location: view_pro.php");
 }
+<<<<<<< HEAD
+=======
+else
+{
+	$_SESSION['msg']="This file type not allowed";
+	header("location:add_more_image.php");
+}
+>>>>>>> 54c01d7234a13747cc9429c0ca64a3123427a8cc
 
 $name=$_FILES['pro_image1']['name'];
 $size=$_FILES['pro_image1']['size'];
@@ -36,6 +44,14 @@ if ($ext=="jpg" || $ext=="jpeg" || $ext=="png" || $ext=="gif")
 	mysqli_query($con, $query);
 	// header("location: view_pro.php");
 }
+<<<<<<< HEAD
+=======
+else
+{
+	$_SESSION['msg']="This file type not allowed";
+	header("location:add_more_image.php");
+}
+>>>>>>> 54c01d7234a13747cc9429c0ca64a3123427a8cc
 
 $name=$_FILES['pro_image2']['name'];
 $size=$_FILES['pro_image2']['size'];
@@ -52,6 +68,14 @@ if ($ext=="jpg" || $ext=="jpeg" || $ext=="png" || $ext=="gif")
 	mysqli_query($con, $query);
 	// header("location: view_pro.php");
 }
+<<<<<<< HEAD
+=======
+else
+{
+	$_SESSION['msg']="This file type not allowed";
+	header("location:add_more_image.php");
+}
+>>>>>>> 54c01d7234a13747cc9429c0ca64a3123427a8cc
 
 $name=$_FILES['pro_image3']['name'];
 $size=$_FILES['pro_image3']['size'];
@@ -68,4 +92,12 @@ if ($ext=="jpg" || $ext=="jpeg" || $ext=="png" || $ext=="gif")
 	mysqli_query($con, $query);
 	header("location: view_pro.php");
 }
+<<<<<<< HEAD
+=======
+else
+{
+	$_SESSION['msg']="This file type not allowed";
+	header("location:add_more_image.php");
+}
+>>>>>>> 54c01d7234a13747cc9429c0ca64a3123427a8cc
 ?>

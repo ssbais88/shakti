@@ -56,11 +56,20 @@ $result = mysqli_query($con,$query);
     </li>
       	</ul>
       	</div>
-      	<form class="form-inline ">
-      		<input type="text" class="form-control" placeholder="search">
+      	
+
+
+        <form class="form-inline ">
+      		<input type="text" class="form-control" name="s_name" placeholder="search">
       		<button class="btn btn-dark" type="submit"><i class="fa fa-search" aria-hidden="true"></i>
             </button>
       	</form>
+
+
+
+
+
+
       	<ul class="navbar-nav">
     
 
