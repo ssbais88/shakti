@@ -38,6 +38,7 @@
 					<div class="dropdown-menu">
 						<a class="dropdown-item" href="#">Change Password</a>
 						<a class="dropdown-item" href="create_new_admin.php">Create New Admin</a>
+						<a class="dropdown-item" href="slider.php">Slider</a>
 					</div>
 
 
