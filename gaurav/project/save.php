@@ -11,7 +11,7 @@ $tmp_name = $_FILES['image']['tmp_name'];
 $arr = explode(".",$name);
 $ext = end($arr);
 
-if($ext=="jpg" || $ext="jpeg" || $ext="png" || $ext="gif")
+if($ext=="jpg" || $ext="jpeg" || $ext="png" || $ext="gif" ||)
  {
   if($size<=(1024*1024*1))
   {	

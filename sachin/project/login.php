@@ -1,7 +1,10 @@
 <?php
-include("header.php"); 
- ?>
 
+// include("db.php");
+
+include("header.php"); 
+
+?>
 <div class="container">
 	<div class="row">
 		<div class="col-md-9 border p-4">
@@ -15,19 +18,30 @@ include("header.php");
 					login
 				</div>
 				<div class="card-body">
-					<form>
+					<form action="auth.php" method="post">
 						<div class="form-group">
 							<label>username</label>
-							<input type="text" placeholder ="username"class="form-control">
+							<input type="text"  name="username" placeholder ="username"class="form-control">
 						</div>
 						<div class="form-group">
 							<label>password</label>
-							<input type="password" placeholder ="password"class="form-control">
+							<input type="password" name="password" placeholder ="password"class="form-control">
 						</div>
 				
 				</div>
 				  <div class="card-footer">
 				  	<input type="submit" value="login"  class="btn btn-success">
+
+				  	<p class="text-danger text-center">
+						<?php
+						if(isset($_SESSION['msg']))
+						{
+							echo $_SESSION['msg'];
+							unset($_SESSION['msg']);
+						}
+						?>
+						</p>
+						<a href="signup.php">creat new account</a>
 				  </div>
 					</form>
 			</div>
