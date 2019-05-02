@@ -20,6 +20,21 @@ $query_slider = "SELECT * FROM slider";
 $result_slider1 = mysqli_query($con, $query_slider);
 $result_slider2 = mysqli_query($con, $query_slider);
 
+
+
+$que_auto = "SELECT * FROM product";
+$res_auto = mysqli_query($con, $que_auto);
+
+$auto = "";
+
+while($data_auto = mysqli_fetch_assoc($res_auto))
+{
+	$auto .= '"'.$data_auto['product_name'].'",';
+}
+
+$search_str= trim($auto, ",");
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -29,6 +44,11 @@ $result_slider2 = mysqli_query($con, $query_slider);
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+
+
 	<style type="text/css">
 		.list-group-item{
 			border-color: #fe4c50 !important;
@@ -48,6 +68,14 @@ $result_slider2 = mysqli_query($con, $query_slider);
 			background-size: 100%;
 		}
 	</style>
+	<script type="text/javascript">
+		$( function() {
+		    var availableTags = [<?php echo $search_str ?>];
+		    $( "#tags" ).autocomplete({
+		      source: availableTags
+		    });
+		  } );
+	</script>
 </head>
 <body>
 <nav class="navbar bg-mycolor navbar-expand-md navbar-dark sticky-top">
@@ -60,6 +88,7 @@ $result_slider2 = mysqli_query($con, $query_slider);
 	<div id="myMenu" class="collapse navbar-collapse">
 	<ul class="navbar-nav">
 		<li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+		<li class="nav-item"><a class="nav-link" href="contact.php">Contact Us</a></li>
 		<li class="nav-item">
 			<a href="my_cart.php" class="nav-link">My Cart <i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="badge badge-pill badge-dark"><?php echo $cart_total; ?></span></a>
 		</li>
@@ -67,7 +96,7 @@ $result_slider2 = mysqli_query($con, $query_slider);
 	</ul>
 	</div>
 	<form class="form-inline" action="" method="get">
-		<input name="q" type="text" class="form-control" placeholder="Search">
+		<input name="q" id="tags" type="text" class="form-control" placeholder="Search">
 		<button type="submit" class="btn btn-dark"><i class="fa fa-search" aria-hidden="true"></i></button>
 	</form>
 	<ul class="navbar-nav">
