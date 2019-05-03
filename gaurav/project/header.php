@@ -30,7 +30,7 @@ $result = mysqli_query($con,$query);
   	  			<a href="#" class="nav-link">About</a>
   	  		</li>
   	  		<li class="nav-item">
-  	  			<a href="#" class="nav-link">Contact</a>
+  	  			<a href="contactus.php" class="nav-link">Contact</a>
   	  		</li>
   	  		<li class="nav-item">
   	  			<a href="#" class="nav-link">Help</a>
@@ -43,7 +43,7 @@ $result = mysqli_query($con,$query);
   	  </form>
       <ul class="navbar-nav">
       	<li class="nav-item">
-      		<a href="#" class="nav-link">My cart<i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+      		<a href="my_cart.php" class="nav-link">My cart<i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="badge badge-pill badge-dark">0</span></a>
       	</li>
       
       	<?php 

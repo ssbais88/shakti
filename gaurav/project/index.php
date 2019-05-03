@@ -51,6 +51,7 @@ $result = mysqli_query($con,$query);
    				<img src="admin/upload/<?php echo $data['image_name']; ?>" style="height:150px !important; width: 100%;" />
    			</div>
    			<div class="card-footer">
+          <a href="addto_cart.php?pid=<?php echo $data['id']?> "class="btn btn-success">Add to cart</a>
    				<a href="#" class="btn btn-success">Buy</a>
               <br />
               <del>(<?php echo $data['p_price'];?>)</del>

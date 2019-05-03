@@ -31,6 +31,7 @@ else
 			</div>
 			<div class="row">
 				<?php
+
 				$x = $_COOKIE['cart'];
 				$arr = explode("#", $x);
 				$total=0;
@@ -40,10 +41,9 @@ else
 					$result = mysqli_query($con, $query);
 					$data = mysqli_fetch_assoc($result);
 					$total += $data['product_price'];
-					?>
+				
 
-
-
+				?>
 				<div class="col-md-10 offset-md-1 my-3">			
 					<div class="card">
 						<div class="card-header">
