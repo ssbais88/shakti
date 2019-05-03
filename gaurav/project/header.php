@@ -43,7 +43,7 @@ $result = mysqli_query($con,$query);
   	  </form>
       <ul class="navbar-nav">
       	<li class="nav-item">
-      		<a href="my_cart.php" class="nav-link">My cart<i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="badge badge-pill badge-dark">0</span></a>
+      		<a href="my_cart.php" class="nav-link">My cart<i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="badge badge-pill badge-warning"></span></a>
       	</li>
       
       	<?php 

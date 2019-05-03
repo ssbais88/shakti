@@ -15,7 +15,7 @@ $result = mysqli_query($con, $query);
 	<h3>View All Product</h3>
 	<div class="row">
 		<div class="col-md-12">
-			<table class="table table-bordered table-dark table-hover">
+			<table class="table table-dark table-bordered  table-hover">
 				<tr>
 					<th>S.No.</th>
 					<th>Product Name</th>

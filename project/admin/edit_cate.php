@@ -10,7 +10,7 @@ $id = $_GET['cate'];
 $query = "SELECT * FROM category WHERE id=$id";
 $result = mysqli_query($con, $query);
 $data = mysqli_fetch_assoc($result);
-// print_r($data);
+print_r($data);
 
 
 ?>
@@ -30,7 +30,7 @@ $data = mysqli_fetch_assoc($result);
 				<div class="card-body">
 						<div class="form-group">
 							<label>Category Name</label>
-							<input type="text" placeholder="Category Name" name="cate_name" class="form-control" value="<?php echo $data['category_name'];?>">
+							<input type="text" placeholder="Category Name" name="cate_name" class="form-control" value="<?php echo $data['cate_name'];?>">
 						</div>
 					</div>
 					<div class="card-footer">

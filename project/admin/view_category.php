@@ -5,7 +5,7 @@ if(! isset($_SESSION['is_admin_logged_in']))
 {
 	header("location:index.php");
 }
-include('header.php');
+include('header.php');	
 $query ="SELECT * FROM category";
 $result=mysqli_query($con, $query);
 
@@ -30,7 +30,14 @@ $result=mysqli_query($con, $query);
 						<td><?php echo $data['id']; ?></td>
 						<td><?php echo $data['category_name'];?></td>
 						<td><a href="edit_cate.php?cate=<?php echo $data['id'];?>" class="btn btn-info">Edit</a></td>
+<<<<<<< HEAD
+=======
+						<td><?php echo $data['category'];?></td>
+						<td><a href="#" class="btn btn-info">Edit</a></td>
+>>>>>>> e7c802d7385a9c2f0ab324fa2cb8ffb828336b14	
+=======
 
+>>>>>>> 768d4a0aa0fdb6e3b0e051c53d8e4ed7c8614604
 						<td><a href="delete_cate.php?cate=<?php echo $data['id']; ?>" class="btn btn-danger">Delete</a></td>
 					</tr>
 

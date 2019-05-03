@@ -61,7 +61,10 @@ else
 							</div>
 							<div class="card-footer">
 								<a href="addtocart.php?pid=<?php echo $data['id']; ?>" class="btn btn-success btn-sm">Add to Cart</a>
+<<<<<<< HEAD
+=======
 								<a href="moreaboutproduct.php?pid=<?php echo $data['id']; ?>" class="btn btn-sm btn-success">More</a>
+>>>>>>> 54c01d7234a13747cc9429c0ca64a3123427a8cc
 							<del>(<?php echo $data['productprice']; ?>)</del><br />
 							<b><?php echo $y; ?></b>
 							</div>
