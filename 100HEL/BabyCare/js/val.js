@@ -4,7 +4,7 @@ $(document).ready(function() {
 	var b=$("#email").val();
 	var c=$("#password").val();
 	var d=$("#re-password").val();
-	var e=$("#profile-image").val();
+	var e=$("#profile_image").val();
 	var f=$("#address").val();
 	var g=$("#city").val();
 	var h=$("#contact").val();
@@ -24,8 +24,10 @@ $(document).ready(function() {
 		$("#email_msg").html("Insert your Email");
 	}
 	else
-	{		
+	{	
+
 		$("#email_msg").html("");
+		
 		var reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 		if (reg.test(b)==false)
 		{
@@ -35,6 +37,7 @@ $(document).ready(function() {
 		{
 			$("#email_msg").html("");
 		}
+	
 	}
 	if (c=="")
 	{
@@ -51,14 +54,22 @@ $(document).ready(function() {
 	else
 	{
 		$("#re-password_msg").html("");
-	}
+		if (c!=d)
+		{
+			$("#re-password_msg").html("Password and Re-password not same");
+		}
+		else
+		{
+			$("#re-password_msg").html("");	
+		}
+	}	
 	if (e=="")
 	{
-		$("#profile-image_msg").html("Insert your profile image");
+		$("#profile_image_msg").html("Insert your profile image");
 	}
 	else
 	{
-		$("#profile-image_msg").html("");
+		$("#profile_image_msg").html("");
 	}
 	if (f=="")
 	{
@@ -68,6 +79,7 @@ $(document).ready(function() {
 	{
 		$("#address_msg").html("");
 	}
+
 	if (g=="Select")
 	{
 		$("#city_msg").html("Select your city");
@@ -83,6 +95,22 @@ $(document).ready(function() {
 	else
 	{
 		$("#contact_msg").html("");
+		if(isNaN(g)==true)
+		{
+			$("#contact_msg").html("Insert Number Only");
+		}
+		else
+		{
+			$("#contact_msg").html("");
+			if(g.length !=10)
+			{
+				$("#contact_msg").html("Insert 10 digits");
+			}
+			else
+			{
+				$("#contact_msg").html("");
+			}
+		}
 	}
 	if (i==false && j==false)
 	{
