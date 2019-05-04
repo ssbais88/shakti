@@ -29,7 +29,7 @@ $query = "SELECT * FROM project WHERE id = ".$_SESSION['id'];
 
 						<tr>
 							<td>Profile Image</td>
-							<td><img src="upload/<?php  echo $data['image_name']; ?>" height="80" width="80"></td>
+							<td><img src="user_image/<?php  echo $data['image_name']; ?>" height="80" width="80"></td>
 						</tr>
 						<tr>
 							<td>User Name</td>

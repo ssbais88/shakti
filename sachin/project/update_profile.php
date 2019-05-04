@@ -10,7 +10,7 @@ if ($_FILE['image']['name']=="")
    $c = $_POST['gender'];
    $d = $_POST['city'];
    $e = $_POST['contact'];
-   $query = "UPDATE product SET full_name='$a',address='$b', gender ='$c',city = '$d',contact='$e'	WHERE id = id ";
+   $query = "UPDATE project SET full_name='$a',address='$b', gender ='$c',city = '$d',contact='$e'	WHERE id = $id ";
    mysqli_query($con,$query);
    header("location:my_profile.php");
 }
@@ -31,7 +31,8 @@ else
           $c = $_POST['gender'];
           $d = $_POST['city'];
           $e = $_POST['contact'];
-          $query = "UPDATE project SET full_name=$a,address=$b, gender=$c,city=$d,contact=$e,image= $new_name WHERE id =$id";
+          $query = "UPDATE project SET full_name='$a',address='$b', gender='$c',city='$d',contact='$e',image_name='$new_name' WHERE id =$id";
+          move_uploaded_file($tmp_name,"user_image/".$new_name);
           mysqli_query($con,$query);
           header("location:my_profile.php");
         }

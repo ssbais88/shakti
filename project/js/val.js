@@ -156,6 +156,6 @@ $(document).ready(function(){
 
 
 		// var a = document.getELementById("full_name").value;
-		return check;
+		return false;
 	});	
 });

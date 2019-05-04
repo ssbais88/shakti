@@ -28,7 +28,7 @@ $result_slider2 = mysqli_query($con, $query_slider);
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
-	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="j/jquery.js"></script>
 	<script type="text/javascript" src="js/bootstrap.bundle.js"></script>
 	<style type="text/css">
 		.list-group-item{
