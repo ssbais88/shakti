@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 <?php
 include ("db.php");
+=======
+	<?php
+
+>>>>>>> 1d97536d0c78d33709a5a08397ec864c8ca4da12
 $query = "SELECT * FROM category";
 $result = mysqli_query($con, $query);
 

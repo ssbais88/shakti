@@ -19,7 +19,8 @@ include("header.php");
 			</div>
 			<div class="row">
 				<div class="col-md-3 border">
-					
+					<a href="#" onclick="demo()">One</a>
+					<a href="#" onclick="demo1()">Two</a>
 				</div>
 				<div class="col-md-9">
 					<div class="row">
