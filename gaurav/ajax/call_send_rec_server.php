@@ -1,9 +1,10 @@
 <?php
 $con = mysqli_connect("localhost","root","","onlineshop");
-$a = $_POST['name'];
-$b = $_POST['fee'];
-$query1 ="INSERT INTO student(name,fee) VALUES('$a','$b')";
-mysqli_query1($con,$query1);
+$q = $_POST['demo1'];
+$r = $_POST['demo2'];
+
+$query1 ="INSERT INTO student(name,fee) VALUES('$q','$r')";
+mysqli_query($con,$query1);
 
 $query ="SELECT * FROM student";
 $result = mysqli_query($con,$query);

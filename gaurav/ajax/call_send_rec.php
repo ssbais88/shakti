@@ -6,19 +6,23 @@
 	<script type="text/javascript">
 		$(document).ready(function(){
            $("button").click(function(){
-           	$.ajax({
-           		url : "call_send_rec_sever.php",
+           	 var a = $("#name").val();
+           	 var b = $("#fee").val();
+           	 $.ajax({
+           		url : "call_send_rec_server.php",
            		type : "post",
+           		data : {demo1: a , demo2 : b },
            		success : function(rec){
+
            			$("#tabs").html(rec);
            			$("#name").val("");
            			$("#fee").val("");
            		}
-           	})
 
+           	
+           	 })
+           	 
            });
-
-
 		});
 		function getAll()
 		{
@@ -27,6 +31,7 @@
 				type : "get",
 				success : function(rec){
 					$("#tabs").html(rec);
+					// alert(rec);
 				} 
 			})
 		}
@@ -44,7 +49,9 @@ Fee<input type="text" id="fee"/>
 <br>
 <button>Save</button>
 <br>
-<table border="1" cellspacing="0" id="tabs"></table>
+</div>
+<div align="center" style=" background-color:green; margin: 0 auto; width: 300px;">
+<table border="1" cellspacing="0" cellpadding="10" id="tabs"></table>
 </div>
 </body>
 </html>
