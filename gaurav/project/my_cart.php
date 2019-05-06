@@ -3,8 +3,8 @@ $con = mysqli_connect("localhost","root","","onlineshop");
 include("header.php");
 if(isset($_GET['admincategory']))
 {
-	$m = $_GET['admincategory'];
-	$query = "SELECT * FROM addproduct WHERE p_category='$m'";
+	$a = $_GET['admincategory'];
+	$query = "SELECT * FROM addproduct WHERE p_category='$a'";
 	$result = mysqli_query($con,$query);
 }
 else
@@ -16,6 +16,12 @@ else
 ?>
 <div class="col-md-9">
 	<div class="row">
+		<div class="col-md-12">
+		<h2>Your cart</h2>
+		<a href="clear_cart.php">Clear cart</a>
+	</div>
+	</div>	
+    <div class="row">
 		<?php
 		$x = $_COOKIE['cart'];
 		$arr = explode("#",$x);
@@ -25,31 +31,29 @@ else
 
 			$query = "SELECT * FROM addproduct where id = $y";
 			$result = mysqli_query($con,$query);
-			$data = mysqli_fetchassoc($result);
-			$total = $data['product_price'];
+			$data = mysqli_fetch_assoc($result);
+			$total += $data['p_price'];
 
 		?>
-		<div class="col-md-12">
-		<h2>Your cart</h2>
-		<a href="">Clear cart</a>
-	</div>
-	</div>	
-    <div class="row">
-    	
+    	<div class="col-md-10 offset-md-1 my-3">
 			<div class="card">
 				<div class="card-header">
-					<?php ?>
+					<h2><?php echo $data['p_name'];?></h2>
 				</div>
 				<div class="card-body">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex 
+					<img src="admin/upload/<?php echo $data['image_name'];?>" height="100" width="100" /> 
 				</div>
 				<div class="card-footer">
-					<button></button>
+					<?php echo $data['p_price'];?>
 				</div>
 		</div>
+	    </div>
+		<?php
+	}
+	?>
 	</div>
-</div>
+	<div class="bg-info p-4">
+					<b>Total : <?php echo $total; ?></b>
+    </div>
 	
 </div>

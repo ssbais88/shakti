@@ -3,6 +3,16 @@ $con = mysqli_connect("localhost","root","","onlineshop");
 
 $query = "select * from admincategory";
 $result = mysqli_query($con,$query);
+if(isset($_COOKIE['cart']))
+{
+  $x = $_COOKIE['cart'];
+  $arr = explode("#", $x);
+  $cart_total=count($arr);
+}
+else
+{
+  $cart_total = 0;  
+}
 
 ?>
  <!DOCTYPE html>
@@ -43,7 +53,7 @@ $result = mysqli_query($con,$query);
   	  </form>
       <ul class="navbar-nav">
       	<li class="nav-item">
-      		<a href="my_cart.php" class="nav-link">My cart<i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="badge badge-pill badge-warning"></span></a>
+      		<a href="my_cart.php" class="nav-link">My cart<i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="badge badge-pill badge-warning"><?php echo $cart_total?></span></a>
       	</li>
       
       	<?php 

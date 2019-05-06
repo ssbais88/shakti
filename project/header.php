@@ -1,5 +1,5 @@
-	<?php
-	include ("db.php");
+<?php
+	// include ("db.php");
 $query = "SELECT * FROM category";
 $result = mysqli_query($con, $query);
 
@@ -88,13 +88,10 @@ $search_str= trim($auto, ",");
 
 	<div id="myMenu" class="collapse navbar-collapse">
 	<ul class="navbar-nav">
-<<<<<<< HEAD
 		<li class="nav-item">
 			<a class="nav-link" href="index.php">Home</a></li>
-=======
 		<li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
 		<li class="nav-item"><a class="nav-link" href="contact.php">Contact Us</a></li>
->>>>>>> 159cdc6cc88a248d913e6b046b9ff62b928c503d
 		<li class="nav-item">
 			<a href="my_cart.php" class="nav-link">My Cart <i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="badge badge-pill badge-dark"><?php echo $cart_total; ?></span></a>
 		</li>
