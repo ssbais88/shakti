@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 25, 2019 at 05:13 PM
--- Server version: 5.7.25-0ubuntu0.16.04.2
--- PHP Version: 7.0.33-0ubuntu0.16.04.3
+-- Generation Time: May 03, 2019 at 03:47 PM
+-- Server version: 5.7.26-0ubuntu0.16.04.1
+-- PHP Version: 7.0.33-0ubuntu0.16.04.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -72,6 +72,29 @@ INSERT INTO `admin` (`id`, `username`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `buy`
+--
+
+CREATE TABLE `buy` (
+  `id` int(11) NOT NULL,
+  `cust_id` int(11) NOT NULL,
+  `productname` varchar(100) NOT NULL,
+  `quantity` varchar(100) NOT NULL,
+  `price` decimal(9,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `buy`
+--
+
+INSERT INTO `buy` (`id`, `cust_id`, `productname`, `quantity`, `price`) VALUES
+(1, 1, 'potato', '1 kilogram', '50.00'),
+(2, 1, 'tomato', '2 kilogram', '30.00'),
+(3, 1, 'cabbage', '3 k .g.', '20.00');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `category`
 --
 
@@ -97,6 +120,25 @@ INSERT INTO `category` (`id`, `category`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `customertable`
+--
+
+CREATE TABLE `customertable` (
+  `id` int(11) NOT NULL,
+  `invoice_no` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `customertable`
+--
+
+INSERT INTO `customertable` (`id`, `invoice_no`, `name`) VALUES
+(1, 3396, 'sohel');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user`
 --
 
@@ -116,7 +158,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `fullname`, `username`, `mobile`, `password`, `gender`, `address`, `city`) VALUES
-(1, 'kalia', 'kalia@gmail.com', '123456', '111', '', 'trrt', 'bhopal');
+(1, 'kalia', 'kalia@gmail.com', '123456', '111', '', 'trrt', 'bhopal'),
+(2, 'vicky', 'vicky@gmail.com', '9907728571', '123', '', 'ghvfgdfghgfhy', 'indore');
 
 --
 -- Indexes for dumped tables
@@ -135,9 +178,21 @@ ALTER TABLE `admin`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `buy`
+--
+ALTER TABLE `buy`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `category`
 --
 ALTER TABLE `category`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `customertable`
+--
+ALTER TABLE `customertable`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -161,15 +216,25 @@ ALTER TABLE `addproduct`
 ALTER TABLE `admin`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
+-- AUTO_INCREMENT for table `buy`
+--
+ALTER TABLE `buy`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
+-- AUTO_INCREMENT for table `customertable`
+--
+ALTER TABLE `customertable`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

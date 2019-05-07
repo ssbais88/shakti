@@ -2,6 +2,20 @@
 $query="SELECT * FROM category";
 $result=mysqli_query($con,$query);
 
+
+
+
+$que_auto="SELECT * FROM addproduct";
+$res_auto=mysqli_query($con ,$que_auto);
+
+$auto="";
+
+while($data_auto=mysqli_fetch_assoc($res_auto))
+{
+	$auto .= '"'.$data_auto['productname'].'",';
+}
+
+$search_str = trim($auto,",");
 ?>
 <html>
 <head>
@@ -11,6 +25,14 @@ $result=mysqli_query($con,$query);
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var availableTags = [<?php echo $search_str ?>];
+			$("#tags").autocomplete({
+				source : availableTags
+			});
+		});
+	</script>
 </head>
 <body>
 	<nav class="navbar navbar-dark bg-success navbar-expand-sm sticky-top">
@@ -27,26 +49,17 @@ $result=mysqli_query($con,$query);
 				<li class="nav-item">
 					<a href="#" class="nav-link">ABOUT</a>
 				</li>
-				<li class="nav-item dropdown">
-					<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">MORE</a>
-					<div class="dropdown-menu">
-					<a href="#" class="dropdown-item">help</a>
-					<a href="#" class="dropdown-item">contact</a>
-					<a href="#" class="dropdown-item">mails</a>
-					</div>	
+				<li class="nav-item">
+					<a href="#" class="nav-link">My Cart<i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="badge badge-pill badge-dark"></span></a>
 				</li>
 			</ul>
 		</div>
-				<div class="form-group mb-0 ">
-					<div class="input-group">
-					<div class="input-group-append">
-					<input type="text" placeholder="search" class="form-control">
-					<button class="btn btn-dark">
-					<i class="fa fa-search" aria-hidden="true"></i>
-					</button>
-				    </div>
-				   </div>
-				</div>			
+		
+			<form class="form-inline" action="" method="get">
+				<input type="text" id="tags" name="q" class="form-control" placeholder="Search Here">
+				<button class="btn btn-dark" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+			</form>
+				
 				<ul class="navbar-nav">
 					<?php
 						if(isset($_SESSION['is_user_logged_in']))
