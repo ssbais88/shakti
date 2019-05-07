@@ -1,4 +1,19 @@
 $(document).ready(function(){
+  $("#user_name").blur(function(){
+    var a = $(this).val()
+    $.ajax({
+      url : "checkusername.php",
+      type : "post",
+      data :{u:a},
+      success : function(res){
+        // alert(res);
+        $("#user_name_msg").html(res);
+      } 
+    })
+  });
+
+
+
  $("#submit").click(function(){
  	var a = $("#full_name").val();
  	var b = $("#profile_pic").val();

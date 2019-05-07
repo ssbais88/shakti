@@ -8,7 +8,7 @@ if(! isset($_SESSION['is_user_logged_in']))
 }
 include("header.php");
 
-$query = "SELECT * FROM user WHERE id = ".['id'];
+$query = "SELECT * FROM user";
 $result = mysqli_query($con, $query);
 
 $data = mysqli_fetch_assoc($result);

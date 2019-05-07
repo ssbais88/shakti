@@ -39,20 +39,33 @@ else
 	}
 }
 
-
-
-
-
-
-
 ?>
+<script type="text/javascript">
+	function demo()
+	{
+		$.ajax({
+			url : "get_product.php",
+			type :"get",
+			success : function(res){
+				// alert(res);
+				$("#show_product").html(res);
+				setTimeout("demo()", 2000);
+			}
+		});
+	}
+	function test()
+	{
+		setTimeout("demo()", 5000);
+	}
+	test();
+</script>
 		<div class="col-md-9">
 			<div class="row">
 				<div class="col-md-12">
 					<h4 class="bg-secondary text-light px-4 py-2">Lastest Product</h4>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row" id="show_product">
 				<?php
 				while($data=mysqli_fetch_assoc($result))
 				{ 

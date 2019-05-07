@@ -1,5 +1,6 @@
 <?php
 include("header.php");
+session_start();
 ?>
 <div class="col-md-9">
 	<div class="row">
@@ -9,6 +10,7 @@ include("header.php");
 	</div>
 	    <div class="row my-2">
 	    	<div class="col-md-8 offset-md-2">
+	    		<form action="auth.php" method="post">
 	    		<div class="card">
 	    			<div class="card-header">
 	    				Signin
@@ -20,13 +22,24 @@ include("header.php");
 	    			    </div>
 	    			    <div class="form-body">
 	    				<label>Password</label>
-	    				<input type="password" name="pass" class="form-control">
+	    				<input type="password" name="pass" class="form-control" placeholder="password">
 	    			    </div>
 	    			</div>
 	    			<div class="card-footer">
 	    				<input type="submit" value="login" class="btn btn-success">
 	    			</div>
+	    			<p class="text-danger text-center">
+	    			<?php
+	    				if(isset($_SESSION['msg']))
+	    				{
+	    					echo $_SESSION['msg'];
+	    					unset($_SESSION['msg']);
+	    				}
+	    			?>
+	    		   </p>
+
 	    		</div>
+	    	</form>
 	    	</div>
 	    </div>
 	</div>
