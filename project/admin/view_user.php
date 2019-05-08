@@ -1,4 +1,4 @@
-<?php
+	<?php
 include("../db.php");
 if(! isset($_SESSION['is_admin_logged_in']))
 {
@@ -10,6 +10,27 @@ $result = mysqli_query($con, $query);
 
 
 ?>
+<script type="text/javascript">
+	function get_user()
+	{
+		$.ajax({
+			url : "get_user.php",
+			type : "get",
+			success : function(res){
+				// alert(res);
+				$("#user_tbl").html(res);
+				setTimeout("get_user()", 2000);
+			}
+		})
+	}
+	setTimeout("get_user()", 2000);
+
+
+</script>
+
+
+
+
 <div class="container">
 	<h3>View All User</h3>
 	<div class="row">
@@ -23,6 +44,7 @@ $result = mysqli_query($con, $query);
 					<th>Status</th>
 					<th>Change</th>
 				</tr>
+				<tbody id="user_tbl">
 				<?php
 				while($data=mysqli_fetch_assoc($result))
 				{ ?>
@@ -37,7 +59,7 @@ $result = mysqli_query($con, $query);
 				<?php
 				}
 				?>
-
+			</tbody>
 
 			</table>
 		</div>

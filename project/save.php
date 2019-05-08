@@ -1,6 +1,4 @@
 <?php
-	// print_r($_POST);
-
 include("db.php");
 $name = $_FILES['image']['name'];
 $tmp_name = $_FILES['image']['tmp_name'];
@@ -19,11 +17,11 @@ if($ext=="jpg" || $ext=="jpeg" || $ext=="gif" || $ext =="png")
 	$c = $_POST['pass'];
 
 	$c = sha1($c);
-
 	$d = $_POST['add'];
 	$e = $_POST['gender'];
 	$f = $_POST['city'];
 	$g = $_POST['contact'];
+	
 	$query="INSERT INTO user (full_name, username, password, address, city, gender, contact, image) VALUES ('$a', '$b', '$c', '$d', '$f', '$e', '$g', '$new_name')";
 	move_uploaded_file($tmp_name, "user_image/".$new_name);
 

@@ -1,10 +1,21 @@
 <?php
 // print_r($_POST);
+
+$con = mysqli_connect("localhost", "admin", "admin", "tss_11");
+
 include("../db.php");
+
 if(! isset($_SESSION['is_admin_logged_in']))
 {
 	header("location:index.php");
 }
+
+$a = $_POST['p_name'];
+$b = $_POST['p_price'];
+$c = $_POST['p_detail'];
+$d = $_POST['p_cate'];
+$e = $_POST['discount'];
+
 
 // print_r($_FILES);
 

@@ -5,7 +5,7 @@ if(! isset($_SESSION['is_admin_logged_in']))
 {
 	header("location:index.php");
 }
-include('header.php');
+include('header.php');	
 $query ="SELECT * FROM category";
 $result=mysqli_query($con, $query);
 
@@ -31,7 +31,8 @@ $result=mysqli_query($con, $query);
 						<td><?php echo $data['category_name'];?></td>
 						<td><a href="edit_cate.php?cate=<?php echo $data['id'];?>" class="btn btn-info">Edit</a></td>
 
-						<td><a href="delete_cate.php?cate=<?php echo $data['id']; ?>" class="btn btn-danger">Delete</a></td>
+						<td><a href="#" onclick="ask(<?php echo $data['id']; ?>)" data-target="#delmodal" data-toggle="modal" class="btn btn-danger">Delete</a></td>
+						
 					</tr>
 
 
@@ -48,6 +49,42 @@ $result=mysqli_query($con, $query);
 		</div>
 	</div>
 </div>
+<script type="text/javascript">
+	var x ="";
+	function ask(a)
+	{
+		x=a;
+	}
+	function delete_cat()
+	{
+		var url = "delete_cate.php?cate="+x;
+		// alert(url);
+		window.location.href=url;	
+	}
+</script>
+
+
+
+
+<div id="delmodal" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h3>Delete</h3>
+			</div>
+			<div class="modal-body">
+				<h5>Are You Sure want to delete this</h5>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-danger" onclick="delete_cat()">Delete</button>
+				<button class="btn btn-light" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
 
 <?php
 include('footer.php');
