@@ -5,6 +5,12 @@ $result=mysqli_query($con,$query);
 
 
 
+$query_slider = "SELECT * FROM slider";
+$result_slide1 = mysqli_query($con,$query_slider); 
+$result_slide2 = mysqli_query($con,$query_slider); 
+
+
+
 $que_auto="SELECT * FROM addproduct";
 $res_auto=mysqli_query($con ,$que_auto);
 
@@ -94,10 +100,63 @@ $search_str = trim($auto,",");
 				</ul>
 		</div>
 	</nav>
-	<div class="jumbotron" style="background-image: url(441.jpeg); background-size: 100% 100%">
-		<h2 style="color: #FFF;">TREASURE BAZZAR</h2>
+
+
+<!-- #SLIDER -->
+<div class="container-fluid" style="height: 250px;">
+	<div id="slider" class="carousel slide" data-ride="carousel">
+		<ul class="carousel-indicators">
+			<?php
+			$i=0;
+			while($data_slide2=mysqli_fetch_assoc($result_slide2))
+			{?>
+				<li class="<?php if($i==0)echo "active"; ?>" data-target="#slider" data-slide-to="<?php echo $i; ?>"></li>
+
+			<?php
+			$i++;
+		    }
+			?>
+		</ul>
+
+		<div class="carousel-inner">
+			<?php
+			$n=0;
+			while($data_slide1=mysqli_fetch_assoc($data_slide1))
+			{?>
+			<div class="<?php if($n==0) echo "active" ?> carousel-item">
+				<img src="slider_img/<?php echo $data_slide1['image_name']; ?>" height="250" width="100%"/>
+				<div class="carousel-caption">
+					<h2><?php echo $data_slide1['title']; ?></h2>
+					<p><?php echo $data_slide2['sub_title']; ?></p>
+				</div>	
+					
+			</div>
+
+			<?php
+			$n++;
+			}
+			?>
+
+		</div>
+
+		<a  class="carousel-control-prev" href="#slider" data-slide="prev">
+			<span class="carousel-control-prev-icon"></span>
+		</a>
+		<a href="#slider" class="carousel-control-next">
+			<span class="carousel-control-next-icon"></span>
+		</a>
+
+
 	</div>
-	<div class="container-fluid">
+
+
+</div>
+<!-- #SLIDER -->
+
+
+
+
+	<div class="container-fluid mt-4">
 		<div class="row">
 			<div class="col-md-3">
 			<?php
