@@ -20,7 +20,7 @@
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo site_url('home/'); ?>">Home</a>
+        <a class="nav-link" href="<?php echo site_url('home'); ?>">Home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="<?php echo site_url('home/about'); ?>">About</a>
@@ -35,7 +35,11 @@
   </div> 
 </nav>
 <div class="container">
-	<h2>This is About Page</h2>
+	<h2>This is Home Page</h2>
+
+  <h2><?php echo $name1; ?></h2>
+  <h2><?php echo $name2; ?></h2>
+  <h2><?php echo $data['x']; ?></h2>
 </div>
 </body>
 </html>
