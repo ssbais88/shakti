@@ -1,19 +1,19 @@
 <?php
 include("../db.php");
 
-if(! isset($_SESSION['is_admin_logged_in']))
+if(! isset($_SESSION['is_user_logged_in']))
 {
 	header("location:index.php");
 }	
-include("header.php");
+include('header.php');
 ?>
 <div class="container">
-	<h3>Sldier</h3>
+	<h3>Slideeer</h3>
 	<div class="row">
 		<div class="col-md-4 offset-md-4">
 			<div class="card">
 				<div class="card-header">
-					<h4>Image For Slider</h4>
+					<h4>Images For Slider</h4>
 				</div>
 				<div class="card-body">
 					<form action="save_slider.php" method="post" enctype="multipart/form-data">
@@ -42,8 +42,4 @@ include("header.php");
 
 <?php
 include('footer.php');
-?>
-
-
-
 ?>

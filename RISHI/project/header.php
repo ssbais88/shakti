@@ -31,6 +31,7 @@ $search_str = trim($auto,",");
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
 	<script type="text/javascript">
 		$(function(){
 			var availableTags = [<?php echo $search_str ?>];
@@ -123,11 +124,11 @@ $search_str = trim($auto,",");
 			$n=0;
 			while($data_slide1=mysqli_fetch_assoc($data_slide1))
 			{?>
-			<div class="<?php if($n==0) echo "active" ?> carousel-item">
+			<div class="<?php if($n==0) echo "active"; ?> carousel-item">
 				<img src="slider_img/<?php echo $data_slide1['image_name']; ?>" height="250" width="100%"/>
 				<div class="carousel-caption">
 					<h2><?php echo $data_slide1['title']; ?></h2>
-					<p><?php echo $data_slide2['sub_title']; ?></p>
+					<p><?php echo $data_slide1['sub_title']; ?></p>
 				</div>	
 					
 			</div>
@@ -139,7 +140,7 @@ $search_str = trim($auto,",");
 
 		</div>
 
-		<a  class="carousel-control-prev" href="#slider" data-slide="prev">
+		<a class="carousel-control-prev" href="#slider" data-slide="prev">
 			<span class="carousel-control-prev-icon"></span>
 		</a>
 		<a href="#slider" class="carousel-control-next">
@@ -152,8 +153,6 @@ $search_str = trim($auto,",");
 
 </div>
 <!-- #SLIDER -->
-
-
 
 
 	<div class="container-fluid mt-4">

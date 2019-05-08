@@ -1,7 +1,8 @@
 <?php
 include('../db.php');
-
-
+// print_r($_FILES);
+// 	// print_r($_POST);
+// die();
 $a = $_POST['title'];
 $b = $_POST['sub_title'];
 
@@ -15,7 +16,7 @@ $ext = end($arr);
 $new_name = time().rand(10000,10000000).".".$ext;
 move_uploaded_file($tmp_name, "../slider_img/".$new_name);
 
-$query="INSERT INTO slider (image_name,title,sub_title) VALUES('$new_name','$a','$b')";
+$query="INSERT INTO slider (image_name,title,sub_title) VALUES 	('$new_name','$a','$b')";
 
 mysqli_query($con ,$query);
 header("location:slider.php");
