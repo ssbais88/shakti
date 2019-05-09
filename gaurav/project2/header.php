@@ -31,6 +31,24 @@
 			<button class="btn btn-dark" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
 		</form>
 		<ul class="navbar-nav ml-5 pl-5">
+			<?php
+			if(isset($_SESSION['is_user_logged_in']))
+				{
+				?>
+				<li class="nav-item">
+					<a href="myprofile.php" class="nav-link">MyProfile</a>
+				</li>
+				<li class="nav-item">
+					<a href="" class="nav-link">MyAccount</a>
+				</li>
+				<li class="nav-item">
+					<a href="" class="nav-link">Logout</a>
+				</li>
+				<?php
+			}
+			else
+				{
+					?>
 			<li class="nav-item">
 				<a href="#" class="nav-link">Mycart<i class="fa fa-shopping-cart" aria-hidden="true"></i>
 				</a>
@@ -43,6 +61,9 @@
 				<a href="signup.php" class="nav-link pl-3">Signup<i class="fa fa-sign-in" aria-hidden="true"></i>
 				</a>
 			</li>
+			<?php
+		}
+		?>
 		</ul>
 
 </nav>
@@ -52,10 +73,11 @@
 		<div class="col-md-3">
 
 <div class="list-group">
- <a href="#" class=" bg-mycolor list-group-item list-group-item-action">Bread</a>	
- <a href="#" class=" bg-mycolor list-group-item list-group-item-action">Cookies</a>
-  <a href="#" class=" bg-mycolor list-group-item list-group-item-action">Cakes & all</a>
-   <a href="#" class=" bg-mycolor list-group-item list-group-item-action">muffins & all</a> 
+<a href="#" class=" bg-mycolor list-group-item list-group-item-action">Bread</a>	
+<a href="#" class=" bg-mycolor list-group-item list-group-item-action">Cookies</a>
+<a href="#" class=" bg-mycolor list-group-item list-group-item-action">Cakes & all</a>
+<a href="#" class=" bg-mycolor list-group-item list-group-item-action">muffins & all</a> 
 </div>
 </div>
+
 
