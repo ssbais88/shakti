@@ -141,8 +141,16 @@ $search_str= trim($auto, ",");
 
 
 </nav>
+<<<<<<< HEAD
 
 
+=======
+ <!-- <div class="jumbotron mb-0" style="background-color: #225544; border-radius: 0; background-image: url('image/bg.jpg'); background-size: 100% 100%">
+	<h1 class="text-light">The Stepping Stone</h1>
+	<p class="text-light">Web Development Training Insititute in Indore</p>
+</div>
+ -->
+>>>>>>> e23655a15a53a7588e50ef5b55b4a6038147b626
 <div style="height: 250px;" class="container-fluid">
 	<div id="slider" class="carousel slide" data-ride="carousel">
 		<ul class="carousel-indicators">
