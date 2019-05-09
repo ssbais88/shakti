@@ -14,7 +14,7 @@ session_start();
  <nav class="navbar navbar-dark bg-dark">
  	<h1>admin Panel</h1>
  </nav>
- <div class="container">
+ <div class="container my-2">
  	<div class="row">
  		<div class="col-md-4 offset-md-4">
  			<form action="auth.php" method="post">
@@ -23,13 +23,13 @@ session_start();
  						<h3>Admin</h3>
  					</div>
  					<div class="card-body">
- 						<div class="form-body">
+ 						<div class="form-group">
  						<label>Username/E-mail</label>
- 						<input type="text" name="username" class="form-layout" placeholder="username">
+ 						<input type="text" name="username" class="form-control" placeholder="username">
  					    </div>
- 					    <div class="form-body">
+ 					    <div class="form-group">
  						<label>Password</label>
- 						<input type="Password" name="pass" class="form-layout" placeholder="password">
+ 						<input type="Password" name="pass" class="form-control" placeholder="password">
  					    </div>
  					</div>
  					<div class="card-footer">

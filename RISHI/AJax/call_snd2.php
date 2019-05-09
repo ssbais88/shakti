@@ -12,7 +12,8 @@
 
 				$.ajax({
 					url : "call_snd2_server.php",
-					type :"post"
+					type :"post",
+					data : {demo1 : a ,demo2 : b}
 				});
 			});
 		});

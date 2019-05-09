@@ -4,7 +4,7 @@ $(document).ready(function(){
 		$.ajax({
 			url : "checkusername.php",
 			type : "post",
-			data : { u : a },
+			data : {u:a},
 			success : function(res){
 				// alert(res);
 				$("#username_msg").html(res);

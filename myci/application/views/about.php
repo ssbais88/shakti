@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,7 +31,7 @@
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo site_url('home/'); ?>">Home</a>
+        <a class="nav-link" href="<?php echo site_url('home'); ?>">Home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="<?php echo site_url('home/about'); ?>">About</a>
@@ -50,3 +51,9 @@
 >>>>>>> 72c74d3e160286d982d75ba4237a39095739b1fb
 </body>
 </html>
+=======
+<div class="container mt-4" style="min-height: 500px;">
+  <h2>About Page</h2>
+  <h3>hello world</h3>
+</div>
+>>>>>>> 59bd769650514c671f76ecf803852e4b74c19e5f

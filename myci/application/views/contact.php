@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,3 +51,9 @@
 >>>>>>> 72c74d3e160286d982d75ba4237a39095739b1fb
 </body>
 </html>
+=======
+<div class="container mt-4" style="min-height: 500px;">
+  <h2>Contact Page</h2>
+  
+</div>
+>>>>>>> cc15b4634ad0634b1661f37aaa35ef29f728c1cc

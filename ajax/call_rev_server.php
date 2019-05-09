@@ -1,5 +1,5 @@
 <?php
-$con = mysqli_connect("localhost", "admin", "admin", "tss_11");
+$con = mysqli_connect("localhost", "root", "", "tss_11");
 $query = "SELECT * FROM student";
 $result = mysqli_query($con, $query);
 while($data=mysqli_fetch_assoc($result))
