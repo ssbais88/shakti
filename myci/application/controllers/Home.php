@@ -36,8 +36,3 @@ class Home extends CI_Controller{
 		$this->load->view("layout", $pagedata);
 	}
 }
-<<<<<<< HEAD
-?>
-=======
-?>
->>>>>>> 513cbd3af4f6ccf96f3f1017041b515e3743d358
