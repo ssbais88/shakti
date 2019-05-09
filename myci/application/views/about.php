@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,3 +40,9 @@
 </div>
 </body>
 </html>
+=======
+<div class="container mt-4" style="min-height: 500px;">
+  <h2>About Page</h2>
+  <h3>hello world</h3>
+</div>
+>>>>>>> 59bd769650514c671f76ecf803852e4b74c19e5f

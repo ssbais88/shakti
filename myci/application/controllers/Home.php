@@ -15,7 +15,7 @@ class Home extends CI_Controller
 		$this->load->view("home", $pagedata);
 	}
 
-	function contact()
+	function about()
 	{
 		$this->load->helper("url"); 
 		$this->load->view("about");
