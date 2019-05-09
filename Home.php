@@ -1,15 +1,19 @@
 <?php
+
 class Home extends CI_Controller{
 	function __construct()
 	{
 		parent::__construct();
 		$this->load->helper("url");
 	}
+
+
 	function index()
 	{
 		$pagedata = array("title"=>"Home Page", "pagename"=>"home");
 		$this->load->view("layout", $pagedata);
 	}
+
 	function about()
 	{
 		$pagedata = array("title"=>"About Page", "pagename"=>"about");
@@ -35,9 +39,9 @@ class Home extends CI_Controller{
 		$pagedata = array("title"=>"Signup Page", "pagename"=>"signup");
 		$this->load->view("layout", $pagedata);
 	}
+
+
 }
-<<<<<<< HEAD
+
 ?>
-=======
-?>
->>>>>>> 513cbd3af4f6ccf96f3f1017041b515e3743d358
+

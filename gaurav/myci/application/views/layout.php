@@ -18,19 +18,25 @@
         <a class="nav-link" href="<?php echo site_url('home')?>">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo site_url('home/layout')?>">About</a>
+        <a class="nav-link" href="<?php echo site_url('home/about1')?>">About</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo site_url('home/layout')?>">Contact</a>
+        <a class="nav-link" href="<?php echo site_url('home/contact1')?>">Contact</a>
       </li> 
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo site_url('home/layout')?>">Help</a>
+        <a class="nav-link" href="<?php echo site_url('home/help')?>">Help</a>
       </li> 
     </ul>
   </div> 
 </nav>
+<div class="jumbotron">hello</div>
 <div class="container">
-  <h2>This is Contact Page</h2>
+  <h2>This is Layout Page</h2>
 </div>
+
+<div style="height:300px" class="mt-4"></div>
+<nav class="navbar navbar-dark bg-dark ">
+  <h2>The Stepping Stone</h2>
+</nav>
 </body>
 </html>
