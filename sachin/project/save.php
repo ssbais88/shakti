@@ -30,7 +30,7 @@ if($ext=="jpg" || $ext=="jpeg" || $ext=="gif" || $ext=="png"  )
         $query="INSERT INTO project (full_name, user_name, password, gender, address, contact, city,image_name) VALUES ('$a', '$b', '$c', '$d', '$e', '$f', '$g','$new_name')";
 
         mysqli_query($con, $query);
-        move_uploaded_file($tmp_name,"upload/".$new_name);
+        move_uploaded_file($tmp_name,"user_image/".$new_name);
 
          header("location:login.php");
 

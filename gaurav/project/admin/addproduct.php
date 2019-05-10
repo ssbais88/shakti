@@ -1,6 +1,7 @@
 <?php
 include ('dashboard.php');
 $con = mysqli_connect("localhost","root","","onlineshop");
+
 $query = "select * from admincategory";
 
 $result = mysqli_query($con,$query); 
@@ -25,15 +26,16 @@ $result = mysqli_query($con,$query);
 						</div>
 						<div class="form-body">
 						<label>Product Category</label>
-						<select class="form-control">
+						<select class="form-control" name="p_cate">
 							<option>Select</option>
 							<?php
-							while($data = mysqli_fetch_assoc($_result))
-								{
-								?><option><?php echo $data['cate_name']?></option>
-								<?php
-							}
+							while($data = mysqli_fetch_assoc($result))
+							{
 							?>
+							<option><?php echo $data['cate_name']?></option>
+							<?php
+						}
+						?>
 						</select>
 						</div>
 						<div class="form-body">

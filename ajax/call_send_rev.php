@@ -6,12 +6,9 @@
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$("button").click(function(){
-				var a = $("#name").val();
-				var b = $("#fee").val();
 				$.ajax({
 					url : "call_send_rev_server.php",
 					type : "post",
-					data :{ name : a, fee : b },
 					success : function(rec){
 						// alert(rec);
 						$("#tab").html(rec);
@@ -48,9 +45,7 @@
 	<Br />
 	<button>Save</button>
 	<br />
-	<table id="tab" border="1" cellspacing="0" align="center">
-		
-	</table>
+	<table id="tab" border="1" cellspacing="0" align="center"></table>
 </div>
 </body>
 </html>

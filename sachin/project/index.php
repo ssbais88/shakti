@@ -22,7 +22,7 @@ if( ! isset($_SESSION['is_user_logged_in']))
          else
         {
           $query = "SELECT * FROM product WHERE p_name LIKE '%$a%'";
-          $result = mysql_query($com,$query);
+          $result = mysqli_query($con,$query);
 
 
 

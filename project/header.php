@@ -1,5 +1,5 @@
-	<?php
 
+<?php
 $query = "SELECT * FROM category";
 $result = mysqli_query($con, $query);
 
@@ -43,7 +43,7 @@ $search_str= trim($auto, ",");
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
-	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="j/jquery.js"></script>
 	<script type="text/javascript" src="js/bootstrap.bundle.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
@@ -88,6 +88,8 @@ $search_str= trim($auto, ",");
 
 	<div id="myMenu" class="collapse navbar-collapse">
 	<ul class="navbar-nav">
+		<li class="nav-item">
+			<a class="nav-link" href="index.php">Home</a></li>
 		<li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
 		<li class="nav-item"><a class="nav-link" href="contact.php">Contact Us</a></li>
 		<li class="nav-item">
@@ -141,8 +143,11 @@ $search_str= trim($auto, ",");
 
 
 </nav>
-
-
+<!--  <div class="jumbotron mb-0" style="background-color: #225544; border-radius: 0; background-image: url('image/bg.jpg'); background-size: 100% 100%">
+	<h1 class="text-light">The Stepping Stone</h1>
+	<p class="text-light">Web Development Training Insititute in Indore</p>
+</div>
+ -->
 <div style="height: 250px;" class="container-fluid">
 	<div id="slider" class="carousel slide" data-ride="carousel">
 		<ul class="carousel-indicators">

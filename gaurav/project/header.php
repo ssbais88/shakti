@@ -3,6 +3,16 @@ $con = mysqli_connect("localhost","root","","onlineshop");
 
 $query = "select * from admincategory";
 $result = mysqli_query($con,$query);
+if(isset($_COOKIE['cart']))
+{
+  $x = $_COOKIE['cart'];
+  $arr = explode("#", $x);
+  $cart_total=count($arr);
+}
+else
+{
+  $cart_total = 0;  
+}
 
 ?>
  <!DOCTYPE html>
@@ -30,20 +40,20 @@ $result = mysqli_query($con,$query);
   	  			<a href="#" class="nav-link">About</a>
   	  		</li>
   	  		<li class="nav-item">
-  	  			<a href="#" class="nav-link">Contact</a>
+  	  			<a href="contactus.php" class="nav-link">Contact</a>
   	  		</li>
   	  		<li class="nav-item">
   	  			<a href="#" class="nav-link">Help</a>
   	  		</li>
   	  	</ul>
   	  </div>
-  	  <form class="form-inline">
-  	  	<input type="text" class="form-control" placeholder="search">
-  	  	<button class="btn btn-success"><i class="fa fa-search" aria-hidden="true"></i></button>
+  	  <form class="form-inline" action="" method="get">
+  	  	<input type="text" name="q" class="form-control" placeholder="search">
+  	  	<button type="submit" class="btn btn-success"><i class="fa fa-search" aria-hidden="true"></i></button>
   	  </form>
       <ul class="navbar-nav">
       	<li class="nav-item">
-      		<a href="#" class="nav-link">My cart<i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+      		<a href="my_cart.php" class="nav-link">My cart<i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="badge badge-pill badge-warning"><?php echo $cart_total?></span></a>
       	</li>
       
       	<?php 
@@ -52,6 +62,9 @@ $result = mysqli_query($con,$query);
 
       <li class="nav-item">
         <a href="myaccount.php" class="nav-link">My Account <i class="fa fa-user" aria-hidden="true"></i></a>
+      </li>
+      <li class="nav-item">
+        <a href="myprofile.php" class="nav-link">My profile <i class="fa fa-user" aria-hidden="true"></i></a>
       </li>
       <li class="nav-item">
         <a href="logout.php" class="nav-link">Logout <i class="fa fa-user" aria-hidden="true"></i></a>
@@ -83,8 +96,8 @@ $result = mysqli_query($con,$query);
         while($data=mysqli_fetch_assoc($result))  
         {  
         ?>
- 				<a href="#" class="list-group-item list-group-item-action"><?php
-        echo $data['cate_name']?></a>
+ 				<a href="index.php?category=<?php echo $data['cate_name'];?>" class="list-group-item list-group-item-action"><?php
+        echo $data['cate_name'];?></a>
  				<?php
       }
       ?>

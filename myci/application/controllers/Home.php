@@ -36,6 +36,7 @@ class Home extends CI_Controller{
 
 	function signup()
 	{
+
 		$this->load->library("form_validation");
 		$this->form_validation->set_rules("full_name", "Full Name", "required");
 		$this->form_validation->set_rules("username", "Username/Email", "required");
@@ -63,3 +64,4 @@ class Home extends CI_Controller{
 	}
 }
 ?>
+

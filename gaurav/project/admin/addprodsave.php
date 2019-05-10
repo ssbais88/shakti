@@ -21,10 +21,10 @@ if($ext=="jpg" || $ext=="jpeg" || $ext=="png" || $ext=="gif")
     	$b = $_POST['P_price'];
     	$c = $_POST['P_discount'];
     	$d = $_POST['P_details'];
+        $e = $_POST['p_cate'];
 
-
-   $query = "insert into addproduct(p_name,p_price,p_discount,p_details,image_name)
-             values('$a','$b','$c','$d','$new_name')";
+ $query = "insert into addproduct(p_name,p_price,p_discount,p_details,image_name,p_category)
+             values('$a','$b','$c','$d','$new_name','$e')";
 
      	move_uploaded_file($tmp_name, "upload/".$new_name);
 

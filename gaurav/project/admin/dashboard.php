@@ -28,17 +28,17 @@
    				<a href="view category.php" class="nav-link">View Category</a>
    			</li>
             <li class="nav-item">
-               <a href="#" class="nav-link">View Users</a>
+               <a href="view_user.php" class="nav-link">View Users</a>
             </li>
             <li class="nav-item dropdown">
                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Setting</a>
                <div class="dropdown-menu">
                   <a href="#" class="dropdown-item">Change Password</a>
-                  <a href="#" class="dropdown-item">Createuseradmin</a>
+                  <a href="create_user_admin.php" class="dropdown-item">Createuseradmin</a>
                </div>
             </li>
    			<li class="nav-item">
-   				<a href="#" class="nav-link">Logout</a>
+   				<a href="logout.php" class="nav-link">Logout</a>
    			</li>
    		</ul>
    		

@@ -23,7 +23,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
+<<<<<<< HEAD
+$config['base_url'] = '';
+=======
 $config['base_url'] = 'http://localhost/tss_11/myci';
+>>>>>>> 72c74d3e160286d982d75ba4237a39095739b1fb
 
 /*
 |--------------------------------------------------------------------------
