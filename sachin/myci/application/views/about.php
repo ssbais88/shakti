@@ -28,7 +28,7 @@
   </button>
  -->
   <!-- Navbar links -->
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+<!--   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link" href="<?php echo site_url('home'); ?>">Home</a>
@@ -57,3 +57,4 @@
   <h3>hello world</h3>
 </div>
 
+ -->
