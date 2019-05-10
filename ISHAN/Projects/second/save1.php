@@ -29,27 +29,27 @@ if ($ext == "jpeg" || $ext == "jpg" || $ext == "png" || $ext == "gif")
 		$f = $_POST['contact'];
 		$g = $_POST['city'];
 
-		$query = "INSERT INTO user(full_name,username,password,gender,address,contact,city,image_name) VALUES 
+		$query = "INSERT INTO user1(full_name,username,password,gender,address,contact,city,image_name) VALUES 
 				('$a','$b','$c','$d','$e','$f','$g','$new_name')";
 
 		move_uploaded_file($tmp_name, "upload_img/".$new_name);
 
 		mysqli_query($con, $query);
 
-		header("location:login.php");
+		header("location:login1.php");
 
 	}
 
 	else
 	{
 			$_SESSION['msg']="This file size is too large ";
-			header("location:signup.php");
+			header("location:signup1.php");
 	}
 }
 else
 {
 			$_SESSION['msg']="This file type is not allowed !";
-			header("location:signup.php");
+			header("location:signup1.php");
 }
 
 ?>

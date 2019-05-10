@@ -15,11 +15,11 @@
 			$("button").click(function(){
 				alert("Alert Appear on click");
 			});
-			$("box").mouseover(function(){
+			$("#box").mouseover(function(){
 				$("body").css({"background-color":"blue"});
 			});
-			$("box").mouseout(function(){
-				$("box").css({"background-color":"green", "width":"500px", "height":"300px"});
+			$("#box").mouseout(function(){
+				$("#box").css({"background-color":"green", "width":"500px", "height":"300px"});
 			});
 		});
 	</script>
@@ -29,4 +29,4 @@
 <div id="box"></div>
 <h1>Hello World</h1>
 </body>
-</html>
+</html

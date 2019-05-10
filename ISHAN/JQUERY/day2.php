@@ -8,8 +8,8 @@
 			$("button").click(function(){
 				alert("hello");
 			});
-			$("box").mouseover(function(){
-				$("body").css("background-color":"pink");
+			$("#box").mouseover(function(){
+				$("body").css("background-color" ,"pink");
 			});
 		});
 	</script>

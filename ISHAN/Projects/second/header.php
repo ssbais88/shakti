@@ -60,8 +60,14 @@ else
 					<button class=" btn nav-item">
 						<a href="login.php" class="nav-link">Login <i class="fa fa-lock" aria-hidden="true"></i></a>
 					</button>
+					<button class=" btn nav-item">
+						<a href="login1.php" class="nav-link">Login1 <i class="fa fa-lock" aria-hidden="true"></i></a>
+					</button>
 					<button class="btn nav-item">
 						<a href="signup.php" class="nav-link">Signup <i class="fa fa-sign-in" aria-hidden="true"></i></a>
+					</button>
+					<button class="btn nav-item">
+						<a href="signup1.php" class="nav-link">Signup1 <i class="fa fa-sign-in" aria-hidden="true"></i></a>
 					</button>
 				<?php
 			}?>
