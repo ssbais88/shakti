@@ -44,7 +44,7 @@ $result = mysqli_query($con,$query);
       	<a href="#"class="navbar-brand">my shopping</a>
 
       	<button type="button" class="navbar-toggler btn" data-toggle="collapse" data-target="#menu">
-      		<span class="navbar-toggler-icon"></span>
+      		<span class="data-toggler-icon"></span>
       	</button>
         <div id="menu" class="collapse navbar-collapse">
       	<ul class="navbar-nav">

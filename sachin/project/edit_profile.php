@@ -6,6 +6,7 @@ $query ="SELECT * FROM project WHERE id= $id";
 $result = mysqli_query($con,$query);
 $data = mysqli_fetch_assoc($result);
 // print_r($data);
+// die;
 
 
 ?>
@@ -22,15 +23,17 @@ $data = mysqli_fetch_assoc($result);
     		<div class="card-body">
     			<form action="update_profile.php" method="POST" enctype="multipart/form-data">
     				<div class="form-group">
-    					<lable>Full Name</lable>
-    					<input type="text" name="full_name" value="<?php echo $data['full_name']; ?>" placeholder="full name"  class="form-control"></div>
-    					<div class="form-group">
-    					<lable>Profile Pic</lable>
-    					<input type="file" name="image" value="" placeholder="profile pick " class="form-control"></div>
+                        <lable>Full Name</lable>
+                        <input type="text" name="full_name" value="<?php echo $data['full_name']; ?>" placeholder="full name"  class="form-control"></div>
+    					
 
                         <div class="form-group">
-    					<label>Curent Pic</lable>
-    					<input type="text" name="current_pic" value="" placeholder="full name"  class="form-control"></div>
+    					<lable>Profile Pic</lable>
+    					<input type="file" name="image"  class="form-control"></div>
+
+                        <div class="form-group">
+    					<label>Current Pic</lable>
+    				     <img src="user_image/<?php echo $data['image_name']; ?>"></div>
 
                         <div class="form-group">
     					<lable>Username/gmail</label>
@@ -44,22 +47,25 @@ $data = mysqli_fetch_assoc($result);
 
                           <div class="form-group">
     					<lable>Address</lable>
-    					<input type="text" name="address" value="<?php  echo $data['address']; ?>" placeholder="full name"  class="form-control"></div>
+    					<input type="text" name="address" value="<?php  echo $data['address']; ?>" placeholder="inter your address"  class="form-control"></div>
 
                         <div class="form-group">
     					<lable>Contact</lable>
-    					<input type="text" name="contact" value="<?php echo $data['contact']; ?>" placeholder="full name"  class="form-control"></div>
-    					<div class="form-group"> 
+    					<input type="text" name="contact" value="<?php echo $data['contact']; ?>" placeholder="enter ypur contact number"  class="form-control"></div>
+    					
+
+
+                        <div class="form-group"> 
     						<label>City</label>
     						<select class="form-control" name="city">
-    							<option>Indore</option>
-    							<option>Bhopal</option>
-    							<option>Mumbai</option>
-    							<option>Pune</option>
+    							<option<?php if($data['city']=="Indore") echo "selected='selected'" ?> >Indore</option>
+    							<option<?php if($data['city']=="Bhopal") echo "selected='selected'"?>  >Bhopal</option>
+    							<option<?php if($data['city']=="Mumbai") echo "selected='selected'" ?> >Mumbai</option>
+    							<option<?php if($data['city']=="Pune")   echo "selected='selected'" ?> >Pune</option>
     						</select>
     					</div>
     					<div class="card-footer">
-    						<input type="submit" class="btn-success"></div>
+    						<input type="submit" value="Update" class="btn-success"></div>
 
 
 

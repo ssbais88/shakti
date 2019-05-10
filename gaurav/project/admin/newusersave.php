@@ -3,14 +3,12 @@
  
  $a = $_POST['username'];
  $b = $_POST['password'];
- $c = $_POST['re_password'];
 
- $query	= "insert into adminusers(username,password,repassword) values('$a',
- '$b','$c')";
+ $query	= "insert into adminlogin(username,password) values('$a',
+ '$b')";
 
  mysqli_query($con,$query);
  header("location:create_user_admin.php");
-
 
 
 ?>

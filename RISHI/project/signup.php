@@ -10,7 +10,7 @@ include("header.php")
 				<h3>User SignUp</h3>	
 				</div>
 			</div>
-		<form action="save_signup.php" method="post">
+		<form action="" method="post">
 			<div class="card-body">
 				<div class="form-group">
 
@@ -55,7 +55,7 @@ include("header.php")
 						<div class="input-group-prepend">
 						<span class="input-group-text"><i class="fa fa-lock" aria-hidden="true"></i></span>		
 						</div>
-						<input type="password" id="pass" name="pass" placeholder="password">
+						<input type="password" id="pass" name="pass" placeholder="password" class="form-control">
 						<p class="text-danger" id="pass_msg"></p>
 					</div>
 				</div>
@@ -65,7 +65,7 @@ include("header.php")
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fa fa-lock" aria-hidden="true"></i></span>		
 						</div>
-						<input type="password" id="re_pass" placeholder="re-password">
+						<input type="password" id="re_pass" placeholder="re-password" class="form-control">
 						<p class="text-danger" id="re_pass_msg"></p>
 					</div>
 				</div>

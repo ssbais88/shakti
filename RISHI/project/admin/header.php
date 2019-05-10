@@ -37,7 +37,7 @@
 					<a href="#" class="nav-link">View Users</a>
 				</li>
 				<li class="nav-item">
-					<a href="#" class="nav-link">Setting</a>
+					<a href="slider.php" class="nav-link">Setting</a>
 				</li>
 				<li class="nav-item">
 					<a href="logout.php" class="nav-link">Logout</a>

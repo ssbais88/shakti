@@ -4,7 +4,7 @@ $a = $_POST['name'];
 $b= $_POST['fee'];
 
 $query1 = "INSERT INTO student (name, fee) VALUES ('$a', '$b')";
-mysqli_query($con, $query1);
+mysqli_query1($con, $query1);
 
 
 $query = "SELECT * FROM student";

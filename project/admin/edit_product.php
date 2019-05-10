@@ -8,7 +8,7 @@ include('header.php');
 
 $a = $_GET['demo'];
 $query1="SELECT * FROM product WHERE id = $a";
-$result1 = mysqli_query($con, $query1);
+$result1 = mysqli_query($con,$query1);
 $data1=mysqli_fetch_assoc($result1);
 // print_r($data1);
 
