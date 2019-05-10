@@ -1,18 +1,7 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-
-	<style type="text/css">
-		body{
-			background-color: #3652AB;
-		}
-	</style>
-</head>
-<body>
-<h1>This is Contact Page</h1>
-
+	<title><?php echo $title; ?></title>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('css/bootstrap.css');?>">
 	<script type="text/javascript" src="<?php echo base_url('js/jquery.js'); ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('js/bootstrap.bundle.js'); ?>"></script>
@@ -41,19 +30,32 @@
       </li> 
       <li class="nav-item">
         <a class="nav-link" href="<?php echo site_url('home/help'); ?>">Help</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?php echo site_url('home/login'); ?>">Login</a>
+      </li> 
+      <li class="nav-item">
+        <a class="nav-link" href="<?php echo site_url('home/signup'); ?>">Signup</a>
       </li> 
     </ul>
   </div> 
 </nav>
-<div class="container">
-	<h2>This is Contact Page</h2>
+<div class="jumbotron">
+  <div class="container">
+    <h2>The Stepping Stone</h2>
+  </div>
 </div>
+<?php
+  $this->load->view($pagename);
+?>
 
+
+<div class="container-fluid bg-dark">
+  <div class="container">
+    <p class="text-center text-light p-4">
+      The Stepping Stone, Indore
+    </p>
+  </div>
+</div>
 </body>
 </html>
-
-<div class="container mt-4" style="min-height: 500px;">
-  <h2>Contact Page</h2>
-  
-</div>
-
