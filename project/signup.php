@@ -18,11 +18,13 @@ include("header.php");
 						</div>
 						<div class="card-body">
 							<form action="save.php" method="post" enctype="multipart/form-data">
+								
 								<div class="form-group">
 									<label>Full Name</label>
 									<input id="full_name" type="Text" name="full_name" placeholder="Full Name" class="form-control">
 									<p class="text-danger" id="full_name_msg"></p>
 								</div>
+								
 								<div class="form-group">
 									<label>Profile Pic</label>
 									<input type="file" id="profile_pic" name="image" placeholder="Full Name" class="form-control">

@@ -28,7 +28,7 @@ $data = mysqli_fetch_assoc($result);
 									</div>
 								<div class="form-group">
 									<label>Profile Pic</label>
-									<input type="file" name="image" placeholder="Full Name" class="form-control">
+									<input type="file" name="image"  class="form-control">
 								</div>
 								<div class="form-group">
 									<label>Current Pic</label>

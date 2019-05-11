@@ -18,8 +18,8 @@
 				// $("#box").slideUp(3000);
 				// $("#box").fadeOut(2000);
 				// $("#box").show();
-				// $("#box").slideDown(3000);
-				$("#box").fadeIn(2000);
+				$("#box").slideDown(3000);
+				// $("#box").fadeIn(2000);
 			});
 		});
 	</script>

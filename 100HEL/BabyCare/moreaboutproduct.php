@@ -38,17 +38,15 @@ $data=mysqli_fetch_assoc($result);
 								<div style="margin: 20px auto; width: 600px; height: 550px; border:1px solid #CCC; text-align: center;">
 								<img id="main_img" src="admin/upload/<?php echo $data['imagename'];?>" height="400" width="400">
 								<Hr />
+								<img src="admin/upload/<?php echo $data['imagename'];?>" onmouseover="demo('<?php echo $data['imagename']; ?>')" class="small_img" height="100" width="100">
 								<?php
 								while($data1=mysqli_fetch_assoc($result1))
 								{ ?>
-									<img src="admin/upload/<?php echo $data1['image_name'];  ?>" class="small_img" onmouseover="demo('<?php echo $data1['image_name'];  ?>')" height="100" width="100">
+									<img src="admin/upload/<?php echo $data1['image_name'];  ?>" class="small_img" onmouseover="demo('<?php echo $data1['image_name']; ?>')" height="100" width="100">
 
 								<?php
 								}
 								?>
-								<!-- <img src="" class="small_img" onmouseover="demo('')" height="100" width="100">
-								<img src="" class="small_img" onmouseover="demo('')" height="100" width="100">
-								<img src="" class="small_img" onmouseover="demo('')" height="100" width="100"> -->
 								</div>
 							</div>
 							<div class="card-footer">

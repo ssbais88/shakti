@@ -1,5 +1,4 @@
-   
-   <?php
+<?php
 include("../db.php");
 if(! isset($_SESSION['is_admin_logged_in']))
 {
@@ -20,6 +19,7 @@ $result=mysqli_query($con, $query);
 				<tr>
 					<th>S.No.</th>
 					<th>Category Name</th>
+					<th>Product Category</th>
 					<th>Edit</th>
 					<th>Delete</th>
 				</tr>
@@ -29,21 +29,21 @@ $result=mysqli_query($con, $query);
 					<tr>
 						<td><?php echo $data['id']; ?></td>
 						<td><?php echo $data['category_name'];?></td>
+<<<<<<< HEAD
+						<td><?php echo $data['category'];?></td>
+						<td><a href="edit_cate.php?cate=<?php echo $data['id'];?>" class="btn btn-info">Edit</a></td>
+						<td><a href="delete_cate.php?cate=<?php echo $data['id']; ?>" class="btn btn-danger">Delete</a></td>
+=======
 						<td><a href="edit_cate.php?cate=<?php echo $data['id'];?>" class="btn btn-info">Edit</a></td>
 
 						<td><a href="#" onclick="ask(<?php echo $data['id']; ?>)" data-target="#delmodal" data-toggle="modal" class="btn btn-danger">Delete</a></td>
 						
+>>>>>>> 1d97536d0c78d33709a5a08397ec864c8ca4da12
 					</tr>
-
-
 
 				<?php
 				}
 				?>
-
-
-
-
 
 			</table>
 		</div>

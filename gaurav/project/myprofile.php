@@ -43,6 +43,7 @@ $data = mysqli_fetch_assoc($result);
            		<td><?php echo $data['city']?></td>
            	</tr>
            </table>
+           <a href="edit_profile.php" class="btn btn-success">Edit</a>
 		</div>
 	</div>
 </div>

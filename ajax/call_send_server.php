@@ -1,5 +1,7 @@
 <?php
-$con = mysqli_connect("localhost", "admin", "admin", "tss_11");
+print_r($_POST);
+die();
+$con = mysqli_connect("localhost", "root", "", "tss_11");
 
 
 $a = $_POST['demo1'];

@@ -1,9 +1,11 @@
 <<<<<<< HEAD
-			<?php
+<?php
 // print_r($_POST);
 =======
+
 <?php
->>>>>>> 65bcba31006394b82e26022fb23a962ef4b4d824
+
+>>>>>>> abd8ff53bdc8bb29d28642a2f8488e966c4575dc
 include("db.php");
 $u = $_POST['username'];
 $p = $_POST['password'];

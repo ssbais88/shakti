@@ -22,6 +22,7 @@ $result = mysqli_query($con, $query);
 					<th>Product Price</th>
 					<th>Product Category</th>
 					<th>Product Discount</th>
+					<th>add</th>
 					<th>Edit</th>
 					<th>Delet</th>
 				</tr>
@@ -34,6 +35,7 @@ $result = mysqli_query($con, $query);
 						<td><?php echo $data['product_price']; ?></td>
 						<td><?php echo $data['product_category']; ?></td>
 						<td><?php echo $data['discount']; ?></td>
+						<td>addmore</td>
 						<td><a href="edit_product.php?demo=<?php echo $data['id'];?>" class="btn btn-info">Edit</a></td>
 						<td><a href="delete_pro.php?demo=<?php echo $data['id']; ?>" class="btn btn-danger">Delete</a></td>
 					</tr>
