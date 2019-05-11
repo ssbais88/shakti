@@ -13,7 +13,7 @@
         <div class="card-body">
           <div class="form-group">
             <label>Full Name</label>
-            <input type="text" class="form-control" name="full_name">
+            <input type="text" class="form-control" name="full_name" value="<?php echo set_value('full_name') ?>">
             <div class="text-danger">
             <?php
             echo form_error("full_name");
@@ -22,7 +22,7 @@
           </div>
           <div class="form-group">
             <label>Username</label>
-            <input type="text" name="username" class="form-control">
+            <input type="text" value="<?php echo set_value('username');?>" name="username" class="form-control">
             <div class="text-danger">
             <?php
             echo form_error("username");
@@ -31,7 +31,7 @@
           </div>
           <div class="form-group">
             <label>Password</label>
-            <input type="password" name="pass" class="form-control">
+            <input type="password" value="<?php echo set_value('pass');?>" name="pass" class="form-control">
             <div class="text-danger">
             <?php
             echo form_error("pass");
@@ -40,7 +40,7 @@
           </div>
           <div class="form-group">
             <label>Re-Password</label>
-            <input type="password" name="re_pass" class="form-control">
+            <input type="password" value="<?php echo set_value('re_pass');?>" name="re_pass" class="form-control">
             <div class="text-danger">
             <?php
             echo form_error("re_pass");
@@ -49,7 +49,7 @@
           </div>
           <div class="form-group">
             <label>Address</label>
-            <textarea class="form-control" name="add"></textarea>
+            <textarea class="form-control" name="add"><?php echo set_value('add');?></textarea>
             <div class="text-danger">
             <?php
             echo form_error("add");
@@ -59,11 +59,11 @@
           <div class="form-group">
             <label>City</label>
             <select class="form-control" name="city">
-              <option>Select</option>
-              <option>Indore</option>
-              <option>Bhopal</option>
-              <option>Mumbai</option>
-              <option>Pune</option>
+              <option value="">Select</option>
+              <option <?php echo set_select('city', 'Indore'); ?> value="Indore">Indore</option>
+              <option <?php echo set_select('city', 'Bhopal'); ?> value="Bhopal">Bhopal</option>
+              <option <?php echo set_select('city', 'Mumbai'); ?> value="Mumbai">Mumbai</option>
+              <option <?php echo set_select('city', 'Pune'); ?> value="Pune">Pune</option>
             </select>
             <div class="text-danger">
             <?php
@@ -73,8 +73,8 @@
           </div>
           <div class="form-group">
             <label>Gender</label>
-            Male <input type="radio" value="male" name="gender">
-            Female <input type="radio" value="female" name="gender">
+            Male <input type="radio" <?php echo set_radio('gender', 'male'); ?> value="male" name="gender">
+            Female <input type="radio" <?php echo set_radio('gender', 'female'); ?> value="female" name="gender">
             <div class="text-danger">
             <?php
             echo form_error("gender");
@@ -83,7 +83,7 @@
           </div>
           <div class="form-group">
             <label>Contact</label>
-            <input type="text" class="form-control" name="contact">
+            <input value="<?php echo set_value('contact');?>" type="text" class="form-control" name="contact">
             <div class="text-danger">
             <?php
             echo form_error("contact");
