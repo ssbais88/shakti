@@ -42,6 +42,7 @@
 </nav>
 <div class="jumbotron">
   <div class="container">
+    <div><?php echo $page_name ?></div>
     <h2>The Stepping Stone</h2>
   </div>
 </div>
