@@ -18,13 +18,20 @@ class Usermodel extends CI_Model{
 	{
 
 	}
-	function select()
+	function select_all()
 	{
 
 	}
 	function delete()
 	{
 
+	}
+	function select_by_username($u)
+	{
+		// SELECT * FROM user WHERE username = '$u'
+		$this->db->where("username", $u);
+		$result=$this->db->get("user");
+		return $result;
 	}
 
 }
