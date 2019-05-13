@@ -58,8 +58,8 @@
 					</div>
 					<div class="form-group">
 						<label>Gender</label>
-						<input type="radio" <?php echo set_radio("male") ?> value="male" name="gender">Male
-						<input type="radio" <?php echo set_radio("fmale") ?> value="female" name="gender">Female
+						<input type="radio" <?php echo set_radio("gender","male") ?> value="male" name="gender">Male
+						<input type="radio" <?php echo set_radio("gender","fmale") ?> value="female" name="gender">Female
 					</div>
 					<div class="text-danger">
 						<?php
@@ -85,7 +85,7 @@
 					</div>
 					<div class="form-group">
 						<label>Contact</label>
-						<input type="text" class="form-control" name="contact" placeholder="Enter 10 Digit Contact">
+						<input type="text" value="<?php echo set_value("contact") ?>" class="form-control" name="contact" placeholder="Enter 10 Digit Contact">
 					</div>
 					<div class="text-danger">
 						<?php

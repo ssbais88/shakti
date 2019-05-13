@@ -60,14 +60,8 @@ else
 					<button class=" btn nav-item">
 						<a href="login.php" class="nav-link">Login <i class="fa fa-lock" aria-hidden="true"></i></a>
 					</button>
-					<button class=" btn nav-item">
-						<a href="login1.php" class="nav-link">Login1 <i class="fa fa-lock" aria-hidden="true"></i></a>
-					</button>
 					<button class="btn nav-item">
 						<a href="signup.php" class="nav-link">Signup <i class="fa fa-sign-in" aria-hidden="true"></i></a>
-					</button>
-					<button class="btn nav-item">
-						<a href="signup1.php" class="nav-link">Signup1 <i class="fa fa-sign-in" aria-hidden="true"></i></a>
 					</button>
 				<?php
 			}?>
@@ -116,6 +110,41 @@ else
 	</nav>
 	</div>
 </div>
+<div class="bg-dark" style="height: 200px;">
+	<div class="carousel slide" id="slide" data-ride="carousel">
+		<ul class="carousel-indicators ">
+			<li class="active" data-target="#slide" data-slide-to="0"></li>
+			<li  data-target="#slide" data-slide-to="1"></li>
+			<li  data-target="#slide" data-slide-to="2"></li>
+		</ul>
+	<div class="carousel-inner">
+		<div class="carousel-item active">
+			<img src="img/4.jpeg" height="200" width="100%">
+			<div class="carousel-caption">
+				Angels
+			</div>
+		</div>
+		<div class="carousel-item">
+			<img src="img/5.jpg" height="200" width="100%">
+			<div class="carousel-caption">
+				<p class="text-dark">Mixer Grinder</p>
+			</div>
+		</div>
+		<div class="carousel-item">
+			<img src="img/6.png" height="200" width="100%">
+			<div class="carousel-caption">
+				New HP Laptop
+			</div>
+		</div>
+	</div>
+	<a href="#slide" class="carousel-control-prev" data-slide="prev">
+		<span class="carousel-control-prev-icon"></span>
+	</a>
+	<a href="#slide" class="carousel-control-next" data-slide="next">
+		<span class="carousel-control-next-icon"></span>
+	</a>
+	</div>
+	</div>
 <div class="container-fluid mt-1">
 	<div class="row">
 		<div class="col-md-3 mb-1">

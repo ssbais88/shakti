@@ -33,23 +33,49 @@ class Home extends CI_Controller
 	{
 		$this->load->library("form_validation");
 		$this->form_validation->set_rules("full_name","Full Name","required");
-		$this->form_validation->set_rules("username","Email Id","required");
+		$this->form_validation->set_rules("username","Email Id","required|valid_email");
 		$this->form_validation->set_rules("pass","Password","required");
-	    $this->form_validation->set_rules("re_pass","Re-Password","required");
+	    $this->form_validation->set_rules("re_pass","Re-Password","required|matches[pass]");
 	    $this->form_validation->set_rules("add","Address","required");
 	    $this->form_validation->set_rules("city","City","required");
 	    $this->form_validation->set_rules("gender","Gender","required");
-	    $this->form_validation->set_rules("contact","Contact","required");
+	    $this->form_validation->set_rules("contact","Contact","required|numeric|exact_length[10]");
 
 	    
 		if ($this->form_validation->run()==false)
 		{
-			$pageview=array("title"=>"sign up","pagename"=>"signup");
+			$pageview=array("title"=>"Signup Page","pagename"=>"signup");
 			$this->load->view("layout",$pageview);
 		}
 		else
 		{
-			echo "yes";
+		
+			// $a = $_POST['full_name'];
+			// This Type was used in Core PHP but in CI we do all using functions and always store all values in only one(1) Associative Array format.
+
+			$data['full_name'] = $this->input->post("full_name");
+			//Remember $data['full_name'], 'full_name' should be match table column name, And 'post' in small letter also inside comes from ->form input type 'name Attribute'.
+			$data['username'] = $this->input->post("username");
+			$data['password'] = $this->input->post("pass");
+			$data['address'] = $this->input->post("add");
+			$data['gender'] = $this->input->post("gender");
+			$data['city'] = $this->input->post("city");
+			$data['contact'] = $this->input->post("contact");
+
+			$this->load->model("usermodel"); 
+
+			//Here we are including model file in controller(Home.php), means Controler and Model Communicate Each other and pass associative array values using 'post' fn.
+
+			$this->usermodel->insert($data);
+
+			//Here 'usermodel' is comes from model file name, and 'insert' is pre-defined function and $data is working as parameterized fn parameter value.
+
+			// header("location:login.php"); It was used in php, but
+
+			redirect("home/signin");  // In CI we redirectiong to login page.
+
+			// echo "yes";
+
 		
 		}
 	}
@@ -57,6 +83,12 @@ class Home extends CI_Controller
 	{
 		$pageview = array("title"=>"Login Page", "pagename"=>"signin");
 		$this ->load->view("layout", $pageview);
+
+	}
+	function authi()
+	{
+		print_r($this->input->post());
+		
 	}
 }
 
