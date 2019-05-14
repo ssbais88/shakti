@@ -2,6 +2,17 @@
 $con = mysqli_connect("localhost","root","","ebay");
 $query = "SELECT * FROM category";
 $result = mysqli_query($con,$query);
+
+if(isset($_COOKIE['cart']))
+{
+	$x = $_COOKIE['cart'];
+	$arr = explode("#", $x);
+	$cart_total = count($arr);
+}
+else
+{
+	$cart_total = 0;
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -56,7 +67,7 @@ $result = mysqli_query($con,$query);
 			}?>
 
 					<button class="btn nav-item">
-						<a href="#" class="nav-link">Cart <i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="badge badge-warning badge-pill">2</span></a>
+						<a href="my_cart.php" class="nav-link">Cart <i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="badge badge-warning badge-pill"><?php echo $cart_total; ?></span></a>
 					</button>
 			</ul>
 		</div>
@@ -68,10 +79,12 @@ $result = mysqli_query($con,$query);
 		" data-toggle="collapse" data-target="#my">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-		<form class="form-inline">
-			<input type="text" name="" class="form-control" placeholder="Search Item's">
+
+		<form class="form-inline" action="" method="get">
+			<input type="text" name="q" class="form-control" placeholder="Search Item's">
 			<button class="btn btn-success"><i class="fa fa-search" aria-hidden="true"></i></button>
 		</form>
+		
 		<div id="my" class="collapse navbar-collapse">
 			<ul class="navbar-nav">
 				<li class="nav-item">
@@ -97,6 +110,41 @@ $result = mysqli_query($con,$query);
 	</nav>
 	</div>
 </div>
+<div class="bg-dark" style="height: 200px;">
+	<div class="carousel slide" id="slide" data-ride="carousel">
+		<ul class="carousel-indicators ">
+			<li class="active" data-target="#slide" data-slide-to="0"></li>
+			<li  data-target="#slide" data-slide-to="1"></li>
+			<li  data-target="#slide" data-slide-to="2"></li>
+		</ul>
+	<div class="carousel-inner">
+		<div class="carousel-item active">
+			<img src="img/4.jpeg" height="200" width="100%">
+			<div class="carousel-caption">
+				Angels
+			</div>
+		</div>
+		<div class="carousel-item">
+			<img src="img/5.jpg" height="200" width="100%">
+			<div class="carousel-caption">
+				<p class="text-dark">Mixer Grinder</p>
+			</div>
+		</div>
+		<div class="carousel-item">
+			<img src="img/6.png" height="200" width="100%">
+			<div class="carousel-caption">
+				New HP Laptop
+			</div>
+		</div>
+	</div>
+	<a href="#slide" class="carousel-control-prev" data-slide="prev">
+		<span class="carousel-control-prev-icon"></span>
+	</a>
+	<a href="#slide" class="carousel-control-next" data-slide="next">
+		<span class="carousel-control-next-icon"></span>
+	</a>
+	</div>
+	</div>
 <div class="container-fluid mt-1">
 	<div class="row">
 		<div class="col-md-3 mb-1">
@@ -104,7 +152,7 @@ $result = mysqli_query($con,$query);
 				<?php
 					while($data=mysqli_fetch_assoc($result))
 					{ ?>
-				<a href="#" class="list-group-item list-group-item-action a1"><?php echo $data['category']; ?></a>
+				<a class="list-group-item list-group-item-action a1" href="index.php?category1=<?php echo $data['category']; ?>"><?php echo $data['category']; ?></a>
 
 				<?php
 				}

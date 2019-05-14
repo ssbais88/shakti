@@ -18,6 +18,7 @@
 				<th>Product Category</th>
 				<th>Product Price</th>
 				<th>Product Discount</th>
+				<th>Add Images</th>
 				<th>Edit</th>
 				<th>Delete</th>
 			</tr>
@@ -30,8 +31,14 @@
 				<td><?php echo $data['pcate']; ?></td>
 				<td><?php echo $data['pprice']; ?></td>
 				<td><?php echo $data['pdiscount']; ?></td>
-				<td><a class="btn btn-warning" href="#">Edit</a></td>
-				<td><a  class="btn btn-danger" href="delete_pro.php?pro=<?php echo $data['id'] ?>">Delete</a></td>
+
+				<td><a class="btn btn-light" 
+					href="add_more_image.php?pro=<?php echo $data['id'] ?>">Add More</a></td>
+
+				<td><a class="btn btn-warning" 
+					href="edit_pro.php?pro=<?php echo $data['id'] ?>">Edit</a></td>
+				<td><a  class="btn btn-danger"
+				 	href="delete_pro.php?pro=<?php echo $data['id'] ?>">Delete</a></td>
 			</tr>
 		<?php	}
 			?>

@@ -46,6 +46,8 @@ $data = mysqli_fetch_assoc($result);
 					<td><?php echo $data['contact'] ?></td>
 				</tr>
 			</table>
+			<a href="edit_profile.php" class="btn btn-info">Edit Profile</a>
+			<a href="#" class="btn btn-info">Change Password</a>
 		</div>
 	</div>
 </div>

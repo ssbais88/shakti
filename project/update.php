@@ -33,7 +33,9 @@ else
 		$e = $_POST['gender'];
 		$f = $_POST['city'];
 		$g = $_POST['contact'];
-		$query="UPDATE user SET full_name='$a', address ='$d', gender='$e', city='$f', contact='$g', image='$new_name' WHERE id=$id";
+
+		$query =" UPDATE user SET full_name='$a', address ='$d', gender='$e', city='$f', contact='$g', image_name='$new_name' WHERE id=$id";
+
 		move_uploaded_file($tmp_name, "user_image/".$new_name);
 
 		mysqli_query($con, $query);

@@ -1,8 +1,39 @@
 <?php
+		// print_r($_COOKIE);
+		// die;
+
 		include("db.php");
 		include("header.php");
-		$query =" SELECT * FROM product";
-		$result = mysqli_query($con,$query);
+		// print_r($_GET);
+	if(isset($_GET['q']))
+	{
+		$q = $_GET['q'];
+		if (isset($_GET['category'])) 
+		{
+			$a = $_GET['category'];
+			$query =" SELECT * FROM product WHERE pcate='$a' AND pname LIKE '%$q%'";
+			$result = mysqli_query($con, $query);
+		}
+		else
+		{
+			$query =" SELECT * FROM product WHERE pname LIKE '%$q%'";
+			$result = mysqli_query($con, $query);
+		}
+	}
+	else
+	{
+		if(isset($_GET['category1']))
+		{
+			$a = $_GET['category1'];
+			$query =" SELECT * FROM product WHERE pcate ='$a'";
+			$result = mysqli_query($con,$query);
+		}
+		else
+		{
+			$query =" SELECT * FROM product";
+			$result = mysqli_query($con,$query);
+		}
+	}	
 ?>
 		<div class="col-md-9 mb-1">
 			<div class="row">
@@ -26,12 +57,17 @@
 							<span class="font-weight-bold"><?php echo $data['pname']; ?></span>
 						</div>
 						<div class="card-body">
-							<img src="admin/upload/<?php echo $data['image_name']; ?>" style="width: 100%; height:150px !important;">
+						<center>
+							<img src="admin/upload/<?php echo $data['image_name']; ?>" style="width: 70%; height:160px !important;">
+						</center>	
 						</div>
 						<div class="card-footer">
-							<button class="btn btn-success">Buy</button>
+						<a href="add_to_cart.php?pid=<?php echo $data['id']; ?>" class="btn btn-success" >Add to Cart</a>
+						<a href="admin/more_img.php?p_id=<?php echo $data['id']; ?>" class="btn btn-primary" >More</a>
+						<br>
 							<del>(<?php echo $data['pprice']; ?>)</del>
 							<b><?php echo $y; ?>.00</b>
+						
 					</div>
 					</div>
 				</div>
