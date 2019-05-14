@@ -1,4 +1,4 @@
-
+	
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-6 offset-3">
@@ -19,6 +19,9 @@
 				</div>
 				<div class="card-footer">
 					<input type="submit" value="Signin" class="btn btn-primary">
+				<p class="text-danger">
+					<?php echo $this->session->flashdata("msg"); ?>
+				</p>
 				</div>
 			</div>
 		</div>

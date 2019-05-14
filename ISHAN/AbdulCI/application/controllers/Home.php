@@ -6,6 +6,7 @@ class Home extends CI_Controller
 	{
 		parent ::__construct();
 		$this->load->helper("url");
+		$this->load->library("session");
 	}
 	function index()
 	{
@@ -56,7 +57,7 @@ class Home extends CI_Controller
 			$data['full_name'] = $this->input->post("full_name");
 			//Remember $data['full_name'], 'full_name' should be match table column name, And 'post' in small letter also inside comes from ->form input type 'name Attribute'.
 			$data['username'] = $this->input->post("username");
-			$data['password'] = $this->input->post("pass");
+			$data['password'] = sha1($this->input->post("pass"));
 			$data['address'] = $this->input->post("add");
 			$data['gender'] = $this->input->post("gender");
 			$data['city'] = $this->input->post("city");
@@ -87,8 +88,36 @@ class Home extends CI_Controller
 	}
 	function authi()
 	{
-		print_r($this->input->post());
-		
+		// print_r($this->input->post());  //This is working like $_POST['name'];
+
+		$email = $this->input->post('username');
+		$password = sha1($this->input->post('password'));
+		$this->load->model('usermodel');
+		$result = $this->usermodel->select_by_username($email);
+
+		if($result->num_rows()==1)
+		{
+			$data = $result->row_array();
+
+			if($data['password']==$password)
+			{
+				$this->session->set_userdata("id", $data['id']);
+				$this->session->set_userdata("name", $data['full_name']);
+				$this->session->set_userdata("is_user_logged_in", true);
+				redirect("user");
+			}
+			else
+			{
+				$this->session->set_flashdata("msg", "This Password is Incorrect !");
+				redirect("home/signin");
+			}
+		}
+		else
+		{
+			$this->session->set_flashdata("msg", "The Username And Password is Incorrect !");
+			redirect("home/signin");
+		}
+
 	}
 }
 

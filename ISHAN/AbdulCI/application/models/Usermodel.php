@@ -32,5 +32,12 @@ class Usermodel extends CI_Model
 	{
 		
 	}
+
+	function select_by_username($email)
+	{
+		$this->db->where("username", $email);
+		$result = $this->db->get("user");
+		return $result;
+	}
 }
 ?>
