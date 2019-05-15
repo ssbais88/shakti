@@ -12,12 +12,24 @@
          $this->db->insert("user",$data); 	
       }
 
-     function select_by_usename($u)
+
+
+
+
+     function select_by_username($u)
       {
        	$this->db->where("username",$u);
  	    $result=$this->db->get("user");
  	    return $result;
- }
+      }
+      function select_by_id($id)
+      {
+      	$this->db->where("id",$id);
+      	$result=$this->db->get("user");
+      	return $result;
+
+
+      }
 
 
 

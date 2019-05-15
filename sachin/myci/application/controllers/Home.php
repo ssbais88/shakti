@@ -74,18 +74,19 @@ class Home extends CI_Controller{
 		$u = $this->input->post("username");
 		$p =sha1($this->input->post("pass"));
 		$this->load->model("usermodel");
-		$result=$this->usermodel->select_by_usename($u);
+		$result=$this->usermodel->select_by_username($u);
 
 		if($result->num_rows()==1)
 		{
 			$data=$result->row_array();
-			if($data['password']==$p)
+			if($data['pass']==$p)
 			{
 
 				$this->session->set_userdata("id",$data['id']);
 				$this->session->set_userdata("name",$data['full_name']);
 				$this->session->set_userdata("is_user_logged_in",true);
 				redirect("user");
+				// echo "yes";
 			}
 			else
 			{
