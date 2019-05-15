@@ -15,11 +15,10 @@ class Admin extends CI_Controller
 
 	function index()
 	{
-		$pageview = array("title"=>"Login", "pagename"=>"admin/login");
-		$this->load->view("admin/layout", $pageview);
+		$this->load->view("admin/login");
 	}
 
-	function panel()
+	function auth()
 	{
 		// print_r($this->input->post());
 
