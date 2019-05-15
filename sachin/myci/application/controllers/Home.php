@@ -4,6 +4,7 @@ class Home extends CI_Controller{
 	{
 		parent::__construct();
 		$this->load->helper("url");
+		$this->load->library("session");
 	}
 	function index()
 	{
@@ -15,29 +16,20 @@ class Home extends CI_Controller{
 		$pagedata = array("title"=>"About Page", "pagename"=>"about","page_name"=>"about me");
 		$this->load->view("layout", $pagedata);
 	}
-	// function contact()
-	// {
- //     $pagedata = array("title"=>"Contact page", "pagename"=>"contact", "page_name"=>"contact");
- //     $this->load->view("layout",$pagedata);
-
-	// }
+	
 	function contact()
 	{
 		$pagedata = array("title"=>"Contact Page", "pagename"=>"contact" ,"page_name"=>"your contact");
 		$this->load->view("layout", $pagedata);
 	
 	}
- function help()
- {
-$pagedata = array("title"=>"help page","pagename"=>"help","page_name"=>"help");
+    function help()
+    {
+        $pagedata = array("title"=>"help page","pagename"=>"help","page_name"=>"help");
 
-$this->load->view("layout",$pagedata);
-
- } 
-
-
-
-	function login()
+        $this->load->view("layout",$pagedata);
+    } 
+    function login()
 	{
 		$pagedata = array("title"=>"Login Page", "pagename"=>"login","page_name"=>"login");
 		$this->load->view("layout", $pagedata);
@@ -64,7 +56,7 @@ $this->load->view("layout",$pagedata);
 	   {
 	   	$data['full_name']=$this->input->post("full_name");
 	   	$data['username']=$this->input->post("username");
-	   	$data['pass']=$this->input->post("pass");
+	   	$data['pass']=sha1($this->input->post("pass"));
 	   	$data['add']=$this->input->post("add");
 	   	$data['city']=$this->input->post("city");
 	   	$data['contact']=$this->input->post("contact");
@@ -76,10 +68,38 @@ $this->load->view("layout",$pagedata);
 	   	redirect("home/login");
 
 	   }
+	}
+	function auth()
+	{
+		$u = $this->input->post("username");
+		$p =sha1($this->input->post("pass"));
+		$this->load->model("usermodel");
+		$result=$this->usermodel->select_by_usename($u);
+
+		if($result->num_rows()==1)
+		{
+			$data=$result->row_array();
+			if($data['password']==$p)
+			{
+
+				$this->session->set_userdata("id",$data['id']);
+				$this->session->set_userdata("name",$data['full_name']);
+				$this->session->set_userdata("is_user_logged_in",true);
+				redirect("user");
+			}
+			else
+			{
+				$this->session->set_flashdata("msg","this password is incorrect");
+				redirect("home/login");
+			}
 
 
-			
+		}
+		else
+		{
+			$this->session->set_flashdata("msg","this username and password is incorrect");
+			redirect("home/login");
 		}
 
-
+	}
 }
