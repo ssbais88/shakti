@@ -34,7 +34,7 @@ if ($ext == "jpeg" || $ext == "jpg" || $ext == "png" || $ext == "gif")
 
 		move_uploaded_file($tmp_name, "upload_img/".$new_name);
 
-		mysqli_query($con, 	$query);
+		mysqli_query($con, $query);
 
 		header("location:login.php");
 

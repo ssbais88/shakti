@@ -4,8 +4,7 @@
 	<title></title>
 	<script type="text/javascript">
 		function add_more()
-		{
-			var tr = document.createElement("tr");
+		{			var tr = document.createElement("tr");
 
 			var td1 = document.createElement("td");
 			var td2 = document.createElement("td");

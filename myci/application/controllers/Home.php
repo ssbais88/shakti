@@ -84,7 +84,7 @@ class Home extends CI_Controller{
 		// print_r($this->input->post());
 		$u = $this->input->post("username");
 		$p = sha1($this->input->post("pass"));
-		$this->load->model("usermodel");
+		$this->load->model("usermodel");	
 		$result=$this->usermodel->select_by_username($u);
 		if($result->num_rows()==1)
 		{
