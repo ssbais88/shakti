@@ -27,6 +27,47 @@ class User extends CI_Controller{
 		$this->load->view("layout", $pagedata);
 	}
 
+	function update_password()
+	{
+		$id = $this->session->userdata("id");
+		$a = sha1($this->input->post("c_pass"));
+		$b = $this->input->post("n_pass");
+		$c = $this->input->post("cn_pass");
+		$this->load->model("usermodel");
+		$result=$this->usermodel->select_by_id($id);
+		$arr = $result->row_array();
+		if($arr['password']==$a)
+		{
+			if($b == $c)
+			{
+				$data['password']=sha1($b);
+				$this->usermodel->update($id, $data);
+				redirect("user");
+			}
+			else
+			{
+				$this->session->set_flashdata("msg", "The New Password and Confirm Password not matched");
+				redirect("user/change_pass");		
+			}
+		}
+		else
+		{
+			$this->session->set_flashdata("msg", "The Current Password not matched");
+			redirect("user/change_pass");
+		}
+
+
+	}
+
+
+
+
+	function change_pass()
+	{
+		$pagedata = array("title"=>"Change Password Page", "pagename"=>"user/change_pass");
+		$this->load->view("layout", $pagedata);
+	}
+
 
 
 
@@ -65,6 +106,20 @@ class User extends CI_Controller{
 	{
 		$this->session->sess_destroy();
 		redirect("home");
+	}
+	function update()
+	{
+		$id = $this->session->userdata("id");
+
+		$data['full_name'] = $this->input->post("full_name");
+		$data['address'] = $this->input->post("add");
+		$data['city'] = $this->input->post("city");
+		$data['gender'] = $this->input->post("gender");
+		$data['contact'] = $this->input->post("contact");
+
+		$this->load->model('usermodel');
+		$this->usermodel->update($id, $data);
+		redirect("user");
 	}
 
 }
