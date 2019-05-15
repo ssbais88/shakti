@@ -25,9 +25,25 @@
 				<li class="nav-item"><a href="<?php echo site_url('home/help'); ?>" class="nav-link">Help</a></li>
 			</ul>
 		</div>
-		<ul class="navbar-nav">
+			<ul class="navbar-nav">
+		<?php
+			if($this->session->userdata('is_user_logged_in'))
+			{ 
+		?>
+			<li class="nav-item"><a href="<?php echo site_url('user/user_profile'); ?>" class="nav-link">My Profile</a></li>
+			<li class="nav-item"><a href="<?php echo site_url('user/edit'); ?>" class="nav-link">Edit Profile</a></li>
+			<li class="nav-item"><a href="<?php echo site_url('user/logout'); ?>" class="nav-link">Signout</a></li>
+		
+		
+		<?php
+		}
+			else
+		{ ?>
 			<li class="nav-item"><a href="<?php echo site_url('home/signup'); ?>" class="nav-link">Signup</a></li>
 			<li class="nav-item"><a href="<?php echo site_url('home/signin'); ?>" class="nav-link">Signin</a></li>
+		<?php	
+		}
+		?>
 		</ul>
 	</nav>
 <div class="jumbotron">
