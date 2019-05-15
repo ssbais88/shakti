@@ -33,9 +33,5 @@ class Usermodel extends CI_Model
 		$result = $this->db->get("user");
 		return $result;
 	}
-	function update()
-	{
-		
-	}
 }
 ?>

@@ -50,7 +50,7 @@
 						</table>
 					</div>
 					<div class="card-footer">
-						<a href="<?php site_url("update") ?>" class="btn btn-info">Update Profile</a>
+						<a href="<?php site_url("update") ?>" class="btn btn-info">Edit Profile</a>
 					</div>
 				</div>
 			</form>

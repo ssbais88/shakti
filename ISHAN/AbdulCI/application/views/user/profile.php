@@ -39,7 +39,7 @@
 						</table>
 					</div>
 					<div class="card-footer">
-						<a href="<?php echo site_url("user/edit_pro"); ?>" class="btn btn-info">Edit Profile</a>
+						<a href="<?php echo site_url("") ?>" class="btn btn-info">Edit Profile</a>
 					</div>
 				</div>
 			</form>
