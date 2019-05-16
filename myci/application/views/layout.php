@@ -39,9 +39,6 @@
             <a class="nav-link" href="<?php echo site_url('user'); ?>">Dashboard</a>
           </li> 
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo site_url('user/profile'); ?>">Profile</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="<?php echo site_url('user/logout'); ?>">Logout</a>
           </li> 
       <?php

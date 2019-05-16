@@ -91,10 +91,7 @@ class User extends CI_Controller{
 		$this->load->model("usermodel");
 		$result=$this->usermodel->select_by_id($id);
 
-
-
-
-
+		
 
 		$pagedata = array("title"=>"edit Profile Page", "pagename"=>"user/edit", "result"=>$result);
 		$this->load->view("layout", $pagedata);
