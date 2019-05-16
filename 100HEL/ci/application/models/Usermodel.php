@@ -1,5 +1,5 @@
 <?php
-class Usermodel extends CI_model
+class Usermodel extends CI_Model
 {
 	
 	function __construct()
@@ -14,9 +14,10 @@ class Usermodel extends CI_model
 		$this->db->insert("user", $data); /*here insert work as insert query put data in user table and $data take same as above function $data*/ 
 	}
 
-	function update()
+	function update($id, $data)
 	{
-
+		$this->db->where("id", $id);
+		$this->db->update("user", $data);
 	}
 
 	function select()

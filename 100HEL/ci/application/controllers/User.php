@@ -45,5 +45,19 @@ class User extends CI_controller
 		$this->session->sess_destroy();
 		redirect("home");
 	}
+	function update()
+	{
+		$this->session->userdata("id");
+
+		$data['full_name']=$this->input->post("full_name");
+		$data['gender']=$this->input->post("gender");
+		$data['address']=$this->input->post("add");
+		$data['city']=$this->input->post("city");
+		$data['contact']=$this->input->post("contact");
+
+		$this->load->model('usermodel');
+		$this->usermodel->update($id, $data);
+		redirect('user');
+	}
 }
 ?>

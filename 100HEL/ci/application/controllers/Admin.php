@@ -11,8 +11,7 @@ class Admin extends CI_controller
 	}
 	function index()
 	{
-		$pagedata = array("title"=>"Admin Login", "pagename"=>"admin/admin_login");
-		$this->load->view("admin/admin_dash", $pagedata);
+		$this->load->view("admin/admin_login");
 	}
 	function admin_auth()
 	{
@@ -26,7 +25,9 @@ class Admin extends CI_controller
 			$data=$result->row_array();
 			if($data['password']==$password)
 			{
+				$this->session->set_userdata("id", $data['id']);
 				$this->session->set_userdata("is_admin_logged_in", true);
+				redirect("admin_dashboard");
 			}
 			else
 			{

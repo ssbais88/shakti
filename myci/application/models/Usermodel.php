@@ -21,7 +21,8 @@ class Usermodel extends CI_Model{
 	}
 	function select_all()
 	{
-
+		$result = $this->db->get("user");
+		return $result;
 	}
 	function delete()
 	{
@@ -41,6 +42,7 @@ class Usermodel extends CI_Model{
 		$result=$this->db->get("user");
 		return $result;
 	}
+	
 
 
 }

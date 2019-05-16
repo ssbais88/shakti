@@ -20,22 +20,16 @@ class Usermodel extends CI_Model
         // This query for inserting data into the database.
         //Above 'db' is fixed name for database, 'insert' is keyword which can't be change and "user" is db <table name> and '$data' is Associative array calling value's inside it like-db column name and form name attribute and here we write always array name after <table nae>. 
 	}
-	function update()
-	{
-		
-	}
-	function select()
-	{
-		
-	}
-	function delete()
-	{
-		
-	}
-
+	
 	function select_by_username($email)
 	{
 		$this->db->where("username", $email);
+		$result = $this->db->get("user");
+		return $result;
+	}
+	function select_by_userid($id)
+	{
+		$this->db->where("id", $id);
 		$result = $this->db->get("user");
 		return $result;
 	}
