@@ -2,7 +2,7 @@
 	<h2>Change Password</h2>
 	<div class="row my-4">
 		<div class="col-md-6 offset-4">
-			<form action="<?php echo site_url("user/update_pass.php"); ?>" method="post">
+			<form action="<?php echo site_url("user/update_pass"); ?>" method="post">
 				<table class="table table-dark table-hover table-bordered">
 					<tr>
 						<td>Current Password</td>

@@ -20,9 +20,10 @@ class Usermodel extends CI_Model
 		$this->db->update("user", $data);
 	}
 
-	function select()
+	function select_all()
 	{
-
+		$result=$this->db->get('user');
+		return $result;
 	}
 
 	function delete()

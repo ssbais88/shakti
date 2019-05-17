@@ -1,7 +1,4 @@
 <?php
-/**
- * 
- */
 class Admin_dashboard extends CI_Controller
 {
 	
@@ -21,7 +18,16 @@ class Admin_dashboard extends CI_Controller
 	}
 	function index()
 	{
-		echo "yes";
+		
+		$pagedata = array("title" => "Admin Dashboard" , "pagename" => "admin/dashboard");
+		$this->load->view("admin/admin_layout", $pagedata);
+	}
+	function view_user()
+	{
+		$this->load->model('usermodel');
+		$result=$this->usermodel->select_all();
+		$pagedata = array("title" => "View Users" , "pagename" => "admin/view_user", "result"=>$result);
+		$this->load->view("admin/admin_layout", $pagedata);
 	}
 }
 ?>
