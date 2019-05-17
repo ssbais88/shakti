@@ -10,6 +10,16 @@
   				<td>Full Name</td>
   				<td><?php echo $data['full_name']; ?></td>
   			</tr>
+        <tr>
+          <td>Picture</td>
+          <td><img src="<?php echo base_url('image/avatar.png') ?>" height="100" width="100">
+            <br />
+            <form action="<?php echo site_url('user/pic_upload') ?>" method="post" enctype="multipart-form-data">
+              
+            <input type="file" onchange="this.form.submit()"/>
+            </form>
+
+        </td>
   			<tr>
   				<td>Username</td>
   				<td><?php echo $data['username']; ?></td>

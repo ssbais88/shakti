@@ -47,16 +47,28 @@
             <th>Username</th>
             <th>Contact</th>
             <th>Detail</th>
+            <th>Current Status</th>
+            <th>Change</th>
           </tr>
           <?php
           foreach($result->result_array() as $data)
-          { ?>
+          { 
+            if($data['status']==1)
+              $x = "Acitve";
+            else
+              $x = "Deactive";
+            ?>
             <tr>
               <td><?php echo $data['id']; ?></td>
               <td><?php echo $data['full_name']; ?></td>
               <td><?php echo $data['username']; ?></td>
               <td><?php echo $data['contact']; ?></td>
               <td><a href="<?php echo site_url('admindashboard/user_detail/'.$data['id']) ?>" class="btn btn-sm btn-info">Detail</a></td>
+              <td><?php echo $x; ?></td>
+              <td><a href="<?php echo site_url('admindashboard/change_status/'.$data['id'].'/'.$data['status']) ?>" class="btn btn-warning btn-sm">Change</a></td>
+
+              <!-- <td><a href="<?php //echo site_url('admindashboard/change_status/'.$data['id'].'/'.$data['status']) ?>" class="btn btn-warning btn-sm"><?php //echo $x; ?></a></td> -->
+              <!-- <td><a href="#" class="btn btn-warning btn-sm">Change</a></td> -->
             </tr>
           <?php 
           }
