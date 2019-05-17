@@ -118,6 +118,15 @@ class User extends CI_Controller{
 		$this->usermodel->update($id, $data);
 		redirect("user");
 	}
+	function pic_upload()
+	{
+		$demo["allowed_types"]="png|jpg|jpeg|gif";
+		$demo["max_size"]=1024; //KB
+		$demo["upload_path"]="image/";
+
+		$this->load->library("upload", $demo);
+		
+	}
 
 }
 ?>

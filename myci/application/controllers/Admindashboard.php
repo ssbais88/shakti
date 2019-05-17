@@ -39,6 +39,17 @@ class Admindashboard extends CI_Controller{
 		$pagedata=array("result"=>$result);
 		$this->load->view("admin/user_detail", $pagedata);
 	}
+	function change_status($a, $b)
+	{
+		if($b==1)
+			$data['status']=0;
+		else
+			$data['status']=1;
+		$this->load->model("usermodel");
+		$this->usermodel->update($a, $data);
+		redirect("admindashboard/view_users");
+
+	}
 }
 
 ?>
