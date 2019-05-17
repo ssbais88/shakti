@@ -37,4 +37,6 @@
   			</td>
   		</tr>
   	</table>
-  	<a href="<?php echo site_url('user/edit') ?>" class="btn btn-primary">Edit</a></div></div></div>
+  	<a href="<?php echo site_url('user/edit') ?>" class="btn btn-primary">Edit</a>
+    <a href="<?php echo site_url('user/change_password'); ?>" class="btn btn-primary">Change Password</a>
+  </div></div></div>

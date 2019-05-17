@@ -121,6 +121,7 @@ class User extends CI_Controller{
 		$this->usermodel->update($id, $data);
 		redirect("user");
 	}
+		
 
 }
 ?>

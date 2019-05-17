@@ -3,13 +3,23 @@
  	function __construct()
  	{
 
- 		parent:: __construct();
+ 		parent::__construct();
  		$this->load->database();
  	}
     function insert($data)
      {
 
          $this->db->insert("user",$data); 	
+      }
+      function update($id,$data)
+      {
+        $this->db->where("id",$id);
+
+        $this->db->update("user",$data);
+
+
+
+
       }
 
 

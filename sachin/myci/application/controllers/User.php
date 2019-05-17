@@ -66,6 +66,60 @@ class User extends CI_Controller{
 		$this->session->sess_destroy();
 		redirect("home");
 	}
+	function update()
+	{
+		$id = $this->session->userdata("id");
+		// print_r($this->input->post());die;
+		$data['full_name']= $this->input->post("full_name");
+		$data['add']=$this->input->post("add");
+		$data['city']=$this->input->post("city");
+		$data['gender']=$this->input->post("gender");
+		$data['contact']=$this->input->post("contact");
+
+		$this->load->model('usermodel');
+		$this->usermodel->update($id,$data);
+		redirect("user");
+	}
+	function change_password()
+	{
+		$pagedata = array("title"=>"change password","pagename"=>"user/change_password","page_name"=>"Change  Password");
+		$this->load->view("layout",$pagedata);
+	}
+	function update_password()
+	{
+		$id=$this->session->userdata("id");
+		
+		// print_r($this->input->post());die;
+		$a = sha1($this->input->post("c_pass"));
+		$b =$this->input->post("n_pass");
+		$c=$this->input->post("cn_pass");
+	    $this->load->model("usermodel");
+		$result= $this->usermodel->select_by_id($id);
+		$arr=$result->row_array();
+		if($arr['pass']==$a)
+		{
+			if($b==$c)
+			{
+				$data['pass']=sha1($b);
+				$this->usermodel->update($id,$data);
+				redirect("user");
+
+			}
+			else
+			{
+				$this->session->set_flashdata("msg","The new password and confirm password are not match");
+				redirect("user/change_password");
+
+			}
+		}
+			else
+			{
+				$this->session->set_flashdata("msg","The corrent password are not match");
+				redirect("user/change_password");
+			}
+		
+
+	}
 
 }
 ?>
