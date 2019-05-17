@@ -91,10 +91,7 @@ class User extends CI_Controller{
 		$this->load->model("usermodel");
 		$result=$this->usermodel->select_by_id($id);
 
-
-
-
-
+		
 
 		$pagedata = array("title"=>"edit Profile Page", "pagename"=>"user/edit", "result"=>$result);
 		$this->load->view("layout", $pagedata);
@@ -121,7 +118,19 @@ class User extends CI_Controller{
 		$this->usermodel->update($id, $data);
 		redirect("user");
 	}
+<<<<<<< HEAD
 		
+=======
+	function pic_upload()
+	{
+		$demo["allowed_types"]="png|jpg|jpeg|gif";
+		$demo["max_size"]=1024; //KB
+		$demo["upload_path"]="image/";
+
+		$this->load->library("upload", $demo);
+		
+	}
+>>>>>>> 1ff7d65021762d3449b54944bce3d17f9e8f625e
 
 }
 ?>

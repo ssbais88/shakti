@@ -23,7 +23,7 @@
 					</div>
 					<div class="form-group">
 						<label>Password</label>
-						<input type="password" name="pass" class="form-control">
+						<input type="password" name="password" class="form-control">
 					</div>
 				</div>
 				<div class="card-footer">
