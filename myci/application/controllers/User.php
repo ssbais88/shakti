@@ -16,6 +16,7 @@ class User extends CI_Controller{
 		if(! $this->session->userdata('is_user_logged_in'))
 		{
 			redirect('home');
+			
 		}
 	}
 
@@ -120,11 +121,28 @@ class User extends CI_Controller{
 	}
 	function pic_upload()
 	{
-		$demo["allowed_types"]="png|jpg|jpeg|gif";
-		$demo["max_size"]=1024; //KB
-		$demo["upload_path"]="image/";
+		$config["allowed_types"]="png|jpg|jpeg|gif";
+		$config["max_size"]=1024; //KB
+		$config["upload_path"]="image/";
 
-		$this->load->library("upload", $demo);
+		$config['encrypt_name']=true;
+
+		$this->load->library("upload", $config);
+		if($this->upload->do_upload()==false)
+		{
+			$a = $this->upload->display_errors();
+			$this->session->set_flashdata("msg", $a);
+			redirect("user/profile");
+		}
+		else
+		{
+			$id = $this->session->userdata("id");
+			$data['image_name']=$this->upload->data("file_name");
+			$this->load->model("usermodel");
+			$this->usermodel->update($id, $data);
+			redirect("user/profile");
+		}
+
 		
 	}
 
