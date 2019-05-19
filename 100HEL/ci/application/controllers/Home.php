@@ -6,11 +6,6 @@ class Home extends CI_Controller{
 		$this->load->helper("url");
 		$this->load->library("session");
 	}
-	function logout()
-	{
-		$this->session->sess_destroy();
-		redirect("home");
-	}
 	function index()
 	{
 		$pagedata=array("title"=>"Home page", "pagename"=>"home" );

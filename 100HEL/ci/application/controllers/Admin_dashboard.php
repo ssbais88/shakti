@@ -29,5 +29,32 @@ class Admin_dashboard extends CI_Controller
 		$pagedata = array("title" => "View Users" , "pagename" => "admin/view_user", "result"=>$result);
 		$this->load->view("admin/admin_layout", $pagedata);
 	}
+	function logout()
+	{
+		$this->session->sess_destroy();
+		redirect('user');
+	}
+	function user_detail($id)
+	{
+		$this->load->model('usermodel');
+		$result=$this->usermodel->select_by_id($id);
+		$pagedata = array("title" => "View Users" , "pagename" => "admin/user_detail", "result"=>$result);
+		$this->load->view("admin/admin_layout", $pagedata);
+
+	}
+	function change_status($id, $a)
+	{
+		if ($a==1)
+		{
+			$data['status']=0;
+		}
+		else
+		{
+			$data['status']=1;
+		}
+		$this->load->model("usermodel");
+		$this->usermodel->update($id, $data);
+		redirect("admin_dashboard/view_user");
+	}
 }
 ?>

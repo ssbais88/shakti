@@ -11,6 +11,14 @@
           <td><?php echo $data['full_name']; ?></td>
         </tr>
         <tr>
+          <td>Picture</td>
+          <td><img src="<?php echo base_url('image/avatar.jpg'); ?>" height="80" width="80">
+            <form action="<?php echo site_url('user/picture_upload'); ?>" method="post" enctype="multipart-form-data">
+              <input type="file" onchange="this.form.submit()" />
+            </form>
+          </td>
+        </tr>
+        <tr>
           <td>Email</td>
           <td><?php echo $data['email']; ?></td>
         </tr>
