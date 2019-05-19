@@ -4,6 +4,15 @@
   	<div class="col-md-6 offset-md-3">
   		<?php
   		$data = $result->row_array();
+      if($data['image_name']=="")
+      {
+        $path = base_url("image/avatar.png");
+      }
+      else
+      {
+        $path = base_url("image/".$data['image_name']);
+      }
+
   		?>
   		<table class="table table-dark table-hover table-bordered">
   			<tr>
@@ -12,12 +21,16 @@
   			</tr>
         <tr>
           <td>Picture</td>
-          <td><img src="<?php echo base_url('image/avatar.png') ?>" height="100" width="100">
+          <td><img src="<?php echo $path; ?>" height="100" width="100">
             <br />
-            <form action="<?php echo site_url('user/pic_upload') ?>" method="post" enctype="multipart-form-data">
+            <form action="<?php echo site_url('user/pic_upload') ?>" method="post" enctype="multipart/form-data">
               
-            <input type="file" onchange="this.form.submit()"/>
+            <input type="file" name="userfile" onchange="this.form.submit()"/>
             </form>
+            <p class="text-danger">
+              <?php echo $this->session->flashdata("msg");
+              ?>
+            </p>
 
         </td>
   			<tr>
