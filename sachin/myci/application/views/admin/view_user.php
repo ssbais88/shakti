@@ -30,7 +30,37 @@
 
 
         <div class="container">
-          <div class="row"></div></div>
+          <div class="row">
+                  <h2>View All Users</h2>
+      <div class="col-md-10 offset-md-1">
+        <table class="table table-hover table-dark table-bordered">
+          <tr>
+            <th>S.No.</th>
+            <th>Full Name</th>
+            <th>Username</th>
+            <th>Contact</th>
+            <th>Detail</th>
+            <th>Current Status</th>
+            <th>Change</th>
+          </tr>
+          <tr>
+            <td><?php echo $result['id']; ?></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+
+
+
+
+          </tr>
+
+
+
+
+
+          </div></div>
 
 
 
