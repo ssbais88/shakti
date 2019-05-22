@@ -74,12 +74,20 @@ class Home extends CI_Controller{
 		if($result->num_rows()==1)
 		{
 			$data=$result->row_array();
-			if(sha1($data['password']==$password))
+			if($data['password']==sha1($password))
 			{
-				$this->session->set_userdata("id", $data['id']);
-				$this->session->set_userdata("name", $data['full_name']);
-				$this->session->set_userdata("is_user_logged_in", true);
-				redirect("user");
+				if($data['status']==1)
+				{
+					$this->session->set_userdata("id", $data['id']);
+					$this->session->set_userdata("name", $data['full_name']);
+					$this->session->set_userdata("is_user_logged_in", true);
+					redirect("user");
+				}
+				else
+				{
+					$this->session->set_flashdata("msg", "You are Deactive Now.....");
+					redirect("home/login");
+				}
 			}
 			else
 			{

@@ -8,7 +8,7 @@ class Usermodel extends CI_Model
 		$this->load->database();
 	}
 
-	function insert($data) /*here we take insert as a function name but we change it and take it what we want same as data but this come in array formate from controller home page data array
+	function insert($data) /*here we take insert as a function name but we change it and take it what we want. same as data but this come in array formate from controller home page data array
 	we take insert name b/c we fire insert query */
 	{
 		$this->db->insert("user", $data); /*here insert work as insert query put data in user table and $data take same as above function $data*/ 

@@ -51,7 +51,7 @@
 			  				<div class="form-group">
 			  					<label>Gender</label>
 			  					<input type="radio" <?php echo set_radio('gender', 'male');?> value="male" name="gender">Male 
-			  					<input type="radio" value="female" <?php echo set_radio('gender', 'female');?> name="gender">Female 
+			  					<input type="radio" <?php echo set_radio('gender', 'female');?> value="female" name="gender">Female 
 			  				</div>
 			  				<div class="text-danger">
 							<?php
@@ -71,12 +71,12 @@
 			  					<label>City</label>
 			  					<select class="form-control" name="city">
 			  						<option value="">Select</option>
-			  						<option <?php echo set_radio('city', 'Indore');?> value="Indore" >Indore</option>
-			  						<option <?php echo set_radio('city', 'Bhopal');?> value="Bhopal" >Bhopal</option>
-			  						<option <?php echo set_radio('city', 'Jaipur');?> value="Jaipur" >Jaipur</option>
-			  						<option <?php echo set_radio('city', 'Udaipur');?> value="Udaipur" >Udaipur</option>
-			  						<option <?php echo set_radio('city', 'Mumbai');?> value="Mumbai" >Mumbai</option>
-			  						<option <?php echo set_radio('city', 'Pune');?> value="Pune" >Pune</option>
+			  						<option <?php echo set_select('city', 'Indore');?> value="Indore" >Indore</option>
+			  						<option <?php echo set_select('city', 'Bhopal');?> value="Bhopal" >Bhopal</option>
+			  						<option <?php echo set_select('city', 'Jaipur');?> value="Jaipur" >Jaipur</option>
+			  						<option <?php echo set_select('city', 'Udaipur');?> value="Udaipur" >Udaipur</option>
+			  						<option <?php echo set_select('city', 'Mumbai');?> value="Mumbai" >Mumbai</option>
+			  						<option <?php echo set_select('city', 'Pune');?> value="Pune" >Pune</option>
 			  					</select>
 			  				</div>
 			  				<div class="text-danger">

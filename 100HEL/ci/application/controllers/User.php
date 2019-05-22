@@ -7,7 +7,6 @@ class User extends CI_controller
 		parent::__construct();
 		$this->load->helper("url");
 		$this->load->library("session");
-
 		$this->backdoor();
 	}
 	function backdoor()
@@ -19,7 +18,7 @@ class User extends CI_controller
 	}
 	function index()
 	{
-		$pagedata = array("title"=>"Dashboard Page", "pagename"=>"user/dash");
+		$pagedata = array("title"=>"Home Page", "pagename"=>"home");
 		$this->load->view("layout", $pagedata);
 	}
 	function profile()
@@ -97,6 +96,30 @@ class User extends CI_controller
 		{
 			$this->session->set_flashdata("msg", "Your Current Password is not matched");
 			redirect("user/change_pass");
+		}
+	}
+	function picture_upload()
+	{
+		$config['allowed_types']="png|jpg|gif|jpeg";
+		$config['max_size']=1024;  //in kb
+		$config['upload_path']="image/";
+		//here $config is array name this can bu what you want and allowed_type, max_size and upload_path is predefine f/n.
+		$config['encrypt_name']=true;
+
+		$this->load->library("upload", $config);
+		if ($this->upload->do_upload()==false)
+		{
+			$error_msg=$this->upload->display_errors();
+			$this->session->set_flashdata("msg", $error_msg);
+			redirect("user/profile");
+		}
+		else
+		{
+			$id=$this->session->userdata("id");
+			$data['image_name']=$this->upload->data("file_name");//here file name is upload new name comes from encrypt_name.
+			$this->load->model("usermodel");
+			$this->usermodel->update($id, $data);
+			redirect("user/profile");
 		}
 	}
 }
