@@ -1,4 +1,4 @@
-<?php
+	<?php
 
 class User extends CI_Controller{
 
@@ -119,9 +119,9 @@ class User extends CI_Controller{
 		$this->usermodel->update($id, $data);
 		redirect("user");
 	}
-<<<<<<< HEAD
+
 		
-=======
+
 	function pic_upload()
 	{
 		$config["allowed_types"]="png|jpg|jpeg|gif";
@@ -148,7 +148,7 @@ class User extends CI_Controller{
 
 		
 	}
->>>>>>> 1ff7d65021762d3449b54944bce3d17f9e8f625e
+
 
 }
 ?>

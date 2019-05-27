@@ -1,8 +1,7 @@
-<<<<<<< HEAD
+
 <?php
 include ("db.php");
-=======
->>>>>>> abd8ff53bdc8bb29d28642a2f8488e966c4575dc
+
 
 <?php
 $query = "SELECT * FROM category";

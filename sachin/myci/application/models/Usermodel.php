@@ -24,7 +24,7 @@
       function select_all()
       {
         $result = $this->db->get("user");
-        // return $result;
+        return $result;
       }
 
 
