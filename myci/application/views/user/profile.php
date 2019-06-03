@@ -1,4 +1,4 @@
-<div class="container mt-4" style="min-height: 500px;">
+  rrrrrr<div class="container mt-4" style="min-height: 500px;">
   <h2>User Profile Page</h2>
   <div class="row">
   	<div class="col-md-6 offset-md-3">
@@ -56,8 +56,8 @@
   			
 
   		</table>
-      <a href="<?php echo site_url('user/edit') ?>" class="btn btn-info">Edit</a>
-  		<a href="<?php echo site_url('user/change_pass') ?>" class="btn btn-info">Change Password</a>
+      <a href="<?php echo site_url('user/edit'); ?>" class="btn btn-info">Edit</a>
+  		<a href="<?php echo site_url('user/change_pass'); ?>" class="btn btn-info">Change Password</a>
   	</div>
   </div>
 </div>
