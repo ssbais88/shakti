@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<?php
-include ("db.php");
-=======
->>>>>>> abd8ff53bdc8bb29d28642a2f8488e966c4575dc
-
 <?php
 $query = "SELECT * FROM category";
 $result = mysqli_query($con, $query);
@@ -48,7 +42,7 @@ $search_str= trim($auto, ",");
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
-	<script type="text/javascript" src="j/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/bootstrap.bundle.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">

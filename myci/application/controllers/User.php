@@ -121,6 +121,7 @@ class User extends CI_Controller{
 	}
 	function pic_upload()
 	{
+		// print_r($_FILES);die;
 		$config["allowed_types"]="png|jpg|jpeg|gif";
 		$config["max_size"]=1024; //KB
 		$config["upload_path"]="image/";

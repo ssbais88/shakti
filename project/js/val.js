@@ -1,6 +1,7 @@
-$(document).ready(function(){
-	$("#username").blur(function(){
-		var a = $(this).val();
+var check = true;
+function check_username()
+{
+	var a = $("#username").val();
 		$.ajax({
 			url : "checkusername.php",
 			type : "post",
@@ -8,8 +9,15 @@ $(document).ready(function(){
 			success : function(res){
 				// alert(res);
 				$("#username_msg").html(res);
+				check=false;
 			}
 		})
+}
+
+
+$(document).ready(function(){
+	$("#username").blur(function(){
+		check_username();
 	});
 
 
@@ -31,7 +39,7 @@ $(document).ready(function(){
 		var y = $("#female").is(":checked");
 
 
-		var check = true;
+		
 
 		if(a=="")
 		{
@@ -59,7 +67,7 @@ $(document).ready(function(){
 		else
 		{
 			
-			$("#username_msg").html("");
+			
 			var reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 			if(reg.test(c)==false)
 			{
@@ -68,7 +76,8 @@ $(document).ready(function(){
 			}
 			else
 			{
-				$("#username_msg").html("");
+				check_username();
+				// $("#username_msg").html("");
 
 			}
 
@@ -170,9 +179,15 @@ $(document).ready(function(){
 		{
 			$("#gender_msg").html("");
 		}
-
+		
+		
+		if($("#username_msg").html()=="")
+		{
+			check=true;
+		}
+		
 
 		// var a = document.getELementById("full_name").value;
-		return false;
+		return check;
 	});	
 });
